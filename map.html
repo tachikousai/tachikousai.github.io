@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <script type="text/javascript" src="main.js"></script>
+    <!--CryptoJS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/enc-base64.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/cipher-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/sha256.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/sha1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/aes.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/hmac.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/pbkdf2.min.js"></script>
+    <!--<script type="text/javascript" src="map.js"></script>-->
+    <!--Leaflet-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!--jsQR-->
+    <!--<script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.min.js"></script>-->
+
+    <title>校内マップ-Made By 立実</title>
+</head>
+
+<body>
+    <header class="header-box">
+        <h1 id="header-kai">Made By<span><a href="" id="header-text">立実</a></span></h1>
+        <div class="nav">
+            <input id="drawer_input" class="drawer_hidden" type="checkbox">
+
+        </div>
+    </header>
+    <div id="before_show_box">
+        <div id="loadingMessage">カメラにアクセスできません<br>(ブラウザの設定でアクセスを許可してください)<br>または下の欄に入力し、認証ボタンをおしてください</div>
+        <canvas id="canvas" hidden></canvas>
+        <div id="output" hidden>
+            <div id="outputMessage">QRコードが見つかりません.</div>
+            <div hidden><b></b> <span id="outputData"></span></div>
+        </div>
+        <!--<script src="jsQR.js"></script>-->
+        <form id="password_form">
+            パスワード：<input type="text" id="password">
+        </form>
+        <button onclick="check(0)">認証</button>
+    </div>
+    <span id="gpsInfo"></span>
+
+    <h3>フロアマップを選択</h3>
+    <div class="floorchange">
+        <input type="button" value="1階" class="floorbutton" id="floor1">
+        <input type="button" value="2階" class="floorbutton" id="floor2">
+        <input type="button" value="3階" class="floorbutton" id="floor3">
+        <input type="button" value="4階" class="floorbutton" id="floor4">
+        <input type="button" value="5階" class="floorbutton" id="floor5">
+    </div>
+    <h4 class="position"><a href="map.html">現在地を再表示するにはここをクリック</a></h4>
+
+    <div class="position" id="mapcontainer" style="margin:5vw; width:90vw;height:50vh;"></div>
+    <h4>立実へ入会しませんか…？ お待ちしてます！</h4>
+
+    <div id="script_box">
+    </div>
+    <script src="decryption.js"></script>
+</body>
+
+</html>

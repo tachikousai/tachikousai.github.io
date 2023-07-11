@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="images/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<script type="text/javascript" src="main.js"></script>
+
+<title>マップ詳細作成ページ</title>
+</head>
+
+<body>
+    <header class="header-box">
+        <h1 id="header-kai">Made By<span><a href="" id="header-text">立実</a></span></h1>
+        <div class="nav">
+        <input id="drawer_input" class="drawer_hidden" type="checkbox">
+   
+        </div>
+    </header>
+    <div style="margin-top: 3vh;"></div>
+    <div id="htmlcode">
+
+    <div id="2B"></div>
+    <div class="container">
+        <div class="place_name_box">
+            <span class="kikaku_name" id="form_kikaku_name">もぐらたたき</span>
+            <span class="place_name" id="form_place_name">2-B</span>
+        </div>
+        <h6 class="time" id="form_time">立高祭全日程</h6>
+        <h6 class="time" id="form_time2"></h6>
+        <div class="syokai">
+            <h5 class="naiyou" id="form_naiyou">みんなでもぐらたたきゲームをしよう！</h5>
+        </div>
+        <h4 class="dantai_name" id="form_dantai_name">2-B</h4>
+    </div>
+    
+    </div>
+
+    <form id="form_test">    
+        <input type="text" name ="input_form_kikaku_name" value="発表名">
+        <input type="text" name ="input_form_place_name" value="発表場所">
+        <input type="text" name ="input_form_time" value="日程">
+        <input type="text" name ="input_form_time2" value="日程/オプション(2行目)">
+        <input type="text" name ="input_form_naiyou" value="コメント">
+        <input type="text" name ="input_form_dantai_name" value="発表団体名">
+    </form>
+
+    <button onClick="getElement();">コードをコピー</button>
+
+    <script>
+        //I used code from this page https://qiita.com/furukouji/items/c45e0bc0606d9501c640 thank you!
+        const form_kikaku_name_value = document.forms.form_test.input_form_kikaku_name;
+        form_kikaku_name_value.addEventListener('input',()=>{
+            let input_kikaku_name  = document.getElementById('form_kikaku_name');
+            input_kikaku_name.textContent = form_kikaku_name_value.value
+        })
+
+        const form_place_name_value = document.forms.form_test.input_form_place_name; 
+        form_place_name_value.addEventListener('input',()=>{
+            let input_place_name  = document.getElementById('form_place_name');
+            input_place_name.textContent = form_place_name_value.value
+        })
+
+        const form_time_value = document.forms.form_test.input_form_time; 
+        form_time_value.addEventListener('input',()=>{
+            let input_time  = document.getElementById('form_time');
+            input_time.textContent = form_time_value.value
+        })
+
+        const form_time2_value = document.forms.form_test.input_form_time2; 
+        form_time2_value.addEventListener('input',()=>{
+            let input_time2  = document.getElementById('form_time2');
+            input_time2.textContent = form_time2_value.value
+        })
+
+        const form_naiyou_value = document.forms.form_test.input_form_naiyou; 
+        form_naiyou_value.addEventListener('input',()=>{
+            let input_naiyou  = document.getElementById('form_naiyou');
+            input_naiyou.textContent = form_naiyou_value.value
+        })
+
+        const form_dantai_name_value = document.forms.form_test.input_form_dantai_name; 
+        form_dantai_name_value.addEventListener('input',()=>{
+            let input_dantai_name  = document.getElementById('form_dantai_name');
+            input_dantai_name.textContent = form_dantai_name_value.value
+        })
+
+        function getElement(){
+        let element = document.getElementById('htmlcode');
+        navigator.clipboard.writeText(element.outerHTML)
+        }
+    </script>
+</body>
+</html>
