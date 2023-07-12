@@ -1,28 +1,38 @@
-body{
-    text-align:center;
-    margin:0px;
-    padding:0px;
+body {
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    /* IE, Edge 対応 */
+    scrollbar-width: none;
+    /* Firefox 対応 */
 }
 
-.header-box{
-    /*position:fixed;*/
-    position: relative;
+body::-webkit-scrollbar {
+    /* Chrome, Safari 対応 */
+    display: none;
+}
+
+.header-box {
+    position: fixed;
     text-align: left;
-    width:100vw;
-    height:8vh;
+    margin-top: 0vh;
+    width: 100vw;
+    height: 8vh;
     background-color: #664a79;
     align-items: center;
 }
 
-a{
+a {
     text-decoration: none;
     color: black;
 }
 
-#header-kai{
+#header-kai {
     font-family: serif;
     font-weight: bolder;
-    /*position:fixed;*/
+    position: fixed;
     position: relative;
     font-size: 3vh;
     margin-left: 13vw;
@@ -31,7 +41,7 @@ a{
     color: white;
 }
 
-#header-text{
+#header-text {
     font-family: serif;
     font-weight: bolder;
     position: relative;
@@ -46,6 +56,7 @@ a{
 .drawer_hidden {
     display: none;
 }
+
 /* ハンバーガーアイコンの設置スペース */
 .drawer_open {
     display: flex;
@@ -54,10 +65,11 @@ a{
     justify-content: center;
     align-items: center;
     position: relative;
-    z-index: 100;/* 重なり順を一番上にする */
+    z-index: 100;
+    /* 重なり順を一番上にする */
     cursor: pointer;
 }
-  
+
 /* ハンバーガーメニューのアイコン */
 .drawer_open span,
 .drawer_open span:before,
@@ -71,92 +83,96 @@ a{
     transition: 0.5s;
     position: absolute;
 }
-  
+
 /* 三本線の一番上の棒の位置調整 */
 .drawer_open span:before {
     bottom: 2vw;
 }
-  
+
 /* 三本線の一番下の棒の位置調整 */
 .drawer_open span:after {
     top: 2vw;
 }
-  
+
 /* アイコンがクリックされたら真ん中の線を透明にする */
-#drawer_input:checked ~ .drawer_open span {
+#drawer_input:checked~.drawer_open span {
     background: rgba(255, 255, 255, 0);
 }
-  
+
 /* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
-#drawer_input:checked ~ .drawer_open span::before {
+#drawer_input:checked~.drawer_open span::before {
     bottom: 0;
     transform: rotate(45deg);
 }
-  
-#drawer_input:checked ~ .drawer_open span::after {
+
+#drawer_input:checked~.drawer_open span::after {
     top: 0;
     transform: rotate(-45deg);
 }
-    
+
 /* メニューのデザイン*/
 .nav_content {
     width: 100%;
     height: 100%;
     position: fixed;
     top: 8vh;
-    left: 100%; /* メニューを画面の外に飛ばす */
+    left: 100%;
+    /* メニューを画面の外に飛ばす */
     z-index: 99;
     background: #fff;
     transition: .5s;
 }
-  
+
 /* メニュー黒ポチを消す */
-.nav_list{
+.nav_list {
     margin-top: 5vh;
     margin-left: 5vw;
     list-style: none;
     font-size: 7vw;
     z-index: 99;
 }
-  
+
 /* アイコンがクリックされたらメニューを表示 */
-#drawer_input:checked ~ .nav_content {
-    left: 0;/* メニューを画面に入れる */
+#drawer_input:checked~.nav_content {
+    left: 0;
+    /* メニューを画面に入れる */
 }
 
-.nav{
+.nav {
     margin-left: 85vw;
     z-index: 99;
 }
 
-main{
-    padding-top:100px;
-    justify-self: center;   /* 横方向中央揃え */
-    align-self: center;     /* 縦方向中央揃え */
+main {
+    padding-top: 100px;
+    justify-self: center;
+    /* 横方向中央揃え */
+    align-self: center;
+    /* 縦方向中央揃え */
 }
 
-main button{
+main button {
     padding: 0.5em;
     font-size: 24pt;
 }
 
-.floorchange{
+.floorchange {
     /*position: relative;
     top: -4vh;*/
-    display:flex;
+    display: flex;
     margin-top: -4vh;
     margin-bottom: -4vh;
 }
 
-.position{
+.position {
     /*position: relative;
     top: -4vh;*/
     margin-top: 5vh;
 }
 
-.floorbutton{
-    margin-top:3vh;
-    margin-left:9vw;
+.floorbutton {
+    margin-top: 3vh;
+    margin-left: 9vw;
     width: 9vw;
     height: 9vw;
     background-color: #e7c3ff;
@@ -165,27 +181,27 @@ main button{
     appearance: none;
 }
 
-#mapcontainer{
+#mapcontainer {
     z-index: 10;
 }
 
-.leaflet{
+.leaflet {
     z-index: 50;
 }
 
-.now_floor_disp{
+.now_floor_disp {
     font-size: 10vw;
 }
 
-.now_floor_disp_num{
+.now_floor_disp_num {
     font-size: 20vw;
 }
 
-#select_id{
+#select_id {
     color: blue;
 }
 
-.container{
+.container {
     color: #333;
     width: 90vw;
     border: 2px solid;
@@ -196,35 +212,41 @@ main button{
     margin-top: 2vh;
     text-align: left;
 }
-.place_name_box{
+
+.place_name_box {
     display: flex;
     justify-content: space-between;
 }
-.kikaku_name{
+
+.kikaku_name {
     font-weight: bold;
     font-size: 5.5vw;
     float: left;
     margin-left: 2vw;
     margin-top: 0.5vh;
 }
-.place_name{
+
+.place_name {
     text-align: right;
     font-weight: bold;
     font-size: 4.5vw;
     margin-right: 2vw;
     margin-top: 0.75vh;
-
+    align-items: center;
+    display: flex;
     background-color: #e7c3ff;
     border-radius: 2vw;
     padding: 0.75vw 1vw;
 }
-.dantai_name{
+
+.dantai_name {
     text-align: right;
     margin-bottom: -0.75vh;
     margin-top: 0vh;
     font-size: 3vw;
 }
-.time{
+
+.time {
     font-weight: bold;
     font-size: 4.5vw;
     margin-left: 3vw;
@@ -232,10 +254,80 @@ main button{
     margin-bottom: 0vw;
     text-align: right;
 }
-.syokai{
+
+.syokai {
     margin: 0vw 3vw 0vw 4vw;
 }
-.naiyou{
+
+.naiyou {
     margin: 1vw 1vw;
     font-size: 3.5vw;
+}
+
+#popup_box {
+    padding-left: 5vw;
+    text-align: left;
+    margin: 10vw;
+    margin-top: 20vh;
+    z-index: 0;
+    width: 75vw;
+    height: 100vw;
+    background-color: rgba(0, 0, 0, 0.75);
+    position: fixed;
+    visibility : hidden;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        z-index: 0;
+        visibility : hidden;
+    }
+
+    100% {
+        opacity: 1;
+        z-index: 100;
+        visibility : visible;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        z-index: 100;
+        visibility : visible;
+    }
+
+    100% {
+        opacity: 0;
+        z-index: 0;
+        visibility : hidden;
+    }
+}
+
+#popup_text {
+    font-size: 7vw;
+    color: #fff;
+    font-weight: bold;
+    margin-top: 5vw;
+    display: flex;
+}
+
+#popup_message {
+    font-size: 5vw;
+    color: #fff;
+}
+
+.close_button {
+    position: absolute;
+    margin-left: 54vw;
+    margin-right: 5vw;
+    margin-top: -16vw;
+    border: none;
+    outline: none;
+    background: rgb(255, 255, 255);
+    font-size: 4vw;
+    font-weight: bold;
+    color: #000000;
 }
