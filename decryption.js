@@ -21,29 +21,16 @@ iv = {
 
 let url = new URL(window.location.href);
 try {
-    let params = url.searchParams;
-    pass = params.get('pass');
-    console.log(pass);
-    if (pass != null) {
-        check(pass);
-    }
-} catch (e) {
-}
-try {
     var pass = localStorage.getItem('passcode');
     if (pass != null) {
-        check(pass)
+        check(pass);
     } else {
-        var head = document.getElementsByTagName("head");
-        var script_tag = document.createElement("script");
-        script_tag.setAttribute("src", "jsQR.js");
-        script_tag.setAttribute("type", "text/javascript");
-        document.head.appendChild(script_tag);
-
-        var script_tag2 = document.createElement("script");
-        script_tag2.setAttribute("src", "https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.min.js");
-        script_tag2.setAttribute("type", "text/javascript");
-        document.head.appendChild(script_tag2);
+        let params = url.searchParams;
+        pass = params.get('pass');
+        console.log(pass);
+        if (pass != null) {
+            check(pass);
+        }
     }
 } catch (e) {
 
@@ -91,15 +78,6 @@ function check(passcode) {
                 const before_box = document.getElementById("before_show_box");
                 before_box.style.display = "none";
 
-                try {
-                    video.pause();
-                    video.srcObject.getVideoTracks()[0].stop();
-                    video.srcObject.getTracks().forEach(track => track.stop());
-                    video.src = "";
-                } catch (e) {
-
-                }
-
             } catch (e) {
                 alert("パスワードが間違っています");
             }
@@ -122,15 +100,6 @@ function check(passcode) {
             localStorage.setItem('passcode', passcode);
             const before_box = document.getElementById("before_show_box");
             before_box.style.display = "none";
-
-            try {
-                video.pause();
-                video.srcObject.getVideoTracks()[0].stop();
-                video.srcObject.getTracks().forEach(track => track.stop());
-                video.src = "";
-            } catch (e) {
-
-            }
 
         } catch (e) {
             alert("パスワードが間違っています");
