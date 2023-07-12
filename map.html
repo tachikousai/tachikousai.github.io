@@ -18,14 +18,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/aes.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/hmac.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/pbkdf2.min.js"></script>
-    <!--<script type="text/javascript" src="map.js"></script>-->
     <!--Leaflet-->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
-    <!--jsQR-->
-    <!--<script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.min.js"></script>-->
 
     <title>校内マップ-Made By 立実</title>
 </head>
@@ -38,14 +35,8 @@
 
         </div>
     </header>
+    <div style="height: 8vh;"></div>
     <div id="before_show_box">
-        <div id="loadingMessage">カメラにアクセスできません<br>(ブラウザの設定でアクセスを許可してください)<br>または下の欄に入力し、認証ボタンをおしてください</div>
-        <canvas id="canvas" hidden></canvas>
-        <div id="output" hidden>
-            <div id="outputMessage">QRコードが見つかりません.</div>
-            <div hidden><b></b> <span id="outputData"></span></div>
-        </div>
-        <!--<script src="jsQR.js"></script>-->
         <form id="password_form">
             パスワード：<input type="text" id="password">
         </form>
