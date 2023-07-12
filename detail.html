@@ -1,117 +1,271 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<link rel="stylesheet" href="style.css">
-<link rel="icon" href="images/favicon.ico">
-<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-<script type="text/javascript" src="main.js"></script>
 
-<title>マップ詳細-Made By 立実</title>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <script type="text/javascript" src="main.js"></script>
+
+    <title>マップ詳細-Made By 立実</title>
 </head>
 
 <body>
     <header class="header-box">
         <h1 id="header-kai">Made By<span><a href="" id="header-text">立実</a></span></h1>
         <div class="nav">
-        <input id="drawer_input" class="drawer_hidden" type="checkbox">
-   
+            <input id="drawer_input" class="drawer_hidden" type="checkbox">
+
         </div>
     </header>
-    <div style="margin-top: 3vh;"></div>
+    <div id="popup_box">
+
+            <p id="popup_text"></p>
+            <button class="close_button" onclick="close_window()">閉じる</button>
+
+            <div id="popup_message"></div>
+    </div>
     <div>
-    <div class="container" id="koya">
-        <div class="place_name_box">
-            <span class="kikaku_name">インフォメーションセンター</span>
-            <span class="place_name">小屋</span>
-        </div>
-        <h6 class="time">立高祭全日程</h6>
+        <div style="height: 8vh;"></div>
 
-        <div class="syokai">
-            <h5 class="naiyou">会場案内を行います</h5>
-        </div>
-        <h4 class="dantai_name">立高祭実行委員会</h4>
+        <div class="container" id="koya">
+            <div class="place_name_box">
+                <span class="kikaku_name">インフォメーションセンター</span>
+                <span class="place_name">小屋</span>
+            </div>
+            <h6 class="time">立高祭全日程</h6>
 
-    </div>
-    <div class="container" id="2B">
-        <div class="place_name_box">
-            <span class="kikaku_name">もぐらたたき</span>
-            <span class="place_name">2-B</span>
-        </div>
-        <h6 class="time">立高祭全日程</h6>
-        <div class="syokai">
-            <h5 class="naiyou">みんなでもぐらたたきゲームをしよう！</h5>
-            <h5 class="naiyou">みんなでもぐらたたきゲームをしよう！</h5>
-            <h5 class="naiyou">みんなでもぐらたたきゲームをしよう！</h5>
+            <div class="syokai">
+                <h5 class="naiyou">会場案内を行います</h5>
+            </div>
+            <h4 class="dantai_name">立高祭実行委員会</h4>
 
         </div>
-        <h4 class="dantai_name">2-B</h4>
+        <div id="htmlcode">
 
-    </div>
-    <div class="container">
-        <div class="place_name_box">
-            <span class="kikaku_name">白雪姫</span>
-            <span class="place_name">柔道場</span>
+            <div id="1D"></div>
+            <div class="container">
+                <div class="place_name_box">
+                    <span class="kikaku_name" id="form_kikaku_name">～立川高校裏口入学編～</span>
+                    <span class="place_name" id="form_place_name">1-D</span>
+                </div>
+                <h6 class="time" id="form_time">立高祭全日程</h6>
+                <h6 class="time" id="form_time2"></h6>
+                <div class="syokai">
+                    <h5 class="naiyou" id="form_naiyou">この世界の人間は、本当の立高を知らない。既成概念をぶち壊す、幻の裏口入学の権利をその手で掴み取れ！</h5>
+                </div>
+                <h4 class="dantai_name" id="form_dantai_name">1-D</h4>
+            </div>
+
         </div>
-        <h6 class="time">1日目：11:30~12:00 12:55~13:25</h6>
-        <h6 class="time">2日目：11:30~12:00 12:55~13:25</h6>
+        
+        <div id="htmlcode">
 
-        <div class="syokai">
-        <h5 class="naiyou">みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！</h5>
+            <div id="3A"></div>
+            <div class="container">
+                <div class="place_name_box">
+                    <span class="kikaku_name" id="form_kikaku_name">としまえん</span>
+                    <span class="place_name" id="form_place_name">3-A</span>
+                </div>
+                <h6 class="time" id="form_time">立高祭全日程</h6>
+                <h6 class="time" id="form_time2"></h6>
+                <div class="syokai">
+                    <h5 class="naiyou" id="form_naiyou">廃遊園地を舞台としたシューティングゲームです！遊具を模した怪物「ガイスト」に立ち向かう組織の一員となってガイストを倒そう！
+                    </h5>
+                </div>
+                <h4 class="dantai_name" id="form_dantai_name">3-A</h4>
+            </div>
+
         </div>
-        <h4 class="dantai_name">2-N</h4>
 
-    </div>
+        <div id="htmlcode">
 
-    <div id="test"></div>
-    <div class="container">
-        <div class="place_name_box">
-            <span class="kikaku_name">白雪姫</span>
-            <span class="place_name">柔道場</span>
+            <div id="3B"></div>
+            <div class="container">
+                <div class="place_name_box">
+                    <span class="kikaku_name" id="form_kikaku_name">3B→Ca+Fe</span>
+                    <span class="place_name" id="form_place_name">3-B</span>
+                </div>
+                <h6 class="time" id="form_time">立高祭全日程</h6>
+                <h6 class="time" id="form_time2"></h6>
+                <div class="syokai">
+                    <h5 class="naiyou" id="form_naiyou">来い！！！！！！！！！！！！！！！！！！</h5>
+                </div>
+                <h4 class="dantai_name" id="form_dantai_name">3-B </h4>
+            </div>
+
         </div>
-        <h6 class="time">1日目：11:30~12:00 12:55~13:25</h6>
-        <h6 class="time">2日目：11:30~12:00 12:55~13:25</h6>
 
-        <div class="syokai">
-        <h5 class="naiyou">みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！</h5>
+        <div id="htmlcode">
+
+            <div id="tahisui"></div>
+            <div class="container">
+                <div class="place_name_box">
+                    <span class="kikaku_name" id="form_kikaku_name">吹奏楽部</span>
+                    <span class="place_name" id="form_place_name">体育館</span>
+                </div>
+                <h6 class="time" id="form_time">9/9、9/10</h6>
+                <h6 class="time" id="form_time2"></h6>
+                <div class="syokai">
+                    <h5 class="naiyou" id="form_naiyou">「ディズニーメドレー」や「銀河鉄道999」などの人気曲を演奏します♪立吹のサウンドをお楽しみに！！ぜひお越しください！！！
+                    </h5>
+                </div>
+                <h4 class="dantai_name" id="form_dantai_name">吹奏楽部</h4>
+            </div>
+
         </div>
-        <h4 class="dantai_name">2-N</h4>
 
-    </div>
-    <div class="container">
-        <div class="place_name_box">
-            <span class="kikaku_name">白雪姫</span>
-            <span class="place_name">柔道場</span>
+        <div id="htmlcode">
+
+            <div id="sangaku"></div>
+            <div class="container">
+                <div class="place_name_box">
+                    <span class="kikaku_name" id="form_kikaku_name">山岳部</span>
+                    <span class="place_name" id="form_place_name">地学室</span>
+                </div>
+                <h6 class="time" id="form_time">立高祭全日程</h6>
+                <h6 class="time" id="form_time2"></h6>
+                <div class="syokai">
+                    <h5 class="naiyou" id="form_naiyou">これまでの山行写真や山行記録、テント等の装備の展示や20kgザック体験など…。　　　　　　　　あなたも是非登山気分に！</h5>
+                </div>
+                <h4 class="dantai_name" id="form_dantai_name">山岳部</h4>
+            </div>
+
         </div>
-        <h6 class="time">1日目：11:30~12:00 12:55~13:25</h6>
-        <h6 class="time">2日目：11:30~12:00 12:55~13:25</h6>
 
-        <div class="syokai">
-        <h5 class="naiyou">みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！</h5>
+        <div id="htmlcode">
+
+            <div id="kuiken"></div>
+            <div class="container">
+                <div class="place_name_box">
+                    <span class="kikaku_name" id="form_kikaku_name">クイズ体験</span>
+                    <span class="place_name" id="form_place_name">社会科室</span>
+                </div>
+                <div class="popup_button"
+                    onclick="popup_window('実施時間','<div style=\'width:50%; margin:0; display:flex; float:left;\'>経験者<br>9/3<br>9:20~<br>11:20~<br>14:20~<br><br>9/4<br>9:20~<br>14:20~</div><div style=\'width:50%; margin:0; display:flex; float:left;\'>未経験者<br>9/3<br>10:20~<br>13:20~<br>15:20~<br><br>9/4<br>10:20~<br>11:20~<br>13:20~</div>')">
+                    <h6 class="time" id="form_time">詳細を表示</h6>
+                </div>
+                <h6 class="time" id="form_time2"></h6>
+                <div class="syokai">
+                    <h5 class="naiyou" id="form_naiyou">〇×クイズと早押しクイズを行います。経験者の部と未経験者の部を分けるので、はじめての方もぜひお越しください！</h5>
+                </div>
+                <h4 class="dantai_name" id="form_dantai_name">クイズ研究部</h4>
+            </div>
+
         </div>
-        <h4 class="dantai_name">2-N</h4>
 
-    </div>
-    <div class="container">
-        <div class="place_name_box">
-            <span class="kikaku_name">白雪姫</span>
-            <span class="place_name">柔道場</span>
+        <div id="htmlcode">
+
+            <div id="sado"></div>
+            <div class="container">
+                <div class="place_name_box">
+                    <span class="kikaku_name" id="form_kikaku_name">茶道部お茶会</span>
+                    <span class="place_name" id="form_place_name">１階和室</span>
+                </div>
+                <h6 class="time" id="form_time">立高祭全日程</h6>
+                <h6 class="time" id="form_time2"></h6>
+                <div class="syokai">
+                    <h5 class="naiyou" id="form_naiyou">お菓子とお抹茶を用意してお待ちしてます！</h5>
+                </div>
+                <h4 class="dantai_name" id="form_dantai_name">茶道部</h4>
+            </div>
+
         </div>
-        <h6 class="time">1日目：11:30~12:00 12:55~13:25</h6>
-        <h6 class="time">2日目：11:30~12:00 12:55~13:25</h6>
 
-        <div class="syokai">
-        <h5 class="naiyou">みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！</h5>
+        <div id="htmlcode">
+
+            <div id="pasodo"></div>
+            <div class="container">
+                <div class="place_name_box">
+                    <span class="kikaku_name" id="form_kikaku_name">パソ同作品展示会！<br><span style="font-size: 4vw;">～くつろぎの場をあなたに～</span></span>
+                    <span class="place_name" id="form_place_name">第1パソコン室</span>
+                </div>
+                <h6 class="time" id="form_time">立高祭全日程</h6>
+                <h6 class="time" id="form_time2"></h6>
+                <div class="syokai">
+                    <h5 class="naiyou" id="form_naiyou">
+                        部員の制作物を見たり遊んだりすることができる貴重な機会です！涼しい、静か、パソコン室に来れば得すること間違いなし！ぜひきてください。</h5>
+                </div>
+                <h4 class="dantai_name" id="form_dantai_name">パソコン同好部</h4>
+            </div>
+
         </div>
-        <h4 class="dantai_name">2-N</h4>
 
-    </div>
+        <!--<div class="container">
+            <div class="place_name_box">
+                <span class="kikaku_name">白雪姫</span>
+                <span class="place_name">柔道場</span>
+            </div>
+            <h6 class="time">1日目：11:30~12:00 12:55~13:25</h6>
+            <h6 class="time">2日目：11:30~12:00 12:55~13:25</h6>
 
-    
-    
+            <div class="syokai">
+                <h5 class="naiyou">
+                    みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！
+                </h5>
+            </div>
+            <h4 class="dantai_name">2-N</h4>
+
+        </div>
+
+        <div id="test"></div>
+        <div class="container">
+            <div class="place_name_box">
+                <span class="kikaku_name">白雪姫</span>
+                <span class="place_name">柔道場</span>
+            </div>
+            <h6 class="time">1日目：11:30~12:00 12:55~13:25</h6>
+            <h6 class="time">2日目：11:30~12:00 12:55~13:25</h6>
+
+            <div class="syokai">
+                <h5 class="naiyou">
+                    みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！
+                </h5>
+            </div>
+            <h4 class="dantai_name">2-N</h4>
+
+        </div>
+        <div class="container">
+            <div class="place_name_box">
+                <span class="kikaku_name">白雪姫</span>
+                <span class="place_name">柔道場</span>
+            </div>
+            <h6 class="time">1日目：11:30~12:00 12:55~13:25</h6>
+            <h6 class="time">2日目：11:30~12:00 12:55~13:25</h6>
+
+            <div class="syokai">
+                <h5 class="naiyou">
+                    みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！
+                </h5>
+            </div>
+            <h4 class="dantai_name">2-N</h4>
+
+        </div>
+        <div class="container">
+            <div class="place_name_box">
+                <span class="kikaku_name">白雪姫</span>
+                <span class="place_name">柔道場</span>
+            </div>
+            <h6 class="time">1日目：11:30~12:00 12:55~13:25</h6>
+            <h6 class="time">2日目：11:30~12:00 12:55~13:25</h6>
+
+            <div class="syokai">
+                <h5 class="naiyou">
+                    みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！みんなで毒リンゴを食べよう！
+                </h5>
+            </div>
+            <h4 class="dantai_name">2-N</h4>
+
+        </div>-->
+
+
+
     </div>
 
     <h4>立実へ入会しませんか…？ お待ちしてます！</h4>
 </body>
+
 </html>
