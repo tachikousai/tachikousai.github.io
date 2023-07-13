@@ -8,13 +8,17 @@
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <meta name="viewport"
         content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <script type="text/javascript" src="main.js"></script>
+
 
     <title>マップ詳細-Made By 立実</title>
 </head>
 
 <body>
-    <header class="header-box">
+    <header class="header-box" id="header">
         <h1 id="header-kai">Made By<span><a href="" id="header-text">立実</a></span></h1>
         <div class="nav">
             <input id="drawer_input" class="drawer_hidden" type="checkbox">
@@ -28,8 +32,8 @@
 
             <div id="popup_message"></div>
     </div>
-    <div>
-        <div style="height: 8vh;"></div>
+    <div class="reset">
+        <!--<div style="height: 8vh;"></div>-->
 
         <div class="container" id="koya">
             <div class="place_name_box">
