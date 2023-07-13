@@ -14,10 +14,14 @@ body::-webkit-scrollbar {
     display: none;
 }
 
+.reset {
+    margin-top: 10vh;
+}
+
 .header-box {
     position: fixed;
+    top: 0;
     text-align: left;
-    margin-top: 0vh;
     width: 100vw;
     height: 8vh;
     background-color: #664a79;
@@ -274,7 +278,7 @@ main button {
     height: 100vw;
     background-color: rgba(0, 0, 0, 0.75);
     position: fixed;
-    visibility : hidden;
+    visibility: hidden;
     opacity: 0;
 }
 
@@ -282,13 +286,13 @@ main button {
     0% {
         opacity: 0;
         z-index: 0;
-        visibility : hidden;
+        visibility: hidden;
     }
 
     100% {
         opacity: 1;
         z-index: 100;
-        visibility : visible;
+        visibility: visible;
     }
 }
 
@@ -296,13 +300,13 @@ main button {
     0% {
         opacity: 1;
         z-index: 100;
-        visibility : visible;
+        visibility: visible;
     }
 
     100% {
         opacity: 0;
         z-index: 0;
-        visibility : hidden;
+        visibility: hidden;
     }
 }
 
@@ -321,13 +325,17 @@ main button {
 
 .close_button {
     position: absolute;
-    margin-left: 54vw;
-    margin-right: 5vw;
-    margin-top: -16vw;
+    top: 6vw;
+    right: 5vw;
     border: none;
     outline: none;
     background: rgb(255, 255, 255);
     font-size: 4vw;
     font-weight: bold;
     color: #000000;
+}
+
+#htmlcode {
+    margin-top: -8vh;
+    padding-top: 8vh;
 }
