@@ -14,18 +14,28 @@ body::-webkit-scrollbar {
     display: none;
 }
 
+.menu_text {
+    color: white;
+    position: absolute;
+    top: 4svh;
+    right: 2svw;
+    margin-left: 5svw;
+    font-size: 5svw;
+}
+
 .reset {
-    margin-top: 10vh;
+    margin-top: 10svh;
 }
 
 .header-box {
     position: fixed;
     top: 0;
     text-align: left;
-    width: 100vw;
-    height: 8vh;
+    width: 100svw;
+    height: 8svh;
     background-color: #664a79;
     align-items: center;
+    z-index: 1000;
 }
 
 a {
@@ -38,8 +48,8 @@ a {
     font-weight: bolder;
     position: fixed;
     position: relative;
-    font-size: 3vh;
-    margin-left: 13vw;
+    font-size: 3svh;
+    margin-left: 18svw;
     margin-top: auto;
     margin-bottom: auto;
     color: white;
@@ -49,11 +59,21 @@ a {
     font-family: serif;
     font-weight: bolder;
     position: relative;
-    font-size: 5.5vh;
-    margin-left: 2vw;
+    font-size: 5.5svh;
+    margin-left: 2svw;
     margin-top: auto;
     margin-bottom: auto;
     color: white;
+}
+
+.main {
+    z-index: 50;
+    position: absolute;
+    top: 8svh;
+}
+
+.container1 {
+    margin: 0 2vw;
 }
 
 /*hamburger menu*/
@@ -64,12 +84,14 @@ a {
 /* ハンバーガーアイコンの設置スペース */
 .drawer_open {
     display: flex;
-    height: 15vw;
-    width: 15vw;
+    height: 15svw;
+    width: 15svw;
     justify-content: center;
     align-items: center;
-    position: relative;
+    position: absolute;
     z-index: 100;
+    right: 0;
+    top: 2.5svh;
     /* 重なり順を一番上にする */
     cursor: pointer;
 }
@@ -80,22 +102,22 @@ a {
 .drawer_open span:after {
     content: '';
     display: block;
-    height: 0.75vw;
-    width: 6.25vw;
-    border-radius: 0.75vw;
-    background: #333;
+    height: 0.75svw;
+    width: 6.25svw;
+    border-radius: 0.75svw;
+    background: #fff;
     transition: 0.5s;
     position: absolute;
 }
 
 /* 三本線の一番上の棒の位置調整 */
 .drawer_open span:before {
-    bottom: 2vw;
+    bottom: 2svw;
 }
 
 /* 三本線の一番下の棒の位置調整 */
 .drawer_open span:after {
-    top: 2vw;
+    top: 2svw;
 }
 
 /* アイコンがクリックされたら真ん中の線を透明にする */
@@ -118,67 +140,54 @@ a {
 .nav_content {
     width: 100%;
     height: 100%;
-    position: fixed;
-    top: 8vh;
+    top: 8svh;
     left: 100%;
     /* メニューを画面の外に飛ばす */
-    z-index: 99;
     background: #fff;
     transition: .5s;
+    position: fixed;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.796);
 }
 
 /* メニュー黒ポチを消す */
 .nav_list {
-    margin-top: 5vh;
-    margin-left: 5vw;
+    margin-top: 5svh;
+    margin-left: 0svw;
     list-style: none;
-    font-size: 7vw;
-    z-index: 99;
+    font-size: 7svw;
 }
 
 /* アイコンがクリックされたらメニューを表示 */
 #drawer_input:checked~.nav_content {
-    left: 0;
+    left: 25svw;
     /* メニューを画面に入れる */
 }
 
 .nav {
-    margin-left: 85vw;
-    z-index: 99;
-}
-
-main {
-    padding-top: 100px;
-    justify-self: center;
-    /* 横方向中央揃え */
-    align-self: center;
-    /* 縦方向中央揃え */
-}
-
-main button {
-    padding: 0.5em;
-    font-size: 24pt;
+    /*margin-left: 85svw;*/
+    z-index: 101;
 }
 
 .floorchange {
     /*position: relative;
-    top: -4vh;*/
+    top: -4svh;*/
     display: flex;
-    margin-top: -4vh;
-    margin-bottom: -4vh;
+    margin-top: -4svh;
+    margin-bottom: -4svh;
 }
 
 .position {
     /*position: relative;
-    top: -4vh;*/
-    margin-top: 5vh;
+    top: -4svh;*/
+    margin-top: 5svh;
 }
 
 .floorbutton {
-    margin-top: 3vh;
-    margin-left: 9vw;
-    width: 9vw;
-    height: 9vw;
+    margin-top: 3svh;
+    margin-left: 9svw;
+    width: 9svw;
+    height: 9svw;
     background-color: #e7c3ff;
     border: none;
     -webkit-appearance: none;
@@ -194,11 +203,11 @@ main button {
 }
 
 .now_floor_disp {
-    font-size: 10vw;
+    font-size: 10svw;
 }
 
 .now_floor_disp_num {
-    font-size: 20vw;
+    font-size: 20svw;
 }
 
 #select_id {
@@ -207,13 +216,13 @@ main button {
 
 .container {
     color: #333;
-    width: 90vw;
+    width: 90svw;
     border: 2px solid;
     border-color: #333;
-    border-radius: 2vw;
+    border-radius: 2svw;
     margin: auto;
-    padding: 1vw;
-    margin-top: 2vh;
+    padding: 1svw;
+    margin-top: 2svh;
     text-align: left;
 }
 
@@ -224,58 +233,58 @@ main button {
 
 .kikaku_name {
     font-weight: bold;
-    font-size: 5.5vw;
+    font-size: 5.5svw;
     float: left;
-    margin-left: 2vw;
-    margin-top: 0.5vh;
+    margin-left: 2svw;
+    margin-top: 0.5svh;
 }
 
 .place_name {
     text-align: right;
     font-weight: bold;
-    font-size: 4.5vw;
-    margin-right: 2vw;
-    margin-top: 0.75vh;
+    font-size: 4.5svw;
+    margin-right: 2svw;
+    margin-top: 0.75svh;
     align-items: center;
     display: flex;
     background-color: #e7c3ff;
-    border-radius: 2vw;
-    padding: 0.75vw 1vw;
+    border-radius: 2svw;
+    padding: 0.75svw 1svw;
 }
 
 .dantai_name {
     text-align: right;
-    margin-bottom: -0.75vh;
-    margin-top: 0vh;
-    font-size: 3vw;
+    margin-bottom: -0.75svh;
+    margin-top: 0svh;
+    font-size: 3svw;
 }
 
 .time {
     font-weight: bold;
-    font-size: 4.5vw;
-    margin-left: 3vw;
-    margin-top: 0.5vh;
-    margin-bottom: 0vw;
+    font-size: 4.5svw;
+    margin-left: 3svw;
+    margin-top: 0.5svh;
+    margin-bottom: 0svw;
     text-align: right;
 }
 
 .syokai {
-    margin: 0vw 3vw 0vw 4vw;
+    margin: 0svw 3svw 0svw 4svw;
 }
 
 .naiyou {
-    margin: 1vw 1vw;
-    font-size: 3.5vw;
+    margin: 1svw 1svw;
+    font-size: 3.5svw;
 }
 
 #popup_box {
-    padding-left: 5vw;
+    padding-left: 5svw;
     text-align: left;
-    margin: 10vw;
-    margin-top: 20vh;
+    margin: 10svw;
+    margin-top: 20svh;
     z-index: 0;
-    width: 75vw;
-    height: 100vw;
+    width: 75svw;
+    height: 100svw;
     background-color: rgba(0, 0, 0, 0.75);
     position: fixed;
     visibility: hidden;
@@ -311,31 +320,143 @@ main button {
 }
 
 #popup_text {
-    font-size: 7vw;
+    font-size: 7svw;
     color: #fff;
     font-weight: bold;
-    margin-top: 5vw;
+    margin-top: 5svw;
     display: flex;
 }
 
 #popup_message {
-    font-size: 5vw;
+    font-size: 5svw;
     color: #fff;
 }
 
 .close_button {
     position: absolute;
-    top: 6vw;
-    right: 5vw;
+    top: 6svw;
+    right: 5svw;
     border: none;
     outline: none;
     background: rgb(255, 255, 255);
-    font-size: 4vw;
+    font-size: 4svw;
     font-weight: bold;
     color: #000000;
 }
 
 #htmlcode {
-    margin-top: -8vh;
-    padding-top: 8vh;
+    margin-top: -8svh;
+    padding-top: 8svh;
+}
+
+.sp_top_img {
+    width: 100svw;
+    height: 80svh;
+    position: relative;
+    /*top: 8svh;
+    left: -15svw;*/
+}
+
+.toha {
+    width: 45%;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #8d93c8;
+    border-radius: 2vw;
+    background-color: rgba(164, 168, 212, 0.4);
+    font-size: 25px;
+    color: black;
+    margin-right: 10px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 0 10px #f0f6da;
+
+}
+
+.tuite {
+    width: 45%;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #8d93c8;
+    border-radius: 2vw;
+    background-color: rgba(164, 168, 212, 0.4);
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 22px;
+    color: black;
+    margin-left: 10px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 0 10px #f0f6da;
+}
+
+.minicontainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 1svh;
+    position: relative;
+}
+
+.title {
+    position: absolute;
+    top: 30svh;
+    left: 50svw;
+    font-size: 12svw;
+    color: #000000;
+    padding: 0;
+    margin: 0;
+    transform: translate(-50%, -50%);
+    writing-mode: vertical-lr;
+    text-shadow: 0 0 15px white;
+}
+
+span {
+    position: relative;
+    top: 1%;
+    text-combine-upright: all;
+    -webkit-text-combine: horizontal;
+}
+
+.title2 {
+    position: absolute;
+    top: 52svh;
+    margin-left: 50svw;
+    font-size: 10svw;
+    color: white;
+    transform: translate(-50%, -50%);
+    text-shadow: 0 0 15px #a6bbed;
+    color: #ed98ce;
+}
+
+.date {
+    position: absolute;
+    top: 65svh;
+    margin-left: 50svw;
+    margin-top: 0;
+    font-size: 7svw;
+    color: #fafdff;
+    transform: translate(-50%, -50%);
+}
+
+.title_text {
+    margin-left: 4svw;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        touch-action: pan-x pan-y;
+    }
+}
+
+.kiyaku_koumoku {
+    text-align: left;
+    margin-left: 10vw;
 }

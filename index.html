@@ -8,22 +8,26 @@
     <meta name="viewport"
         content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <script type="text/javascript" src="main.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/core.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/enc-base64.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/cipher-core.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/sha256.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/sha1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/aes.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/hmac.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/pbkdf2.min.js"></script>
+
     <title>ホーム-立高祭</title>
 </head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M7EDTWMFQ1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-M7EDTWMFQ1');
+</script>
 
 <body>
     <div id="script"></div>
     <span id="js-code"></span>
     <header class="header-box">
-        <h1 id="header-kai">第74回<span id="header-text">立高祭</span></h1>
+        <a href="index.html"><h1 id="header-kai">第75回<span id="header-text">立高祭</span></h1></a>
+        <span class="menu_text">Menu</span>
         <!-- ハンバーガーメニュー部分 -->
         <div class="nav">
             <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
@@ -34,27 +38,46 @@
             <!-- メニュー -->
             <nav class="nav_content">
                 <ul class="nav_list">
-                    <li class="nav_item">メニュー</li>
-                    <li class="nav_item"><a href="">立高祭とは？</a></li>
-                    <li class="nav_item"><a href="">立高祭について</a></li>
+                    <li class="nav_item"><a href="whatis.html">立高祭とは？</a></li>
+                    <li class="nav_item"><a href="about.html">今年の立高祭</a></li>
                     <li class="nav_item"><a href="map.html">校内マップ</a></li>
-                    <li class="nav_item"><a href="">アクセス</a></li>
-                    <li class="nav_item"><a href="">投稿</a></li>
-                    <li class="nav_item"><a href="">ギャラリー</a></li>
-                    <li class="nav_item"><a href="">過去の立高祭</a></li>
+                    <li class="nav_item"><a href="detail.html">発表一覧</a></li>
+                    <!--<li class="nav_item"><a href="kuchikomi.html">口コミ</a></li>-->
+                    <li class="nav_item"><a href="access.html">アクセス</a></li>
+                    <li class="nav_item"><a href="site.html">このサイトについて</a></li>
+                    <li class="nav_item"><a href="license.html">利用規約</a></li>
                 </ul>
             </nav>
-
         </div>
     </header>
 
-    <form id="password_form">
-        パスワード：<input type="text" id="password">
-    </form>
-    <script src="decryption.js"></script>
-    <button onclick="check()">実行</button>
+    <div class="main">
+        <img src="images/top_pic.jpg" class="sp_top_img">
+        <h1 class="title">第<span>75</span>回立高祭</h1>
+        <h2 class="title2">-桜花爛漫-</h2>
+        <h3 class="date">2023/9/9-9/10</h3>
 
-    
+        <div class="minicontainer">
+            <a class="toha" href="whatis.html">
+                <div>
+                    <p>立高祭とは？</p>
+                </div>
+            </a>
+
+            <a class="tuite" href="about.html">
+                <div>
+                    <p>第75回<br>立高祭について</p>
+                </div>
+            </a>
+        </div>
+
+        <h4>このサイトの内容の無断転載を禁止します
+            <br>
+            制作:立高祭実行委員会
+        </h4>
+
+    </div>
+
 </body>
 
 </html>

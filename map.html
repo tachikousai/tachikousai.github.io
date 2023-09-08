@@ -8,7 +8,6 @@
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <meta name="viewport"
         content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-    <script type="text/javascript" src="main.js"></script>
     <!--CryptoJS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/core.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/enc-base64.min.js"></script>
@@ -21,21 +20,52 @@
     <!--Leaflet-->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>-->
+    <!--jQuery-->
+    <script src="./jquery-3.5.1.min.js"></script>
+
+    <!--<script type="text/javascript" src="main.js"></script>-->
 
 
     <title>校内マップ-Made By 立実</title>
 </head>
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M7EDTWMFQ1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-M7EDTWMFQ1');
+</script>
+
 <body>
     <header class="header-box">
-        <h1 id="header-kai">Made By<span><a href="" id="header-text">立実</a></span></h1>
+        <a href="index.html"><h1 id="header-kai">第75回<span id="header-text">立高祭</span></h1></a>
+        <span class="menu_text">Menu</span>
+        <!-- ハンバーガーメニュー部分 -->
         <div class="nav">
+            <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
             <input id="drawer_input" class="drawer_hidden" type="checkbox">
+            <!-- ハンバーガーアイコン -->
+            <label for="drawer_input" class="drawer_open"><span></span></label>
 
+            <!-- メニュー -->
+            <nav class="nav_content">
+                <ul class="nav_list">
+                    <li class="nav_item"><a href="whatis.html">立高祭とは？</a></li>
+                    <li class="nav_item"><a href="about.html">今年の立高祭</a></li>
+                    <li class="nav_item"><a href="map.html">校内マップ</a></li>
+                    <li class="nav_item"><a href="detail.html">発表一覧</a></li>
+                    <li class="nav_item"><a href="access.html">アクセス</a></li>
+                    <li class="nav_item"><a href="site.html">このサイトについて</a></li>
+                    <li class="nav_item"><a href="license.html">ライセンス</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
-    <div style="height: 8vh;"></div>
+    <div style="height: 8svh;"></div>
     <div id="before_show_box">
         <form id="password_form">
             パスワード：<input type="text" id="password">
@@ -54,7 +84,7 @@
     </div>
     <h4 class="position"><a href="map.html">現在地を再表示するにはここをクリック</a></h4>
 
-    <div class="position" id="mapcontainer" style="margin:5vw; width:90vw;height:50vh;"></div>
+    <div class="position" id="mapcontainer" style="margin:5svw; width:90svw;height:50svh;"></div>
     <h4>立実へ入会しませんか…？ お待ちしてます！</h4>
 
     <div id="script_box">

@@ -9,7 +9,7 @@
     <meta name="viewport"
         content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <!--jQuery-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./jquery-3.5.1.min.js"></script>
 
     <script type="text/javascript" src="main.js"></script>
 
@@ -17,23 +17,50 @@
     <title>マップ詳細-Made By 立実</title>
 </head>
 
-<body>
-    <header class="header-box" id="header">
-        <h1 id="header-kai">Made By<span><a href="" id="header-text">立実</a></span></h1>
-        <div class="nav">
-            <input id="drawer_input" class="drawer_hidden" type="checkbox">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M7EDTWMFQ1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-M7EDTWMFQ1');
+</script>
+
+<body>
+    <header class="header-box">
+        <a href="index.html"><h1 id="header-kai">第75回<span id="header-text">立高祭</span></h1></a>
+        <span class="menu_text">Menu</span>
+        <!-- ハンバーガーメニュー部分 -->
+        <div class="nav">
+            <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+            <input id="drawer_input" class="drawer_hidden" type="checkbox">
+            <!-- ハンバーガーアイコン -->
+            <label for="drawer_input" class="drawer_open"><span></span></label>
+
+            <!-- メニュー -->
+            <nav class="nav_content">
+                <ul class="nav_list">
+                    <li class="nav_item"><a href="whatis.html">立高祭とは？</a></li>
+                    <li class="nav_item"><a href="about.html">今年の立高祭</a></li>
+                    <li class="nav_item"><a href="map.html">校内マップ</a></li>
+                    <li class="nav_item"><a href="detail.html">発表一覧</a></li>
+                    <li class="nav_item"><a href="access.html">アクセス</a></li>
+                    <li class="nav_item"><a href="site.html">このサイトについて</a></li>
+                    <li class="nav_item"><a href="license.html">ライセンス</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
     <div id="popup_box">
 
-            <p id="popup_text"></p>
-            <button class="close_button" onclick="close_window()">閉じる</button>
+        <p id="popup_text"></p>
+        <button class="close_button" onclick="close_window()">閉じる</button>
 
-            <div id="popup_message"></div>
+        <div id="popup_message"></div>
     </div>
     <div class="reset">
-        <!--<div style="height: 8vh;"></div>-->
+        <!--<div style="height: 8svh;"></div>-->
 
         <div class="container" id="koya">
             <div class="place_name_box">
@@ -46,6 +73,45 @@
                 <h5 class="naiyou">会場案内を行います</h5>
             </div>
             <h4 class="dantai_name">立高祭実行委員会</h4>
+
+        </div>
+        
+        <div id="htmlcode">
+
+
+            <div id="2B"></div>
+            <div class="container">
+                <div class="place_name_box">
+                    <span class="kikaku_name" id="form_kikaku_name">動くピンは1-Bからの挑戦状</span>
+                    <span class="place_name" id="form_place_name">1-B</span>
+                </div>
+                <h6 class="time" id="form_time">立高祭全日</h6>
+                <h6 class="time" id="form_time2">9/9　9/10</h6>
+                <div class="syokai">
+                    <h5 class="naiyou" id="form_naiyou">
+                        動くピンは逃げ惑う人々を模して……失礼いたしました。日頃のストレス発散も兼ねてピンを倒しちゃってください！クイズとボウリングの究極のコラボ！しかもそのピンは蠢（うごめ）く！ハイスコアを狙ってあなたもこのゲームに挑戦してみませんか？
+                    </h5>
+                </div>
+                <h4 class="dantai_name" id="form_dantai_name">1-B</h4>
+            </div>
+
+        </div>
+
+        <div id="htmlcode">
+
+            <div id="2B"></div>
+            <div class="container">
+                <div class="place_name_box">
+                    <span class="kikaku_name" id="form_kikaku_name">迷宮からの脱獄</span>
+                    <span class="place_name" id="form_place_name">1-C</span>
+                </div>
+                <h6 class="time" id="form_time">立高祭全日程</h6>
+                <h6 class="time" id="form_time2"></h6>
+                <div class="syokai">
+                    <h5 class="naiyou" id="form_naiyou">体と頭脳を駆使して迷宮からみんな脱獄できるのか!?暗く複雑な迷路でスリルを楽しもう！</h5>
+                </div>
+                <h4 class="dantai_name" id="form_dantai_name">1-C</h4>
+            </div>
 
         </div>
         <div id="htmlcode">
@@ -62,6 +128,58 @@
                     <h5 class="naiyou" id="form_naiyou">この世界の人間は、本当の立高を知らない。既成概念をぶち壊す、幻の裏口入学の権利をその手で掴み取れ！</h5>
                 </div>
                 <h4 class="dantai_name" id="form_dantai_name">1-D</h4>
+            </div>
+
+        </div>
+        
+        <div id="htmlcode">
+
+            <div id="2B"></div>
+            <div class="container">
+                <div class="place_name_box">
+                    <span class="kikaku_name" id="form_kikaku_name">メイドッチャ〜あなたの❤︎心❤︎にラブストライク〜</span>
+                    <span class="place_name" id="form_place_name">1-E</span>
+                </div>
+                <h6 class="time" id="form_time">立高祭全日程</h6>
+                <h6 class="time" id="form_time2"></h6>
+                <div class="syokai">
+                    <h5 class="naiyou" id="form_naiyou">マトを倒して景品GET！3種類のシューティングゲームとキュートなメイド空間でご主人様をお迎えします❤︎</h5>
+                </div>
+                <h4 class="dantai_name" id="form_dantai_name">1-E</h4>
+            </div>
+
+        </div>
+        <div id="htmlcode">
+
+            <div id="2B"></div>
+            <div class="container">
+                <div class="place_name_box">
+                    <span class="kikaku_name" id="form_kikaku_name">H島からの脱出</span>
+                    <span class="place_name" id="form_place_name">1-H</span>
+                </div>
+                <h6 class="time" id="form_time">立高祭全日程</h6>
+                <h6 class="time" id="form_time2">9月9日（土）10日（日）</h6>
+                <div class="syokai">
+                    <h5 class="naiyou" id="form_naiyou">謎を解いて、Ｈ島から脱出するための鍵を研究所から盗み出そう！</h5>
+                </div>
+                <h4 class="dantai_name" id="form_dantai_name">1-H</h4>
+            </div>
+
+        </div>
+        <div id="htmlcode">
+
+            <div id="2B"></div>
+            <div class="container">
+                <div class="place_name_box">
+                    <span class="kikaku_name" id="form_kikaku_name">ガラスの靴はないけれど</span>
+                    <span class="place_name" id="form_place_name">2-C教室</span>
+                </div>
+                <h6 class="time" id="form_time">立高祭全日程</h6>
+                <h6 class="time" id="form_time2"></h6>
+                <div class="syokai">
+                    <h5 class="naiyou" id="form_naiyou">人魚姫とシンデレラが織り成す現代版おとぎ話です</h5>
+                </div>
+                <h4 class="dantai_name" id="form_dantai_name">2-C</h4>
             </div>
 
         </div>
@@ -99,6 +217,24 @@
                     <h5 class="naiyou" id="form_naiyou">来い！！！！！！！！！！！！！！！！！！</h5>
                 </div>
                 <h4 class="dantai_name" id="form_dantai_name">3-B </h4>
+            </div>
+
+        </div>
+
+        <div id="htmlcode">
+
+            <div id="2B"></div>
+            <div class="container">
+                <div class="place_name_box">
+                    <span class="kikaku_name" id="form_kikaku_name">玲瓏</span>
+                    <span class="place_name" id="form_place_name">3-C</span>
+                </div>
+                <h6 class="time" id="form_time">立高祭全日程</h6>
+                <h6 class="time" id="form_time2"></h6>
+                <div class="syokai">
+                    <h5 class="naiyou" id="form_naiyou">秋風とともに届いた祭の知らせ。荘厳とした社に迎えられ、賑やかな露店や囃子に囲われて、あなたを未知の世界へ誘います。</h5>
+                </div>
+                <h4 class="dantai_name" id="form_dantai_name">3-C</h4>
             </div>
 
         </div>
@@ -184,7 +320,8 @@
             <div id="pasodo"></div>
             <div class="container">
                 <div class="place_name_box">
-                    <span class="kikaku_name" id="form_kikaku_name">パソ同作品展示会！<br><span style="font-size: 4vw;">～くつろぎの場をあなたに～</span></span>
+                    <span class="kikaku_name" id="form_kikaku_name">パソ同作品展示会！<br><span
+                            style="font-size: 4vw;">～くつろぎの場をあなたに～</span></span>
                     <span class="place_name" id="form_place_name">第1パソコン室</span>
                 </div>
                 <h6 class="time" id="form_time">立高祭全日程</h6>
