@@ -9,6 +9,18 @@
   <title>立高祭について-立高祭</title>
   <meta name="viewport"
     content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <script>
+    async function fetchData() {
+      try {
+        const response = await fetch('https://script.google.com/macros/s/AKfycbyNGede96Uukxdo_7NM-sHhEf00UdoFHzzhyV0JNQXC7tpN6VXpd8fQb6NWcO9FGaq4/exec');
+        const data = await response.json();
+        document.getElementById('sheetData').innerText = data.value;
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    }
+    window.onload = fetchData;
+  </script>
 </head>
 
 <!-- Google tag (gtag.js) -->
@@ -51,38 +63,9 @@
       </nav>
     </div>
   </header>
-
-  <div class="main">
-    <h1 class="title_text" style="text-align:left;">第76回立高祭について</h1>
-
-    <div class="container1">
-      <p>日時：2024/9/7~9/8</p>
-      <p>場所：東京都立立川高等学校</p>
-      <p style="text-align:right;">東京都立川市錦町2-13-5</p>
-
-      <div style="text-align:right;"><a href="access.html">詳しいアクセスはこちら！</a></div>
-      <br>
-
-
-
-      <div class="container2">
-        <a class="sanka">
-          参加方法：
-        </a>
-        <a class="tyuuibun">
-          今年の立高祭は事前の申し込みなしでご入場いただけます。詳しくは都立立川高等学校公式ホームページへ。
-        </a>
-      </div>
-
-
-    </div>
-
-
-    <div style="text-align:right;">
-      <a href="index.html" style="text-decoration: none;">トップに戻る</a>
-    </div>
-
-  </div>
+  
+  <h1>Google Sheets Data</h1>
+  <p id="sheetData">Loading...</p>
 
 </body>
 
