@@ -40,6 +40,7 @@
             <h5 class="naiyou" id="form_naiyou">みんなでもぐらたたきゲームをしよう！</h5>
         </div>
         <h4 class="dantai_name" id="form_dantai_name">2-B</h4>
+        <h5 class="url" id="form_url">https://example.com</h5> <!-- URL表示エリアを追加 -->
     </div>
     
     </div>
@@ -51,6 +52,7 @@
         <input type="text" name ="input_form_time2" value="日程/オプション(2行目)">
         <input type="text" name ="input_form_naiyou" value="コメント">
         <input type="text" name ="input_form_dantai_name" value="発表団体名">
+        <input type="text" name ="input_form_url" value="insuta URL"> <!-- URL入力フィールドを追加 -->
     </form>
 
     <button onClick="getElement();">コードをコピー</button>
@@ -91,6 +93,12 @@
         form_dantai_name_value.addEventListener('input',()=>{
             let input_dantai_name  = document.getElementById('form_dantai_name');
             input_dantai_name.textContent = form_dantai_name_value.value
+        })
+
+        const form_url_value = document.forms.form_test.input_form_url; // 新しいURL入力フィールドのリスナーを追加
+        form_url_value.addEventListener('input',()=>{
+            let input_url  = document.getElementById('form_url');
+            input_url.textContent = form_url_value.value
         })
 
         function getElement(){
