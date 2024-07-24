@@ -74,7 +74,7 @@ $('#make').on('click', function(){ //makeボタンが押された場合の処理
         
         // 新しいcanvasのサイズを設定
         const logo = new Image();
-        logo.src = './tachikousai.png';
+        logo.src = 'images/tachikousai.png';
         logo.onload = () => {
             const originalLogoWidth = logo.width;
             const originalLogoHeight = logo.height;
