@@ -74,9 +74,6 @@ a {
 
 .container1 {
     margin: 0 2vw;
-    font-size: 4svw;
-    word-break: keep-all;
-    overflow-wrap: anywhere;
 }
 
 /*hamburger menu*/
@@ -451,7 +448,6 @@ span {
 
 .title_text {
     margin-left: 4svw;
-    font-size: 6svw;
 }
 
 @media screen and (max-width: 768px) {
@@ -460,158 +456,7 @@ span {
     }
 }
 
-.content_title_box {
-    height: 5svw;
-    width: auto;
-    margin: 2svw;
-}
-
-.content_title_text {
-    font-size: 5svw;
-}
-
-
-
-#qr_edit {
+.kiyaku_koumoku {
     text-align: left;
-    margin-left: 1svw;
+    margin-left: 10vw;
 }
-
-#qr_edit p {
-    margin: 3svw;
-    font-size: 5svw;
-}
-
-#qr_edit label {
-    font-size: 5svw;
-    margin-left: 12.5svw;
-
-    display: inline-block;
-    width: 45svw;
-    vertical-align: top;
-
-    margin-bottom: 3svw;
-
-}
-
-#qr_edit select {
-    margin-left: 12.5svw;
-    border: solid #929292 0.1svw;
-    border-radius: 1svw;
-    background-color: #ffffff;
-    padding: 2svw;
-}
-
-#qr_edit span {
-    font-size: 5svw;
-}
-
-#qr_edit input {
-    font-size: 5svw;
-}
-
-.formText {
-    font-size: 5svw;
-}
-
-
-.reason_checkbox {
-    background: #fff;
-    border: solid #231815 3svw;
-    width: 3svw;
-    height: 3svw;
-}
-
-.reason_label {
-    width: 80svw !important;
-}
-
-.inline-block {
-    display: inline-block;
-}
-
-
-.button {
-    margin: 3svw;
-    width: 50svw;
-    height: auto;
-    font-size: 5svw;
-    padding: 2svw;
-    border: solid rgba(194, 88, 255, 0.75) 0.25svw;
-    background-color: rgb(102, 74, 121);
-    border-radius: 1.5svw;
-    color: white;
-    font-weight: bolder;
-}
-
-#qrcode {
-    display: none;
-}
-
-@keyframes heightCompressionAndDisappear {
-    0% {
-        opacity: 1;
-    }
-
-    99% {
-        opacity: 0;
-    }
-
-    100% {
-        display: none;
-    }
-}
-
-#qrContainer {
-    width: 100svw;
-    padding: auto;
-}
-
-
-#qr_edit {
-    margin: 10svw 0;
-    border: solid #cacaca 0svw;
-    border-top: solid #cacaca 0.25svw;
-    border-bottom: solid #cacaca 0.25svw;
-    padding: 5svw 0;
-}
-
-#introTextAfter {
-    display: none;
-}
-
-#dlImg {
-    display: none;
-    margin: auto;
-}
-
-#newImg {
-    display: none;
-    margin: 3svw;
-    border: solid rgba(0, 0, 0, 0.75) 0.1svw;
-    border-radius: 3svw;
-    padding: 1svw;
-}
-
-#qrcode_credit {
-    font-size: 3svw;
-}
-
-/*
-.qr_form_div {
-    margin-top: 3svw;
-}
-
-.qr_form_div label{
-    margin-bottom: 3svw;
-    display: inline-block;
-    width: 40svw;
-    vertical-align: top;
-}
-
-.qr_form {
-    height: 5svw;
-    width: 30svw;
-    font-size: 3svw;
-}
-*/
