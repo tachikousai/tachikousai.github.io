@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -5,7 +6,6 @@
   <meta charset="utf-8">
   <title></title>
   <link rel="stylesheet" href="style.css">
-  <script src="./main qr.js" type="module"></script>
 </head>
 
 <body>
@@ -58,8 +58,9 @@
 
       <form id="qr_edit">
         <div>
-          <p>1.お住まいの<wbr>市区町村を選択</p>
+          <p>1.お住まいの<wbr>市区町村を選択 (必須)</p>
           <select name="liveArea" id="liveArea" class="formText liveArea" required>
+            <option value="000000">選択してください</option>
             <option value="132284">あ：あきる野市</option>
             <option value="132071">　　昭島市</option>
             <option value="132250">い：稲城市</option>
@@ -107,7 +108,7 @@
         </div>
 
         <div>
-          <p>2.入場される方の人数を入力</p>
+          <p>2.入場される方の人数を入力 (必須)</p>
           <label>小学生以下</label>
           <select name="numPeopleElementary" id="numPeopleElementary" class="formText numPeopleElementary">
             <option>0</option>
@@ -215,7 +216,7 @@
         </div>
 
         <div>
-          <p>3.お越しになった理由を選択</p>
+          <p>3.お越しになった理由を選択 (任意)</p>
           <label class="formText reason_label">
             <input type="checkbox" name="reason" class="formText reason_checkbox" id="reason1">お子様の状況を<wbr>見たいから
           </label>
@@ -258,9 +259,7 @@
   </div>
   <script src="jquery.min.js"></script>
   <script src="jquery.qrcode.min.js" charset="utf-8"></script>
-  <script src="main qr.js" charset="utf-8"></script>
+  <script src="main_qr.js" charset="utf-8"></script>
 </body>
-
-</html>
 
 </html>
