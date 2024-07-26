@@ -12,9 +12,10 @@
   <script>
     async function fetchData() {
       try {
-        const response = await fetch('https://script.google.com/macros/s/AKfycbyNGede96Uukxdo_7NM-sHhEf00UdoFHzzhyV0JNQXC7tpN6VXpd8fQb6NWcO9FGaq4/exec');
+        const response = await fetch('https://script.google.com/macros/s/https://script.google.com/macros/s/AKfycbynifUayZ85B-D3JVsxW3Yvg8TfuH2AlDScfVJvc2rcA-zLacTbeKQFjndFg1LqV-ue/exec');
         const data = await response.json();
-        document.getElementById('sheetData').innerText = data.value;
+        document.getElementById('sheetDataB3').innerText = data.valueB3;
+        document.getElementById('sheetDataB4').innerText = data.valueB4;
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -63,9 +64,9 @@
       </nav>
     </div>
   </header>
-  
   <h1>Google Sheets Data</h1>
-  <p id="sheetData">Loading...</p>
+  <p>B3: <span id="sheetDataB3">Loading...</span></p>
+  <p>B4: <span id="sheetDataB4">Loading...</span></p>
 
 </body>
 
