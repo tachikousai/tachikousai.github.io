@@ -245,7 +245,7 @@ a {
 .place_name {
     text-align: right;
     font-weight: bold;
-    font-size: 4.5svw;
+    font-size: 5.5svw;
     margin-right: 2svw;
     margin-top: 0.75svh;
     align-items: center;
@@ -256,6 +256,13 @@ a {
 }
 
 .dantai_name {
+    text-align: right;
+    margin-bottom: -0.75svh;
+    margin-top: 0svh;
+    font-size: 3svw;
+}
+
+.url {
     text-align: right;
     margin-bottom: -0.75svh;
     margin-top: 0svh;
