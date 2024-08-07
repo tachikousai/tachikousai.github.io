@@ -1,0 +1,624 @@
+body {
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    /* IE, Edge 対応 */
+    scrollbar-width: none;
+    /* Firefox 対応 */
+}
+
+body::-webkit-scrollbar {
+    /* Chrome, Safari 対応 */
+    display: none;
+}
+
+.menu_text {
+    color: white;
+    position: absolute;
+    top: 4svh;
+    right: 2svw;
+    margin-left: 5svw;
+    font-size: 5svw;
+}
+
+.reset {
+    margin-top: 10svh;
+}
+
+.header-box {
+    position: fixed;
+    top: 0;
+    text-align: left;
+    width: 100svw;
+    height: 8svh;
+    background-color: #664a79;
+    align-items: center;
+    z-index: 1000;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#header-kai {
+    font-family: serif;
+    font-weight: bolder;
+    position: fixed;
+    position: relative;
+    font-size: 3svh;
+    margin-left: 18svw;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: white;
+}
+
+#header-text {
+    font-family: serif;
+    font-weight: bolder;
+    position: relative;
+    font-size: 5.5svh;
+    margin-left: 2svw;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: white;
+}
+
+.main {
+    z-index: 50;
+    position: absolute;
+    top: 8svh;
+}
+
+.container1 {
+    margin: 0 2vw;
+    font-size: 4svw;
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+}
+
+/*hamburger menu*/
+.drawer_hidden {
+    display: none;
+}
+
+/* ハンバーガーアイコンの設置スペース */
+.drawer_open {
+    display: flex;
+    height: 15svw;
+    width: 15svw;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 100;
+    right: 0;
+    top: 2.5svh;
+    /* 重なり順を一番上にする */
+    cursor: pointer;
+}
+
+/* ハンバーガーメニューのアイコン */
+.drawer_open span,
+.drawer_open span:before,
+.drawer_open span:after {
+    content: '';
+    display: block;
+    height: 0.75svw;
+    width: 6.25svw;
+    border-radius: 0.75svw;
+    background: #fff;
+    transition: 0.5s;
+    position: absolute;
+}
+
+/* 三本線の一番上の棒の位置調整 */
+.drawer_open span:before {
+    bottom: 2svw;
+}
+
+/* 三本線の一番下の棒の位置調整 */
+.drawer_open span:after {
+    top: 2svw;
+}
+
+/* アイコンがクリックされたら真ん中の線を透明にする */
+#drawer_input:checked~.drawer_open span {
+    background: rgba(255, 255, 255, 0);
+}
+
+/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+#drawer_input:checked~.drawer_open span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+
+#drawer_input:checked~.drawer_open span::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+/* メニューのデザイン*/
+.nav_content {
+    width: 100%;
+    height: 100%;
+    top: 8svh;
+    left: 100%;
+    /* メニューを画面の外に飛ばす */
+    background: #fff;
+    transition: .5s;
+    position: fixed;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.796);
+}
+
+/* メニュー黒ポチを消す */
+.nav_list {
+    margin-top: 5svh;
+    margin-left: 0svw;
+    list-style: none;
+    font-size: 7svw;
+}
+
+/* アイコンがクリックされたらメニューを表示 */
+#drawer_input:checked~.nav_content {
+    left: 25svw;
+    /* メニューを画面に入れる */
+}
+
+.nav {
+    /*margin-left: 85svw;*/
+    z-index: 101;
+}
+
+.floorchange {
+    /*position: relative;
+    top: -4svh;*/
+    display: flex;
+    margin-top: -4svh;
+    margin-bottom: -4svh;
+}
+
+.position {
+    /*position: relative;
+    top: -4svh;*/
+    margin-top: 5svh;
+}
+
+.floorbutton {
+    margin-top: 3svh;
+    margin-left: 9svw;
+    width: 9svw;
+    height: 9svw;
+    background-color: #e7c3ff;
+    border: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+#mapcontainer {
+    z-index: 10;
+}
+
+.leaflet {
+    z-index: 50;
+}
+
+.now_floor_disp {
+    font-size: 10svw;
+}
+
+.now_floor_disp_num {
+    font-size: 20svw;
+}
+
+#select_id {
+    color: blue;
+}
+
+.container {
+    color: #333;
+    width: 90svw;
+    border: 2px solid;
+    border-color: #333;
+    border-radius: 2svw;
+    margin: auto;
+    padding: 1svw;
+    margin-top: 2svh;
+    text-align: left;
+}
+
+.place_name_box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.kikaku_name {
+    font-weight: bold;
+    font-size: 5.5svw;
+    float: left;
+    margin-left: 2svw;
+    margin-top: 0.5svh;
+}
+
+.place_name {
+    text-align: right;
+    font-weight: bold;
+    font-size: 5.5svw;
+    margin-right: 2svw;
+    margin-top: 0.75svh;
+    align-items: center;
+    display: flex;
+    background-color: #e7c3ff;
+    border-radius: 2svw;
+    padding: 0.75svw 1svw;
+}
+
+.dantai_name {
+    text-align: right;
+    margin-bottom: -0.75svh;
+    margin-top: 0svh;
+    font-size: 3svw;
+}
+
+.url {
+    text-align: right;
+    margin-bottom: -0.75svh;
+    margin-top: 0svh;
+    font-size: 3svw;
+}
+
+.time {
+    font-weight: bold;
+    font-size: 4.5svw;
+    margin-left: 3svw;
+    margin-top: 0.5svh;
+    margin-bottom: 0svw;
+    text-align: right;
+}
+
+.syokai {
+    margin: 0svw 3svw 0svw 4svw;
+}
+
+.naiyou {
+    margin: 1svw 1svw;
+    font-size: 3.5svw;
+}
+
+#popup_box {
+    padding-left: 5svw;
+    text-align: left;
+    margin: 10svw;
+    margin-top: 20svh;
+    z-index: 0;
+    width: 75svw;
+    height: 100svw;
+    background-color: rgba(0, 0, 0, 0.75);
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        z-index: 0;
+        visibility: hidden;
+    }
+
+    100% {
+        opacity: 1;
+        z-index: 100;
+        visibility: visible;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        z-index: 100;
+        visibility: visible;
+    }
+
+    100% {
+        opacity: 0;
+        z-index: 0;
+        visibility: hidden;
+    }
+}
+
+#popup_text {
+    font-size: 7svw;
+    color: #fff;
+    font-weight: bold;
+    margin-top: 5svw;
+    display: flex;
+}
+
+#popup_message {
+    font-size: 5svw;
+    color: #fff;
+}
+
+.close_button {
+    position: absolute;
+    top: 6svw;
+    right: 5svw;
+    border: none;
+    outline: none;
+    background: rgb(255, 255, 255);
+    font-size: 4svw;
+    font-weight: bold;
+    color: #000000;
+}
+
+#htmlcode {
+    margin-top: -8svh;
+    padding-top: 8svh;
+}
+
+.sp_top_img {
+    width: 100svw;
+    height: 80svh;
+    position: relative;
+    /*top: 8svh;
+    left: -15svw;*/
+}
+
+.toha {
+    width: 45%;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #8d93c8;
+    border-radius: 2vw;
+    background-color: rgba(164, 168, 212, 0.4);
+    font-size: 25px;
+    color: black;
+    margin-right: 10px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 0 10px #f0f6da;
+
+}
+
+.tuite {
+    width: 45%;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #8d93c8;
+    border-radius: 2vw;
+    background-color: rgba(164, 168, 212, 0.4);
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 22px;
+    color: black;
+    margin-left: 10px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 0 10px #f0f6da;
+}
+
+.minicontainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 1svh;
+    position: relative;
+}
+
+.title {
+    position: absolute;
+    top: 30svh;
+    left: 50svw;
+    font-size: 12svw;
+    color: #000000;
+    padding: 0;
+    margin: 0;
+    transform: translate(-50%, -50%);
+    writing-mode: vertical-lr;
+    text-shadow: 0 0 15px white;
+}
+
+span {
+    position: relative;
+    top: 1%;
+    text-combine-upright: all;
+    -webkit-text-combine: horizontal;
+}
+
+.title2 {
+    position: absolute;
+    top: 52svh;
+    margin-left: 50svw;
+    font-size: 10svw;
+    color: white;
+    transform: translate(-50%, -50%);
+    text-shadow: 0 0 15px #a6bbed;
+    color: #ed98ce;
+}
+
+.date {
+    position: absolute;
+    top: 65svh;
+    margin-left: 50svw;
+    margin-top: 0;
+    font-size: 7svw;
+    color: #fafdff;
+    transform: translate(-50%, -50%);
+}
+
+.title_text {
+    margin-left: 4svw;
+    font-size: 6svw;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        touch-action: pan-x pan-y;
+    }
+}
+
+.content_title_box {
+    height: 5svw;
+    width: auto;
+    margin: 2svw;
+}
+
+.content_title_text {
+    font-size: 5svw;
+}
+
+
+
+#qr_edit {
+    text-align: left;
+    margin-left: 1svw;
+}
+
+#qr_edit p {
+    margin: 3svw;
+    font-size: 5svw;
+}
+
+#qr_edit label {
+    font-size: 5svw;
+    margin-left: 12.5svw;
+
+    display: inline-block;
+    width: 45svw;
+    vertical-align: top;
+
+    margin-bottom: 3svw;
+
+}
+
+#qr_edit select {
+    margin-left: 12.5svw;
+    border: solid #929292 0.1svw;
+    border-radius: 1svw;
+    background-color: #ffffff;
+    padding: 2svw;
+}
+
+#qr_edit span {
+    font-size: 5svw;
+}
+
+#qr_edit input {
+    font-size: 5svw;
+}
+
+.formText {
+    font-size: 5svw;
+}
+
+
+.reason_checkbox {
+    background: #fff;
+    border: solid #231815 3svw;
+    width: 3svw;
+    height: 3svw;
+}
+
+.reason_label {
+    width: 80svw !important;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+
+.button {
+    margin: 3svw;
+    width: 50svw;
+    height: auto;
+    font-size: 5svw;
+    padding: 2svw;
+    border: solid rgba(194, 88, 255, 0.75) 0.25svw;
+    background-color: rgb(102, 74, 121);
+    border-radius: 1.5svw;
+    color: white;
+    font-weight: bolder;
+}
+
+#qrcode {
+    display: none;
+}
+
+@keyframes heightCompressionAndDisappear {
+    0% {
+        opacity: 1;
+    }
+
+    99% {
+        opacity: 0;
+    }
+
+    100% {
+        display: none;
+    }
+}
+
+#qrContainer {
+    width: 100svw;
+    padding: auto;
+}
+
+
+#qr_edit {
+    margin: 10svw 0;
+    border: solid #cacaca 0svw;
+    border-top: solid #cacaca 0.25svw;
+    border-bottom: solid #cacaca 0.25svw;
+    padding: 5svw 0;
+}
+
+#introTextAfter {
+    display: none;
+}
+
+#dlImg {
+    display: none;
+    margin: auto;
+}
+
+#newImg {
+    display: none;
+    margin: 3svw;
+    border: solid rgba(0, 0, 0, 0.75) 0.1svw;
+    border-radius: 3svw;
+    padding: 1svw;
+}
+
+#qrcode_credit {
+    font-size: 3svw;
+}
+
+/*
+.qr_form_div {
+    margin-top: 3svw;
+}
+
+.qr_form_div label{
+    margin-bottom: 3svw;
+    display: inline-block;
+    width: 40svw;
+    vertical-align: top;
+}
+
+.qr_form {
+    height: 5svw;
+    width: 30svw;
+    font-size: 3svw;
+}
+*/
