@@ -603,7 +603,49 @@ span {
 #qrcode_credit {
     font-size: 3svw;
 }
+.header-box2 {
+    position: fixed;
+    top: 8svh;
+    text-align: left;
+    width: 100svw;
+    height: 8svh;
+    background-color: hsl(130, 50%, 55%);
+    align-items: center;
+    z-index: 1000;
+}
 
+.header-box2 p {
+    font-size: 4.5svw;
+    color: #ffffff;
+    margin: 0;
+    line-height: 1;
+    padding-top: 1.5svh;
+    font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+}
+
+
+/*
+.header-box {
+    position: fixed;
+    top: 0;
+    text-align: left;
+    width: 100svw;
+    height: 8svh;
+    background-color: #664a79;
+    align-items: center;
+    z-index: 1000;
+}
+#header-kai {
+    font-family: serif;
+    font-weight: bolder;
+    position: fixed;
+    position: relative;
+    font-size: 3svh;
+    margin-left: 18svw;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: white;
+}
 /*
 .qr_form_div {
     margin-top: 3svw;
