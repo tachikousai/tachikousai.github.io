@@ -13,14 +13,19 @@
     <script>
         async function fetchData() {
             try {
-                const response = await fetch('https://script.google.com/macros/s/AKfycbynifUayZ85B-D3JVsxW3Yvg8TfuH2AlDScfVJvc2rcA-zLacTbeKQFjndFg1LqV-ue/exec');
+                const response = await fetch('https://script.google.com/macros/s/AKfycbyNGede96Uukxdo_7NM-sHhEf00UdoFHzzhyV0JNQXC7tpN6VXpd8fQb6NWcO9FGaq4/exec');
                 const data = await response.json();
                 document.getElementById('sheetDataB3').innerText = data.valueB3;
+                document.getElementById('sheetDataB18').innerText = data.valueB18;
+                document.getElementById('sheetDataB19').innerText = data.valueB19;
 
-                // sheetDataB4 の加工
+                // sheetDataB4,19の加工
                 let sheetDataB4 = data.valueB4;
                 sheetDataB4 = sheetDataB4.replace("1899-12-29T15:", "").replace(":00.000Z", "").replace("00:", "").replace(":00", "");
                 document.getElementById('sheetDataB4').innerText = sheetDataB4;
+                let sheetDataB19 = data.valueB19;
+                sheetDataB19 = sheetDataB19.replace("1899-12-29T15:", "").replace(":00.000Z", "").replace("00:", "").replace(":00", "");
+                document.getElementById('sheetDataB19').innerText = sheetDataB19;
 
             } catch (error) {
                 console.error('Error fetching data:', error);
@@ -39,7 +44,11 @@
 
         <div class="header-box2">
             <p>現在体育館でおこなれている団体は<span id="sheetDataB3">Loading...</span>です。約
-                <span id="sheetDataB4">Loading...</span>分以上の時間遅れています。</p>
+                <span id="sheetDataB4">Loading...</span>分遅れています。</p>
+        </div>
+        <div class="header-box3">
+            <p>現在トレルでおこなれている団体は<span id="sheetDataB18">Loading...</span>です。約
+                <span id="sheetDataB19">Loading...</span>分遅れています。</p>
         </div>
 
         <span class="menu_text">Menu</span>
@@ -67,6 +76,10 @@
             </nav>
         </div>
     </header>
+<div class="dannpatu">
+    <h2>団体発表の予定表は以下の通りです</h2>
+    <p>写真を張り付ける予定</p>
+</div>
 
 </body>
 

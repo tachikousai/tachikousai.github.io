@@ -611,7 +611,7 @@ span {
     height: 8svh;
     background-color: hsl(130, 50%, 55%);
     align-items: center;
-    z-index: 1000;
+    z-index: 10;
 }
 
 .header-box2 p {
@@ -622,6 +622,35 @@ span {
     padding-top: 1.5svh;
     font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
 }
+
+.header-box3 {
+    position: fixed;
+    top: 16svh;
+    text-align: left;
+    width: 100svw;
+    height: 8svh;
+    background-color: hsl(227, 94%, 75%);
+    align-items: center;
+    z-index: 10;
+}
+
+.header-box3 p {
+    font-size: 4.5svw;
+    color: #ffffff;
+    margin: 0;
+    line-height: 1;
+    padding-top: 1.5svh;
+    font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+}
+
+.dannpatu{
+    font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+    position: relative;
+    margin-top: 24svh;
+    font-size: 4svw;
+
+}
+
 
 
 /*
