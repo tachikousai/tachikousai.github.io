@@ -229,6 +229,10 @@ a {
     text-align: left;
 }
 
+.expalainmake {
+    top:24svh
+}
+
 .place_name_box {
     display: flex;
     justify-content: space-between;
