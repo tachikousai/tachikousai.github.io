@@ -17,14 +17,14 @@ body::-webkit-scrollbar {
 .menu_text {
     color: white;
     position: absolute;
-    top: 4svh;
+    top: 10svw;
     right: 2svw;
     margin-left: 5svw;
     font-size: 5svw;
 }
 
 .reset {
-    margin-top: 10svh;
+    margin-top: 19svw;
 }
 
 .header-box {
@@ -32,7 +32,8 @@ body::-webkit-scrollbar {
     top: 0;
     text-align: left;
     width: 100svw;
-    height: 8svh;
+    height: 17svw;
+    /*max-height: 150px;*/
     background-color: #664a79;
     align-items: center;
     z-index: 1000;
@@ -47,9 +48,8 @@ a {
     font-family: serif;
     font-weight: bolder;
     position: fixed;
-    position: relative;
-    font-size: 3svh;
-    margin-left: 18svw;
+    font-size: 6svw;
+    margin-left: 14svw;
     margin-top: auto;
     margin-bottom: auto;
     color: white;
@@ -59,24 +59,221 @@ a {
     font-family: serif;
     font-weight: bolder;
     position: relative;
-    font-size: 5.5svh;
+    font-size: 12svw;
     margin-left: 2svw;
     margin-top: auto;
     margin-bottom: auto;
     color: white;
 }
 
+.top_Infobar {
+    width: 100svw;
+    height: 10svw;
+    background-color: #edd3e3;
+    display: flex;
+    position: relative;
+}
+
+.top_Infobar_Status {
+    position: relative;
+
+    height: 8svw;
+    top: 0.75svw;
+    left: 0.25svw;
+    width: 20svw;
+    font-size: 6svw;
+    background-color: rgba(174, 116, 195, 0.5);
+    border: #000000;
+    border-style: inherit;
+    border-radius: 2svw;
+    padding: 0.25svw;
+    line-height: 8svw;
+}
+
+
+.top_Infobar_Title {
+    position: absolute;
+
+    height: 9svw;
+    top: 1svw;
+    left: 20.25svw;
+    width: 60svw;
+    font-size: 6svw;
+    padding: 0svw;
+    line-height: 9svw;
+}
+
+
+.top_Infobar_Delay {
+    position: absolute;
+
+    height: 8svw;
+    top: 0.75svw;
+    right: 0.25svw;
+    width: 20svw;
+    font-size: 4.5svw;
+    background-color: rgba(174, 116, 195, 0.5);
+    border: #000000;
+    border-style: inherit;
+    border-radius: 2svw;
+    padding: 0.25svw 0;
+    line-height: 8svw;
+}
+
+.top_Picture {
+    position: relative;
+    width: 90svw;
+    height: 60svw;
+    overflow: hidden;
+    margin: 2svw auto;
+    border: solid rgba(87, 87, 87, 0.75) 0.5svw;
+    border-radius: 2svw;
+}
+
+
+
+.img-01,
+.img-02,
+.img-03 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.img-01 {
+    background-image: url('images/top01.jpg');
+    animation: slide-animation-01 24s infinite;
+}
+
+.img-02 {
+    background-image: url('images/top02.jpg');
+    animation: slide-animation-02 24s infinite;
+}
+
+.img-03 {
+    background-image: url('images/top03.jpg');
+    animation: slide-animation-03 24s infinite;
+}
+
+@keyframes slide-animation-01 {
+    0% {
+        opacity: 1;
+        transform: scale(1.0);
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 0;
+        transform: scale(1.15);
+    }
+
+    90% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1.0);
+    }
+}
+
+@keyframes slide-animation-02 {
+    0% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 0;
+        transform: scale(1.0);
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes slide-animation-03 {
+    0% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0;
+        transform: scale(1.0);
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+}
+
 .main {
     z-index: 50;
     position: absolute;
-    top: 8svh;
+    top: 17svw;
 }
 
 .container1 {
-    margin: 0 2vw;
+    margin: 0 2svw;
     font-size: 4svw;
     word-break: keep-all;
     overflow-wrap: anywhere;
+}
+
+.top_Mini_Title {
+    margin-bottom: 10svw;
+}
+
+#top_Mini_Title_Count {
+    font-size: 6.5svw;
+    font-family: serif;
+    font-weight: bold;
+}
+
+#top_Mini_Title_Main {
+    font-size: 7svw;
+    font-family: serif;
+    font-weight: bold;
+}
+
+#top_Mini_Title_Subtitle {
+    font-size: 7svw;
+    font-family: serif;
+    font-weight: bold;
+    margin-left: 3svw;
+}
+
+#top_Mini_Title_Date {
+    font-size: 6svw;
 }
 
 /*hamburger menu*/
@@ -87,16 +284,17 @@ a {
 /* ハンバーガーアイコンの設置スペース */
 .drawer_open {
     display: flex;
-    height: 15svw;
+    height: 12.5svw;
     width: 15svw;
     justify-content: center;
     align-items: center;
     position: absolute;
     z-index: 100;
     right: 0;
-    top: 2.5svh;
+    top: 6.5svw;
     /* 重なり順を一番上にする */
     cursor: pointer;
+    margin: 0;
 }
 
 /* ハンバーガーメニューのアイコン */
@@ -143,7 +341,7 @@ a {
 .nav_content {
     width: 100%;
     height: 100%;
-    top: 8svh;
+    top: 17svw;
     left: 100%;
     /* メニューを画面の外に飛ばす */
     background: #fff;
@@ -155,7 +353,7 @@ a {
 
 /* メニュー黒ポチを消す */
 .nav_list {
-    margin-top: 5svh;
+    margin-top: 5svw;
     margin-left: 0svw;
     list-style: none;
     font-size: 7svw;
@@ -227,10 +425,6 @@ a {
     padding: 1svw;
     margin-top: 2svh;
     text-align: left;
-}
-
-.expalainmake {
-    top:24svh
 }
 
 .place_name_box {
@@ -363,6 +557,40 @@ a {
     padding-top: 8svh;
 }
 
+
+/*トップページのCSS*/
+.top_textBox {
+    width: 75svw;
+    height: auto;
+    border: solid rgba(0, 0, 0, 0.75) 0.5svw;
+    border-radius: 3svw;
+    margin: 7.5svw auto;
+    padding: 4svw;
+    position: relative;
+}
+
+.top_textBox_title {
+    position: absolute;
+    font-size: 6svw;
+    top: -10svw;
+    background-color: rgba(255, 255, 255, 1);
+    padding: 0 2svw;
+}
+
+.top_textBox_main {
+    width: 70svw;
+    position: relative;
+    margin: 2svw auto 0 auto;
+    text-align: left;
+}
+
+.top_textBox_main span {
+    font-size: 4.5svw;
+}
+
+
+
+
 .sp_top_img {
     width: 100svw;
     height: 80svh;
@@ -481,6 +709,20 @@ span {
     font-size: 5svw;
 }
 
+
+.link_color {
+    color: rgba(13, 0, 255, 0.75);
+    text-decoration: underline;
+}
+
+.linkBox {
+    margin-top: 1svw;
+}
+
+.link_more {
+    margin-left: 40svw;
+    font-size: 4svw;
+}
 
 
 #qr_edit {
@@ -607,78 +849,7 @@ span {
 #qrcode_credit {
     font-size: 3svw;
 }
-.header-box2 {
-    position: fixed;
-    top: 8svh;
-    text-align: left;
-    width: 100svw;
-    height: 8svh;
-    background-color: hsl(130, 50%, 55%);
-    align-items: center;
-    z-index: 10;
-}
 
-.header-box2 p {
-    font-size: 4.5svw;
-    color: #ffffff;
-    margin: 0;
-    line-height: 1;
-    padding-top: 1.5svh;
-    font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
-}
-
-.header-box3 {
-    position: fixed;
-    top: 16svh;
-    text-align: left;
-    width: 100svw;
-    height: 8svh;
-    background-color: hsl(227, 94%, 75%);
-    align-items: center;
-    z-index: 10;
-}
-
-.header-box3 p {
-    font-size: 4.5svw;
-    color: #ffffff;
-    margin: 0;
-    line-height: 1;
-    padding-top: 1.5svh;
-    font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
-}
-
-.dannpatu{
-    font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
-    position: relative;
-    margin-top: 24svh;
-    font-size: 4svw;
-
-}
-
-
-
-/*
-.header-box {
-    position: fixed;
-    top: 0;
-    text-align: left;
-    width: 100svw;
-    height: 8svh;
-    background-color: #664a79;
-    align-items: center;
-    z-index: 1000;
-}
-#header-kai {
-    font-family: serif;
-    font-weight: bolder;
-    position: fixed;
-    position: relative;
-    font-size: 3svh;
-    margin-left: 18svw;
-    margin-top: auto;
-    margin-bottom: auto;
-    color: white;
-}
 /*
 .qr_form_div {
     margin-top: 3svw;
@@ -697,3 +868,120 @@ span {
     font-size: 3svw;
 }
 */
+
+#top_footer_adjuster {
+    height: 15svw;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 94svw;
+    background: rgba(142, 241, 127, 0.5);
+    z-index: 150;
+    height: 12.5svw;
+    /*border: solid rgba(0, 0, 0, 0.75) 0svw;*/
+    border-radius: 3svw;
+    margin: 3svw;
+}
+
+.top_Footer_Detail {
+    position: absolute;
+
+    height: 10svw;
+    top: 1svw;
+    left: 1svw;
+    width: 25svw;
+    font-size: 4.5svw;
+    font-weight: bold;
+    background-color: rgba(174, 116, 195, 0.75);
+    border: #000000;
+    border-style: inherit;
+    border-radius: 2svw;
+    padding: auto 0;
+    line-height: 10svw;
+}
+
+.top_Footer_Timetable {
+    position: absolute;
+
+    height: 10svw;
+    top: 1svw;
+    left: 27svw;
+    width: 40svw;
+    font-size: 4.5svw;
+    font-weight: bold;
+
+    background-color: rgba(174, 116, 195, 0.75);
+    border: #000000;
+    border-style: inherit;
+    border-radius: 2svw;
+    padding: auto 0;
+    line-height: 10svw;
+}
+
+.top_Footer_Access {
+    position: absolute;
+
+    height: 10svw;
+    top: 1svw;
+    left: 68svw;
+    width: 25svw;
+    font-size: 4.5svw;
+    font-weight: bold;
+
+    background-color: rgba(174, 116, 195, 0.75);
+    border: #000000;
+    border-style: inherit;
+    border-radius: 2svw;
+    padding: auto 0;
+    line-height: 10svw;
+}
+.header-box2 {
+    position: fixed;
+    top: 17svw;
+    text-align: left;
+    width: 100svw;
+    height: 16svw;
+    background-color: hsl(130, 50%, 55%);
+    align-items: center;
+    z-index: 10;
+}
+
+.header-box2 p {
+    font-size: 4.5svw;
+    color: #ffffff;
+    margin: 0;
+    line-height: 1;
+    padding-top: 1.5svh;
+    font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+}
+
+.header-box3 {
+    position: fixed;
+    top: 33svw;
+    text-align: left;
+    width: 100svw;
+    height: 16svw;
+    background-color: hsl(227, 94%, 75%);
+    align-items: center;
+    z-index: 10;
+}
+
+.header-box3 p {
+    font-size: 4.5svw;
+    color: #ffffff;
+    margin: 0;
+    line-height: 1;
+    padding-top: 1.5svh;
+    font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+}
+
+.dannpatu{
+    font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+    position: relative;
+    margin-top: 49svw;
+    font-size: 4svw;
+
+}

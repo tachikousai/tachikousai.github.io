@@ -1,85 +1,155 @@
 <!DOCTYPE html>
+<html>
 
 <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-    <meta name="viewport"
-        content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-    <script type="text/javascript" src="main.js"></script>
-
-    <title>ホーム-立高祭</title>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="style.css">
+  <script src="./main.js"></script>
 </head>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-M7EDTWMFQ1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-M7EDTWMFQ1');
-</script>
-
 <body>
-    <div id="script"></div>
-    <span id="js-code"></span>
-    <header class="header-box">
-        <a href="index.html"><h1 id="header-kai">第76回<span id="header-text">立高祭</span></h1></a>
-        <span class="menu_text">Menu</span>
-        <!-- ハンバーガーメニュー部分 -->
-        <div class="nav">
-            <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
-            <input id="drawer_input" class="drawer_hidden" type="checkbox">
-            <!-- ハンバーガーアイコン -->
-            <label for="drawer_input" class="drawer_open"><span></span></label>
+  <header class="header-box">
+    <a href="index.html"><h1 id="header-kai">第76回<span id="header-text">立高祭</span></h1></a>
+    <span class="menu_text">Menu</span>
+    <!-- ハンバーガーメニュー部分 -->
+    <div class="nav">
+        <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+        <input id="drawer_input" class="drawer_hidden" type="checkbox">
+        <!-- ハンバーガーアイコン -->
+        <label for="drawer_input" class="drawer_open"><span></span></label>
 
-            <!-- メニュー -->
-            <nav class="nav_content">
-                <ul class="nav_list">
-                    <li class="nav_item"><a href="whatis.html">立高祭とは？</a></li>
-                    <li class="nav_item"><a href="about.html">今年の立高祭</a></li>
-                    <li class="nav_item"><a href="map.html">校内マップ</a></li>
-                    <li class="nav_item"><a href="detail.html">発表一覧</a></li>
-                    <li class="nav_item"><a href="kuchikomi.html">口コミ</a></li>
-                    <li class="nav_item"><a href="2024/createQR.html">受付QRコード作成</a></li>
-                    <li class="nav_item"><a href="danpatu.html">団体発表時間</a></li>
-                    <li class="nav_item"><a href="access.html">アクセス</a></li>
-                    <li class="nav_item"><a href="site.html">このサイトについて</a></li>
-                    <li class="nav_item"><a href="license.html">利用規約</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+        <!-- メニュー -->
+        <nav class="nav_content">
+            <ul class="nav_list">
+                <li class="nav_item"><a href="whatis.html">立高祭とは？</a></li>
+                <li class="nav_item"><a href="about.html">今年の立高祭</a></li>
+                <li class="nav_item"><a href="map.html">校内マップ</a></li>
+                <li class="nav_item"><a href="detail.html">発表一覧</a></li>
+                <li class="nav_item"><a href="kuchikomi.html">口コミ</a></li>
+                <li class="nav_item"><a href="2024/createQR.html">受付QRコード作成</a></li>
+                <li class="nav_item"><a href="danpatu.html">団体発表時間</a></li>
+                <li class="nav_item"><a href="access.html">アクセス</a></li>
+                <li class="nav_item"><a href="site.html">このサイトについて</a></li>
+                <li class="nav_item"><a href="license.html">利用規約</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-    <div class="main">
-        <img src="images/top_pic.jpg" class="sp_top_img">
-        <h1 class="title">第<span>76</span>回立高祭</h1>
-        <h2 class="title2">-綺羅新風-</h2>
-        <h3 class="date">2024/9/7-9/8</h3>
+  <div class="main">
+    <!--開演中情報・最新情報等の掲示-->
+    <div class="top_Infobar">
+      <div class="top_Infobar_Status" id="top_Infobar_Status">開演中</div>
+      <div class="top_Infobar_Title" id="top_Infobar_Title">パフォーマンス</div>
+      <div class="top_Infobar_Delay" id="top_Infobar_Delay">遅れなし</div>
+    </div>
 
-        <div class="minicontainer">
-            <a class="toha" href="whatis.html">
-                <div>
-                    <p>立高祭とは？</p>
-                </div>
-            </a>
 
-            <a class="tuite" href="about.html">
-                <div>
-                    <p>第76回<br>立高祭について</p>
-                </div>
-            </a>
-        </div>
+    <!--トップページ画像-->
+    <div class="top_Picture">
+      <div class="img-01"></div>
+      <div class="img-02"></div>
+      <div class="img-03"></div>
+    </div>
 
-        <h4>このサイトの内容の無断転載を禁止します
-            <br>
-            制作:立高祭実行委員会
-        </h4>
+    <div class="top_Mini_Title">
+      <div>
+        <span id="top_Mini_Title_Count">第76回</span>
+        <span id="top_Mini_Title_Main">立高祭</span>
+        <span id="top_Mini_Title_Subtitle">-綺羅新風-</span>
+      </div>
+      <div>
+        <span id="top_Mini_Title_Date">2024/9/7 ～ 9/8</span>
+      </div>
+    </div>
+
+    <div class="top_textBox">
+      <p class="top_textBox_title" id="top_textBox_news">NEWS</p>
+      <div class="top_textBox_main">
+        <span>今年度から、受付ではQRコードを使用します。<a href="2024/createQR.html"
+            class="link_color">QRコード生成ページ</a>から、事前に生成していただけるとスムーズに入場できます。</span>
+      </div>
+    </div>
+
+    <div class="top_textBox">
+      <p class="top_textBox_title" id="top_textBox_news">立高祭とは？</p>
+      <div class="top_textBox_main">
+        <span>立高生が全力で取り組むお祭りです。</span>
+      </div>
+      <div class="linkBox">
+        <a class="link_more" href="whatis.html">詳しくはこちら ＞</a>
+      </div>
+    </div>
+
+    <div class="top_textBox">
+      <p class="top_textBox_title" id="top_textBox_news">開催日程</p>
+      <div class="top_textBox_main">
+        <span>2024年9月7日から8日まで、東京都立立川高等学校で行われます。事前予約は不要です。</span>
+      </div>
+      <div class="linkBox">
+        <a class="link_more" href="about.html">詳しくはこちら ＞</a>
+      </div>
+    </div>
+
+    <div class="top_textBox">
+      <p class="top_textBox_title" id="top_textBox_news">アクセス</p>
+      <div class="top_textBox_main">
+        <span>JR立川駅から　　　徒歩n分<br>柴崎体育館駅から　徒歩n分<br>立川南駅から　　　徒歩n分<br>走ったらもうちょい早く着けるよ</span>
+      </div>
+      <div class="linkBox">
+        <a class="link_more" href="access.html">詳しくはこちら ＞</a>
+      </div>
+    </div>
+
+    <div class="top_textBox">
+      <p class="top_textBox_title" id="top_textBox_news">お願い</p>
+      <div class="top_textBox_main">
+        <span>校内では実行委員・教員の指示に従ってください。</span>
+      </div>
+    </div>
+
+    <div class="top_textBox">
+      <p class="top_textBox_title" id="top_textBox_news">このサイトについて</p>
+      <div class="top_textBox_main">
+        <span>このサイトは立高祭実行委員会が運営しています。ページや機能はほぼすべてオリジナルです。</span>
+      </div>
+      <div class="linkBox">
+        <a class="link_more" href="site.html">詳しくはこちら ＞</a>
+      </div>
+    </div>
+
+    <div class="top_Media_Link">
+      <!--ここにXやらInstagramのリンクを貼り付け-->
+    </div>
+
+
+    <div id="top_footer_adjuster"></div>
+
+    <div class="container1">
 
     </div>
 
+
+  </div>
+  <footer>
+    <div>
+      <a href="detail.html">
+        <div class="top_Footer_Detail" id="top_Footer_Detail">出展一覧</div>
+      </a>
+      <a href="danpatu.html">
+        <div class="top_Footer_Timetable" id="top_Footer_Timetable">タイムテーブル</div>
+      </a>
+      <a href="access.html">
+        <div class="top_Footer_Access" id="top_Footer_Access">アクセス</div>
+      </a>
+    </div>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="jquery.qrcode.min.js" charset="utf-8"></script>
+  <script src="main.js" charset="utf-8"></script>
 </body>
+
+</html>
 
 </html>
