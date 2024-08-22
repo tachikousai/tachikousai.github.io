@@ -21,10 +21,10 @@
 
             // sheetDataB4,19の加工
             let sheetDataB4 = data.valueB4;
-            sheetDataB4 = sheetDataB4.replace("1899-12-29T15:", "").replace(":00.000Z", "").replace("00:", "").replace(":00", "");
+            sheetDataB4 = sheetDataB4.replace("1899-12-29T15:", "").replace(":00.000Z", "").replace("00:", "").replace(":00", "").replace("00","0").replace("05","5");
             document.getElementById('sheetDataB4').innerText = sheetDataB4;
             let sheetDataB19 = data.valueB19;
-            sheetDataB19 = sheetDataB19.replace("1899-12-29T15:", "").replace(":00.000Z", "").replace("00:", "").replace(":00", "");
+            sheetDataB19 = sheetDataB19.replace("1899-12-29T15:", "").replace(":00.000Z", "").replace("00:", "").replace(":00", "").replace("00","0").replace("05","5");
             document.getElementById('sheetDataB19').innerText = sheetDataB19;
 
         } catch (error) {
@@ -33,6 +33,23 @@
     }
 
     window.onload = fetchData;
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      let infobars = document.querySelectorAll('.top_Infobar');
+      let currentIndex = 0;
+  
+      setInterval(() => {
+        // 全てのInfobarを非表示にする
+        infobars.forEach(infobar => infobar.style.display = 'none');
+        
+        // 現在のインデックスのInfobarを表示する
+        infobars[currentIndex].style.display = 'block';
+  
+        // インデックスを切り替える
+        currentIndex = (currentIndex + 1) % infobars.length;
+      }, 3000); // 3秒ごとに切り替え
+    });
   </script>
 </head>
 
@@ -67,16 +84,19 @@
 
   <div class="main">
     <!--開演中情報・最新情報等の掲示-->
-    <div class="top_Infobar">
+    <a href="danpatu.html">
+    <div class="top_Infobar" style="display: block;">
       <div class="top_Infobar_Status" id="top_Infobar_Status">体育館</div>
       <div class="top_Infobar_Title" id="top_Infobar_Title">発表団体は<span id="sheetDataB3">Loading...</span></div>
       <div class="top_Infobar_Delay" id="top_Infobar_Delay">遅れ<span id="sheetDataB4"></span>分</div>
     </div>
-    <div class="top_Infobar">
+    <div class="top_Infobar" style="display: none;">
       <div class="top_Infobar_Status" id="top_Infobar_Status">トレル</div>
       <div class="top_Infobar_Title" id="top_Infobar_Title">発表団体は<span id="sheetDataB18">Loading...</span></div>
       <div class="top_Infobar_Delay" id="top_Infobar_Delay">遅れ<span id="sheetDataB19"></span>分</div>
     </div>
+    </a>
+    
 
 
     <!--トップページ画像-->
