@@ -943,7 +943,7 @@ footer {
     top: 17svw;
     text-align: left;
     width: 100svw;
-    height: 16svw;
+    height: 13svw;
     background-color: hsl(130, 50%, 55%);
     align-items: center;
     z-index: 10;
@@ -960,10 +960,10 @@ footer {
 
 .header-box3 {
     position: fixed;
-    top: 33svw;
+    top: 30svw;
     text-align: left;
     width: 100svw;
-    height: 16svw;
+    height: 13svw;
     background-color: hsl(227, 94%, 75%);
     align-items: center;
     z-index: 10;
@@ -981,7 +981,7 @@ footer {
 .dannpatu{
     font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
     position: relative;
-    margin-top: 49svw;
+    margin-top: 43svw;
     font-size: 4svw;
 
 }
