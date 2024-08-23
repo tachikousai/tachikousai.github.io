@@ -90,7 +90,7 @@ $('#make').on('click', function () { //makeボタンが押された場合の処�
             }
             qrCodeContext.putImageData(qrCodeImageData, 0, 0);
 
-            const logo = new Image();
+            const logo = new Image();//裏の文字と重なって見ずらいので廃止
             logo.src = 'images/tachikousai.png'; // QRコードの下に表示する画像
             logo.onload = () => {
                 const originalLogoWidth = logo.width;
@@ -105,7 +105,7 @@ $('#make').on('click', function () { //makeボタンが押された場合の処�
                 combinedCanvas.height = qrCodeCanvas.height + logoHeight + padding * 3;
 
                 // 背景画像を描画
-                combinedContext.globalAlpha = 0.5; // 透過度を設定
+                combinedContext.globalAlpha = 0.3; // 透過度を設定
                 combinedContext.drawImage(backgroundImage, 0, 0, combinedCanvas.width, combinedCanvas.height);
 
                 // QRコードを描画
