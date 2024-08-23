@@ -75,7 +75,7 @@ $('#make').on('click', function () { //makeボタンが押された場合の処�
 
         // 背景画像をロード
         const backgroundImage = new Image();
-        backgroundImage.src = 'background.jpg'; // 背景画像のパス
+        backgroundImage.src = 'images/background.jpg'; // 背景画像のパス
         backgroundImage.onload = () => {
             // QRコードを取得して白を透明にする処理
             const qrCodeCanvas = document.querySelector('#qrcode canvas');
@@ -91,7 +91,7 @@ $('#make').on('click', function () { //makeボタンが押された場合の処�
             qrCodeContext.putImageData(qrCodeImageData, 0, 0);
 
             const logo = new Image();
-            logo.src = 'tachikousai.png'; // QRコードの下に表示する画像
+            logo.src = 'images/tachikousai.png'; // QRコードの下に表示する画像
             logo.onload = () => {
                 const originalLogoWidth = logo.width;
                 const originalLogoHeight = logo.height;
