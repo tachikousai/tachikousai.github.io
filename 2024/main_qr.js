@@ -9,7 +9,6 @@ function hidden() {
 $('#make').on('click', function () { //makeボタンが押された場合の処理
     var input1 = $('#liveArea').val(); //テキストを取得
 
-
     var input2 = $('#numPeopleElementary').val(); //テキストを取得
     var input3 = $('#numPeopleJhs').val(); //テキストを取得
     var input4 = $('#numPeopleObOg').val(); //テキストを取得
@@ -18,14 +17,12 @@ $('#make').on('click', function () { //makeボタンが押された場合の処�
     var input7 = $('#numPeopleInvolved').val(); //テキストを取得
     var input8 = $('#numPeopleOther').val(); //テキストを取得
 
-
     var input9 = $('#reason1').prop('checked'); //テキストを取得
     var input10 = $('#reason2').prop('checked'); //テキストを取得
     var input11 = $('#reason3').prop('checked'); //テキストを取得
     var input12 = $('#reason4').prop('checked'); //テキストを取得
     var input13 = $('#reason5').prop('checked'); //テキストを取得
     var input14 = $('#reason6').prop('checked'); //テキストを取得
-
 
     if (input1 == "000000") {
         alert("お住まいの地域を選択してください");
@@ -34,7 +31,6 @@ $('#make').on('click', function () { //makeボタンが押された場合の処�
     } else {
 
         hidden(); //二回目にmakeがクリックされた場合の処理
-
 
         var inputStr = "";
 
@@ -52,6 +48,14 @@ $('#make').on('click', function () { //makeボタンが押された場合の処�
             inputStr = inputStr + addStr + ",";
         }
 
+        let date = new Date();
+        let day = date.getDate().toString().padStart(2, "0");
+        let hour = date.getHours().toString().padStart(2, "0");
+        let minute = date.getMinutes().toString().padStart(2, "0");
+
+
+        inputStr = inputStr + day + "," + hour + "," + minute;
+
 
         var size = 600; //サイズを取得
         var text = unescape(encodeURIComponent(inputStr));//日本語対応
@@ -66,40 +70,67 @@ $('#make').on('click', function () { //makeボタンが押された場合の処�
         const combinedContext = combinedCanvas.getContext('2d');
         const img = document.getElementById('newImg');
 
-        // 画像のサイズを調整するためのパラメータ
-        const logoWidthRatio = 1.00;  // 画像の幅を元のhoge%にする
-        const logoHeightRatio = 1.00; // 画像の高さを元のhoge%にする
-
         // QRと画像の周りの余白
         const padding = 50;  // 余白のサイズ
 
-        // QRの描画が完了した後に実行する
-        setTimeout(() => {
+        // 背景画像をロード
+        const backgroundImage = new Image();
+        backgroundImage.src = 'background.jpg'; // 背景画像のパス
+        backgroundImage.onload = () => {
+            // QRコードを取得して白を透明にする処理
             const qrCodeCanvas = document.querySelector('#qrcode canvas');
-            const qrCodeWidth = qrCodeCanvas.width;
-            const qrCodeHeight = qrCodeCanvas.height;
+            const qrCodeContext = qrCodeCanvas.getContext('2d');
+            const qrCodeImageData = qrCodeContext.getImageData(0, 0, qrCodeCanvas.width, qrCodeCanvas.height);
+            const qrCodeData = qrCodeImageData.data;
 
-            // 新しいcanvasのサイズを設定
+            for (let i = 0; i < qrCodeData.length; i += 4) {
+                if (qrCodeData[i] === 255 && qrCodeData[i + 1] === 255 && qrCodeData[i + 2] === 255) {
+                    qrCodeData[i + 3] = 0; // アルファ値を0に設定（透明）
+                }
+            }
+            qrCodeContext.putImageData(qrCodeImageData, 0, 0);
+
             const logo = new Image();
-            logo.src = './images/tachikousai.png';
+            logo.src = 'tachikousai.png'; // QRコードの下に表示する画像
             logo.onload = () => {
                 const originalLogoWidth = logo.width;
                 const originalLogoHeight = logo.height;
+                const logoWidthRatio = 1.00;  // 画像の幅を元のサイズの100%にする
+                const logoHeightRatio = 1.00; // 画像の高さを元のサイズの100%にする
+
                 const logoWidth = originalLogoWidth * logoWidthRatio;
                 const logoHeight = originalLogoHeight * logoHeightRatio;
 
-                combinedCanvas.width = qrCodeWidth + padding * 2;
-                combinedCanvas.height = qrCodeHeight + logoHeight + padding * 3;
+                combinedCanvas.width = qrCodeCanvas.width + padding * 2;
+                combinedCanvas.height = qrCodeCanvas.height + logoHeight + padding * 3;
 
-                // 背景を白に設定
-                combinedContext.fillStyle = "#ffffff";
-                combinedContext.fillRect(0, 0, combinedCanvas.width, combinedCanvas.height);
+                // 背景画像を描画
+                combinedContext.globalAlpha = 0.5; // 透過度を設定
+                combinedContext.drawImage(backgroundImage, 0, 0, combinedCanvas.width, combinedCanvas.height);
 
-                // QRを描画
+                // QRコードを描画
+                combinedContext.globalAlpha = 1.0; // 透過度を元に戻す
                 combinedContext.drawImage(qrCodeCanvas, padding, padding);
 
+                // 画像を取得して白を透明にする処理
+                const logoCanvas = document.createElement('canvas');
+                logoCanvas.width = logoWidth;
+                logoCanvas.height = logoHeight;
+                const logoContext = logoCanvas.getContext('2d');
+                logoContext.drawImage(logo, 0, 0, logoWidth, logoHeight);
+
+                const logoImageData = logoContext.getImageData(0, 0, logoCanvas.width, logoCanvas.height);
+                const logoData = logoImageData.data;
+
+                for (let i = 0; i < logoData.length; i += 4) {
+                    if (logoData[i] === 255 && logoData[i + 1] === 255 && logoData[i + 2] === 255) {
+                        logoData[i + 3] = 0; // アルファ値を0に設定（透明）
+                    }
+                }
+                logoContext.putImageData(logoImageData, 0, 0);
+
                 // QRの下に画像を描画
-                combinedContext.drawImage(logo, (combinedCanvas.width - logoWidth) / 2, qrCodeHeight + padding * 2, logoWidth, logoHeight);
+                combinedContext.drawImage(logoCanvas, (combinedCanvas.width - logoWidth) / 2, qrCodeCanvas.height + padding * 2, logoWidth, logoHeight);
 
                 // combinedCanvasを画像に変換
                 const dataURL = combinedCanvas.toDataURL('image/png');
@@ -107,7 +138,7 @@ $('#make').on('click', function () { //makeボタンが押された場合の処�
                 // img要素にデータURLを設定
                 img.src = dataURL;
 
-                date = new Date()
+                date = new Date();
 
                 const imgDownloadName = "tachikousai_" + date.toLocaleString() + ".png";
 
@@ -115,10 +146,9 @@ $('#make').on('click', function () { //makeボタンが押された場合の処�
                 const dlLink = document.getElementById('dlImg');
                 dlLink.href = dataURL;
                 dlLink.download = imgDownloadName;
-                dlLink.style.display = "block"
+                dlLink.style.display = "block";
             };
-        }, 100);  // 1秒待つ
-
+        };
 
         const hideView1 = document.getElementById("qr_edit");
         hideView1.style.display = "none";
@@ -127,13 +157,13 @@ $('#make').on('click', function () { //makeボタンが押された場合の処�
         hideView2.style.display = "none";
 
         const makeButton = document.getElementById("make");
-        makeButton.style.display = "none"
+        makeButton.style.display = "none";
 
         const displayView = document.getElementById("introTextAfter");
-        displayView.style.display = "block"
+        displayView.style.display = "block";
 
         const imgFrame = document.getElementById("newImg");
-        imgFrame.style.display = "inline"
+        imgFrame.style.display = "inline";
 
     }
 
