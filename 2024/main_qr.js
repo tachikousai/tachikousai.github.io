@@ -25,9 +25,9 @@ $('#make').on('click', function () { //makeボタンが押された場合の処�
     var input14 = $('#reason6').prop('checked'); //テキストを取得
 
     if (input1 == "000000") {
-        alert("お住まいの地域を選択してください");
+        alert("お住まいの市区町村を選択してください");
     } else if (input2 == "0" && input3 == "0" && input4 == "0" && input5 == "0" && input6 == "0" && input7 == "0" && input8 == "0") {
-        alert("来場される方の人数を入力してください");
+        alert("入場される方の人数を入力してください");
     } else {
 
         hidden(); //二回目にmakeがクリックされた場合の処理
