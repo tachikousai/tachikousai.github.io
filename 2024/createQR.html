@@ -111,6 +111,36 @@
 
         <div>
           <p>2.入場される方の人数を入力 (必須)</p>
+          <label>本校の保護者</label>
+          <select name="numPeopleObOgParents" id="numPeopleObOgParents" class="formText numPeopleObOgParents">
+            <option>0</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+          </select>
+          <span>人</span>
+
+          <label>本校の卒業生</label>
+          <select name="numPeopleObOg" id="numPeopleObOg" class="formText numPeopleObOg">
+            <option>0</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+          </select>
+          <span>人</span>
+
           <label>小学生以下</label>
           <select name="numPeopleElementary" id="numPeopleElementary" class="formText numPeopleElementary">
             <option>0</option>
@@ -128,36 +158,6 @@
 
           <label>中学生・その保護者</label>
           <select name="numPeopleJhs" id="numPeopleJhs" class="formText numPeopleJhs">
-            <option>0</option>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-            <option>6</option>
-            <option>7</option>
-            <option>8</option>
-            <option>9</option>
-          </select>
-          <span>人</span>
-
-          <label>本校卒業生</label>
-          <select name="numPeopleObOg" id="numPeopleObOg" class="formText numPeopleObOg">
-            <option>0</option>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-            <option>6</option>
-            <option>7</option>
-            <option>8</option>
-            <option>9</option>
-          </select>
-          <span>人</span>
-
-          <label>本校の保護者</label>
-          <select name="numPeopleObOgParents" id="numPeopleObOgParents" class="formText numPeopleObOgParents">
             <option>0</option>
             <option>1</option>
             <option>2</option>
@@ -224,23 +224,27 @@
           </label>
 
           <label class="formText reason_label">
-            <input type="checkbox" name="reason" class="formText reason_checkbox" id="reason2">立川高校に興味があったから
+            <input type="checkbox" name="reason" class="formText reason_checkbox" id="reason2">本校の卒業生だから
           </label>
 
           <label class="formText reason_label">
-            <input type="checkbox" name="reason" class="formText reason_checkbox" id="reason3">お祭りが好きだから
+            <input type="checkbox" name="reason" class="formText reason_checkbox" id="reason3">立川高校に興味があったから
           </label>
 
           <label class="formText reason_label">
-            <input type="checkbox" name="reason" class="formText reason_checkbox" id="reason4">どのような催事があるのか<br>　興味があったから
+            <input type="checkbox" name="reason" class="formText reason_checkbox" id="reason4">立川高校への受験を<br>　考えているから
           </label>
 
           <label class="formText reason_label">
-            <input type="checkbox" name="reason" class="formText reason_checkbox" id="reason5">立高グッズが欲しかったから
+            <input type="checkbox" name="reason" class="formText reason_checkbox" id="reason5">クラ発・団発に興味があったから
           </label>
 
           <label class="formText reason_label">
-            <input type="checkbox" name="reason" class="formText reason_checkbox" id="reason6">その他
+            <input type="checkbox" name="reason" class="formText reason_checkbox" id="reason6">立高グッズが欲しかったから
+          </label>
+
+          <label class="formText reason_label">
+            <input type="checkbox" name="reason" class="formText reason_checkbox" id="reason7">その他
           </label>
         </div>
       </form>
