@@ -9,10 +9,10 @@ function hidden() {
 $('#make').on('click', function () { //makeボタンが押された場合の処理
     var input1 = $('#liveArea').val(); //テキストを取得
 
-    var input2 = $('#numPeopleElementary').val(); //テキストを取得
-    var input3 = $('#numPeopleJhs').val(); //テキストを取得
-    var input4 = $('#numPeopleObOg').val(); //テキストを取得
-    var input5 = $('#numPeopleObOgParents').val(); //テキストを取得
+    var input2 = $('#numPeopleObOgParents').val(); //テキストを取得
+    var input3 = $('#numPeopleObOg').val(); //テキストを取得
+    var input4 = $('#numPeopleElementary').val(); //テキストを取得
+    var input5 = $('#numPeopleJhs').val(); //テキストを取得
     var input6 = $('#numPeopleNear').val(); //テキストを取得
     var input7 = $('#numPeopleInvolved').val(); //テキストを取得
     var input8 = $('#numPeopleOther').val(); //テキストを取得
@@ -23,6 +23,7 @@ $('#make').on('click', function () { //makeボタンが押された場合の処�
     var input12 = $('#reason4').prop('checked'); //テキストを取得
     var input13 = $('#reason5').prop('checked'); //テキストを取得
     var input14 = $('#reason6').prop('checked'); //テキストを取得
+    var input15 = $('#reason7').prop('checked'); //テキストを取得
 
     if (input1 == "000000") {
         alert("お住まいの市区町村を選択してください");
@@ -34,8 +35,8 @@ $('#make').on('click', function () { //makeボタンが押された場合の処�
 
         var inputStr = "";
 
-        for (i = 1; i < 15; i++) {
-            inputName = String("input" + String(i));
+        for (inputCount = 1; inputCount < 16; inputCount++) {
+            inputName = String("input" + String(inputCount));
 
             addStr = String(eval(inputName));
 
