@@ -358,6 +358,11 @@ a {
     margin-left: 0svw;
     list-style: none;
     font-size: 7svw;
+    color: #000000;
+}
+
+.nav_item a {
+    color: black;
 }
 
 /* アイコンがクリックされたらメニューを表示 */
@@ -369,6 +374,7 @@ a {
 .nav {
     /*margin-left: 85svw;*/
     z-index: 101;
+    color: #000000;
 }
 
 .floorchange {
@@ -592,13 +598,8 @@ a {
 .top_Media_Link{
     background-color: #3A3C3C;    
     font-size: 3svw;
+    color: #ffffff;
 }
-
-.top_Media_Link h2,a,h3{
-    color:#ffffff
-}
-
-
 
 .sp_top_img {
     width: 100svw;
