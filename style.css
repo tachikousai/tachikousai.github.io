@@ -595,8 +595,8 @@ a {
     font-size: 4.5svw;
 }
 
-.top_Media_Link{
-    background-color: #3A3C3C;    
+.top_Media_Link {
+    background-color: #3A3C3C;
     font-size: 3svw;
     color: #ffffff;
     padding-bottom: 15svw;
@@ -953,6 +953,7 @@ footer {
     line-height: 10svw;
     color: #000000;
 }
+
 .header-box2 {
     position: fixed;
     top: 17svw;
@@ -970,7 +971,7 @@ footer {
     margin: 0;
     line-height: 1;
     padding-top: 1.5svh;
-    font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+    font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
 }
 
 .header-box3 {
@@ -990,13 +991,311 @@ footer {
     margin: 0;
     line-height: 1;
     padding-top: 1.5svh;
-    font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+    font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
 }
 
-.dannpatu{
+.dannpatu {
     font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
     position: relative;
     margin-top: 43svw;
     font-size: 4svw;
 
+}
+
+@media only screen and (min-width: 999px) {
+
+    /* パソコン用のCSS */
+    /* height 17svw to 5svw */
+    body {
+        overflow-x: hidden;
+    }
+
+    .header-box {
+        width: 100svw;
+        height: 5svw;
+    }
+
+    #header-kai {
+        font-size: 2svw;
+        margin-left: 5svw;
+    }
+
+    #header-text {
+        font-size: 3.5svw;
+        margin-left: 1svw;
+    }
+
+    .top_Infobar {
+        width: 50svw;
+        height: 5svw;
+        background-color: #edd3e3;
+        display: flex;
+        position: fixed;
+        bottom: 2.75svw;
+        left: 4svw;
+        color: #000000;
+        border: inherit;
+        border-radius: 1svw;
+
+    }
+
+    .top_Infobar_Status {
+        position: relative;
+
+        height: 4svw;
+        top: 0.25svw;
+        left: 0.25svw;
+        width: 10svw;
+        font-size: 2.5svw;
+
+        border-radius: 1svw;
+        padding: 0.25svw;
+        line-height: 4svw;
+    }
+
+
+    .top_Infobar_Title {
+        position: absolute;
+
+        height: 5svw;
+        top: 0.25svw;
+        left: 12.75svw;
+        width: 25svw;
+        font-size: 2svw;
+        padding: 0svw;
+        line-height: 5svw;
+    }
+
+
+    .top_Infobar_Delay {
+        position: absolute;
+
+        height: 4svw;
+        top: 0.25svw;
+        right: 0.25svw;
+        width: 10svw;
+        font-size: 2svw;
+        border-radius: 1svw;
+        padding: 0.25svw 0;
+        line-height: 4svw;
+    }
+
+    .top_Picture {
+        width: 49.5svw;
+        height: 33svw;
+        margin-left: 4svw;
+        border: solid rgba(87, 87, 87, 0.75) 0.25svw;
+        border-radius: 2svw;
+        position: fixed;
+    }
+
+    .main {
+        top: 5svw;
+    }
+
+    .top_Mini_Title {
+        position: absolute;
+        left: 56svw;
+        margin-right: 0;
+        top: 3svw;
+        width: 40svw;
+        margin-bottom: 10svw;
+    }
+
+    #top_Mini_Title_Count {
+        font-size: 3svw;
+    }
+    
+    #top_Mini_Title_Main {
+        font-size: 3.5svw;
+    }
+    
+    #top_Mini_Title_Subtitle {
+        font-size: 3.5svw;
+        font-family: serif;
+        font-weight: bold;
+        margin-left: 1svw;
+    }
+    
+    #top_Mini_Title_Date {
+        font-size: 2.5svw;
+    }
+
+    .drawer_open {
+        height: 5svw;
+        width: 3svw;
+        top: 2.25svw;
+        right: 3svw;
+    }
+
+    /* ハンバーガーメニューのアイコン */
+    .drawer_open span,
+    .drawer_open span:before,
+    .drawer_open span:after {
+        height: 0.5svw;
+        width: 4svw;
+        border-radius: 0.75svw;
+    }
+
+    /* 三本線の一番上の棒の位置調整 */
+    .drawer_open span:before {
+        bottom: 1.25svw;
+    }
+
+    /* 三本線の一番下の棒の位置調整 */
+    .drawer_open span:after {
+        top: 1.25svw;
+    }
+
+
+    /* メニューのデザイン*/
+    .nav_content {
+        top: 5svw;
+    }
+
+    /* メニュー黒ポチを消す */
+    .nav_list {
+        margin-top: 3svw;
+        margin-left: 0svw;
+        font-size: 3svw;
+    }
+
+    /* アイコンがクリックされたらメニューを表示 */
+    #drawer_input:checked~.nav_content {
+        left: 60svw;
+        /* メニューを画面に入れる */
+    }
+
+    .menu_text {
+        top: 1.5svw;
+        right: 7svw;
+        font-size: 2.5svw;
+    }
+
+    .top_textBox {
+        width: 32.5svw;
+        height: auto;
+        border: solid rgba(0, 0, 0, 0.75) 0.25svw;
+        border-radius: 3svw;
+        left: 56svw;
+        padding: 4svw;
+        position: relative;
+        top: 10svw;
+        margin-right: 0;
+    }
+    
+    .top_textBox_title {
+        position: absolute;
+        font-size: 3svw;
+        top: -5svw;
+        background-color: rgba(255, 255, 255, 1);
+        padding: 0 0.5svw;
+    }
+    
+    .top_textBox_main {
+        width: 32.5svw;
+        position: relative;
+        margin: 1svw auto 0 auto;
+        text-align: left;
+    }
+    
+    .top_textBox_main span {
+        font-size: 2svw;
+    }
+
+    .link_more {
+        margin-left: 15svw;
+        font-size: 2svw;
+    }
+
+    .top_Media_Link {
+        position: absolute;
+
+        font-size: 1svw;
+        padding: 0;
+        margin: 0;
+        width: 100svw;
+        bottom: -20svw;
+        text-align: left;
+    }
+
+    .top_Media_Link h2 {
+        margin-left: 5svw;
+    }
+
+    .top_Media_Link a {
+        margin-left: 6svw;
+    }
+
+    footer {
+        position: fixed;
+        left: 53.5svw;
+        bottom: -0.25svw;
+        width: 40svw;
+        height: 5svw;
+        border-radius: 1svw;
+        margin: 3svw;
+    }
+    
+    .top_Footer_Detail {
+        position: absolute;
+    
+        height: 4svw;
+        top: 0.5svw;
+        left: 0.5svw;
+        width: 11svw;
+        font-size: 1.75svw;
+        font-weight: bold;
+        border-radius: 1svw;
+        padding: auto 0;
+        line-height: 4svw;
+    }
+    
+    .top_Footer_Timetable {
+        position: absolute;
+    
+        height: 4svw;
+        top: 0.5svw;
+        left: 12.5svw;
+        width: 15svw;
+        font-size: 1.75svw;
+        font-weight: bold;
+    
+        border-radius: 1svw;
+        padding: auto 0;
+        line-height: 4svw;
+    }
+    
+    .top_Footer_Access {
+        position: absolute;
+    
+        height: 4svw;
+        top: 0.5svw;
+        left: 28.5svw;
+        width: 11svw;
+        font-size: 1.75svw;
+        font-weight: bold;
+    
+        border-radius: 1svw;
+        padding: auto 0;
+        line-height: 4svw;
+    }
+}
+/* テーブル全体のスタイル */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+/* テーブルの各セルに枠線を追加 */
+th, td {
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: center;
+}
+
+/* ヘッダー部分のスタイル */
+thead th {
+    background-color: #f2f2f2;
 }
