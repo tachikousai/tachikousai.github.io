@@ -1008,10 +1008,9 @@ footer {
     width: 100svw;
     height: 22.5svw;
     top: 17svw;
-    background-color: hsl(227, 94%, 75%);
+    background-color: #5b6060;
     align-items: center;
     z-index: 10;
-    color: #ffffff;
 
 }
 #header-text4 {
@@ -1022,13 +1021,23 @@ footer {
     margin-left: 2svw;
     margin-top: auto;
     margin-bottom: auto;
-    color: white;
+    color: hsl(227, 94%, 75%);
 }
 
 #detail-text{
     margin-top: 39.5svw;
 }
 
+#white{
+    font-family: serif;
+    font-weight: bolder;
+    position: relative;
+    font-size: 3.5svw;
+    margin-left: 2svw;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: #ffffff;
+}
 @media only screen and (min-width: 999px) {
 
     /* パソコン用のCSS */
