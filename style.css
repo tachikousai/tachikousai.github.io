@@ -1002,6 +1002,33 @@ footer {
 
 }
 
+.header-box4 {
+    position: fixed;
+    text-align: center;
+    width: 100svw;
+    height: 22.5svw;
+    top: 17svw;
+    background-color: hsl(227, 94%, 75%);
+    align-items: center;
+    z-index: 10;
+    color: #ffffff;
+
+}
+#header-text4 {
+    font-family: serif;
+    font-weight: bolder;
+    position: relative;
+    font-size: 3.5svw;
+    margin-left: 2svw;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: white;
+}
+
+#detail-text{
+    margin-top: 39.5svw;
+}
+
 @media only screen and (min-width: 999px) {
 
     /* パソコン用のCSS */
@@ -1013,6 +1040,35 @@ footer {
     .header-box {
         width: 100svw;
         height: 5svw;
+    }
+
+    .header-box2 {
+        width: 100svw;
+        height: 5svw;
+        top: 5svw;
+    }
+
+    .header-box2 p {
+        font-size: 2svw;
+    }
+
+    .header-box3 {
+        width: 100svw;
+        height: 5svw;
+        top: 10svw;
+    }
+
+    .header-box3 p {
+        font-size: 2svw;
+    }
+    .header-box4 {
+        width: 100svw;
+        height: 5svw;
+        top: 5svw;
+    }
+    #header-text4 {
+        font-size: 1svw;
+        margin-left: 1svw;
     }
 
     #header-kai {
