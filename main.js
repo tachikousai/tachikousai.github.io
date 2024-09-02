@@ -24,7 +24,7 @@ function close_window() {
 
 $(window).on('load', function () {
       try {
-            let headerHeight = $('#header').outerHeight();
+            let headerHeight = $(window).width() * 39.5 / 100; // 39.5svwをピクセルに変換
             let speed = 100;
             let href = location.hash;
             console.log(href);
