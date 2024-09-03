@@ -1017,7 +1017,7 @@ footer {
     position: fixed;
     text-align: center;
     margin: 0;
-    width: 66.5svw;
+    width: 70svw;
     height: 5svw;
     top: 17svw;
     right: 0; 
@@ -1064,7 +1064,7 @@ footer {
     line-height: 10svw;
     font-size: 3.9svw;
     font-family: serif;
-    border: 1px solid hsl(0, 0%, 100%); /* 枠線を追加 */
+    border: 0.5px solid hsl(0, 0%, 100%); /* 枠線を追加 */
     border-radius: 0px; /* 角を丸くしたい場合はこのプロパティを使用 */
 }
 
