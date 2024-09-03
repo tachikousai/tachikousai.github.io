@@ -462,23 +462,23 @@ a {
 
 .dantai_name {
     text-align: right;
-    margin-bottom: -0.75svh;
+    margin-bottom: -0.5svw;
     margin-top: 0svh;
-    font-size: 3svw;
+    font-size: 3.5svw;
 }
 
 .url {
     text-align: right;
-    margin-bottom: -0.75svh;
+    margin-bottom: -0.5svw;
     margin-top: 0svh;
-    font-size: 3svw;
+    font-size: 3.5svw;
 }
 
 .time {
     font-weight: bold;
     font-size: 4.5svw;
     margin-left: 3svw;
-    margin-top: 0.5svh;
+    margin-top: 0.5svw;
     margin-bottom: 0svw;
     text-align: right;
 }
