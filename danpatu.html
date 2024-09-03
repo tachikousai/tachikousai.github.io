@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -70,16 +71,17 @@
         </div>
 
         <div class="header-box2">
-            <p>体育館の発表団体は<span id="sheetDataB3">Loading...</span>。<br>約
-                <span id="sheetDataB4">Loading...</span>分遅れています。</p>
+            <p>体育館 発表団体：<span id="sheetDataB3">Loading...</span><br>
+            約<span id="sheetDataB4">Loading...</span>分遅れ</p>
         </div>
         <div class="header-box3">
-            <p>トレーニングルーム（トレル）の発表団体は<br><span id="sheetDataB18">Loading...</span>。約
-                <span id="sheetDataB19">Loading...</span>分遅れています。</p>
+            <p>トレル 発表団体：<span id="sheetDataB18">Loading...</span><br>
+            約<span id="sheetDataB19">Loading...</span>分遅れ</p>
         </div>
     </header>
-<div class="dannpatu">
-    <p>プログラムの性質上現在団体発表が行われているという表記になることがありますが、実際に行われるのは文化祭当日です。また、予定は変更になる可能性があります。</p>
+<div class="danpatu">
+    <p>調整やメンテナンス等で、団体発表が実施中と表示されることがあります。ご迷惑をおかけします。また、掲載中の予定は変更になる場合があります。</p>
+    <p>「トレル」は1階・トレーニングルームの略称です。</p>
     <h1>団体発表 タイムテーブル</h1>
 </div>
 
@@ -253,8 +255,10 @@
     </table>
 </div>
 
-<!--軽音学部-->
+<!--軽音楽部-->
 <div class="schedule day1">
+    <div class="keion_box">
+
     <h2>軽音楽部</h2>
     <h2>体育館</h2>
     <table>
@@ -288,9 +292,9 @@
             </tr>
         </tbody>
     </table>
-</div>
+<!--</div>
 
-<div class="schedule day1">
+<div class="schedule day1">-->
     <h2>トレル</h2>
     <table>
         <thead>
@@ -374,8 +378,11 @@
         </tbody>
     </table>
 </div>
+</div>
 
 <div class="schedule day2">
+    <div class="keion_box">
+
     <h2>軽音楽部</h2>
     <h2>体育館</h2>
     <table>
@@ -419,9 +426,9 @@
             </tr>
         </tbody>
     </table>
-</div>
+<!--</div>
 
-<div class="schedule day2">
+<div class="schedule day2">-->
     <h2>トレル</h2>
     <table>
         <thead>
@@ -465,6 +472,7 @@
         </tbody>
     </table>
 </div>
+</div>
 
 <script>
     function showSchedule(day) {
@@ -480,7 +488,7 @@
         document.querySelectorAll('.tab-button').forEach(function(button) {
             button.classList.remove('active');
         });
-        document.querySelector('.tab-button.' + day).classList.add('active');
+        document.querySelector('.tab-button', day).classList.add('active');
     }
     
     // デフォルトでDay 1を表示
