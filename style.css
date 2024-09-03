@@ -1002,6 +1002,17 @@ footer {
 
 }
 
+.header-box-detail {
+    position: fixed;
+    text-align: center;
+    width: 100svw;
+    height: 15.2svw;
+    top: 17svw;
+    background-color: hsl(0, 0%, 100%);
+    align-items: left;
+    z-index: 9;
+}
+
 .header-box-detail-left {
     position: fixed;
     text-align: center;
@@ -1033,7 +1044,6 @@ footer {
     position: relative;
     margin-top: auto;
     margin-bottom: auto;
-
 }
 
 .header-box-detail-under-kurahatu {
@@ -1070,6 +1080,10 @@ footer {
 
 #detail-text{
     margin-top: 39.5svw;
+}
+
+.detaillimk{
+    font-size: 5svw;
 }
 
 #white{
@@ -1392,16 +1406,51 @@ footer {
         line-height: 4svw;
     }
 }
+/* タブのスタイル */
+.tabs {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+.tab-button.active {
+    background-color: #ddd;
+}
+
+/* スケジュールのデフォルト表示 */
+.schedule {
+    display: none;
+}
+
+/* Day 1とDay 2の表示 */
+.schedule.day1, .schedule.day2 {
+    display: none;
+}
+
+/* アクティブなタブ */
+.tab-button.active {
+    background-color: #ddd;
+}
 /* テーブル全体のスタイル */
 table {
-    width: 100%;
+    width: 80%;
     border-collapse: collapse;
     margin-bottom: 20px;
+    margin: 0 auto 20px auto;
 }
 
 /* テーブルの各セルに枠線を追加 */
 th, td {
-    border: 1px solid #000;
+    border: 1px solid #000; /* 黒い枠線 */
     padding: 8px;
     text-align: center;
 }
@@ -1409,8 +1458,11 @@ th, td {
 /* ヘッダー部分のスタイル */
 thead th {
     background-color: #f2f2f2;
+    border: 1px solid #000; /* ヘッダーの枠線 */
 }
 
-.detaillimk{
-    font-size: 5svw;
+/* テーブルの枠線 */
+table {
+    border: 2px solid #000; /* テーブルの外枠 */
+    border-radius: 5px; /* 角を丸める */
 }
