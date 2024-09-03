@@ -22,29 +22,30 @@ function close_window() {
       window.history.pushState("", document.title);
 }
 
-$(window).on('load', function () {
-      try {
-            let headerHeight = $(window).width() * 32/100; //svwをピクセルに変換
-            let speed = 100;
-            let href = location.hash;
-            console.log(href);
-            let target = $(href == "#" || href == "" ? 'html' : href);
-            let position = target.offset().top - headerHeight;
-            console.log(target.offset().top);
-            console.log(headerHeight);
-            $('html, body').stop().animate({ scrollTop: position }, speed, "swing");
-      } catch (e) { }
-});
-$(window).on('header-box-detail', function () {
-      try {
-            let headerHeight = $(window).width() * 32/100; //svwをピクセルに変換
-            let speed = 100;
-            let href = location.hash;
-            console.log(href);
-            let target = $(href == "#" || href == "" ? 'html' : href);
-            let position = target.offset().top - headerHeight;
-            console.log(target.offset().top);
-            console.log(headerHeight);
-            $('html, body').stop().animate({ scrollTop: position }, speed, "swing");
-      } catch (e) { }
-});
+$(document).ready(function () {
+      function scrollToHash() {
+          try {
+              let headerHeight = $(window).width() * 32 / 100; // svwをピクセルに変換
+              let speed = 100;
+              let href = location.hash;
+              console.log(href);
+              let target = $(href == "#" || href == "" ? 'html' : href);
+              let position = target.offset().top - headerHeight;
+              console.log(target.offset().top);
+              console.log(headerHeight);
+              $('html, body').stop().animate({ scrollTop: position }, speed, "swing");
+          } catch (e) { }
+      }
+  
+      // onloadでスクロール処理を実行
+      $(window).on('load', scrollToHash);
+  
+      // クリック時にも同じスクロール処理を実行
+      $('a[href*="#"]').on('click', function (e) {
+          e.preventDefault(); // デフォルトのリンク動作を無効化
+          location.hash = this.hash;
+          scrollToHash(); // スクロール処理を呼び出し
+      });
+  });
+  
+
