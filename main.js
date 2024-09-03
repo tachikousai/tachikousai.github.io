@@ -35,3 +35,16 @@ $(window).on('load', function () {
             $('html, body').stop().animate({ scrollTop: position }, speed, "swing");
       } catch (e) { }
 });
+$(window).on('header-box-detail', function () {
+      try {
+            let headerHeight = $(window).width() * 32/100; //svwをピクセルに変換
+            let speed = 100;
+            let href = location.hash;
+            console.log(href);
+            let target = $(href == "#" || href == "" ? 'html' : href);
+            let position = target.offset().top - headerHeight;
+            console.log(target.offset().top);
+            console.log(headerHeight);
+            $('html, body').stop().animate({ scrollTop: position }, speed, "swing");
+      } catch (e) { }
+});
