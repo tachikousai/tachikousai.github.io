@@ -78,9 +78,11 @@ $('#make').on('click', function () { //makeボタンが押された場合の処�
         const backgroundImage = new Image();
         backgroundImage.src = 'images/background.jpg'; // 背景画像のパス
         backgroundImage.onload = () => {
-            // QRコードを取得して白を透明にする処理
+            // QRコードを取得する処理
             const qrCodeCanvas = document.querySelector('#qrcode canvas');
             const qrCodeContext = qrCodeCanvas.getContext('2d');
+            // 白背景を透過する処理（背景に画像を設定する場合はコメントアウト解除）
+            /*
             const qrCodeImageData = qrCodeContext.getImageData(0, 0, qrCodeCanvas.width, qrCodeCanvas.height);
             const qrCodeData = qrCodeImageData.data;
 
@@ -90,6 +92,7 @@ $('#make').on('click', function () { //makeボタンが押された場合の処�
                 }
             }
             qrCodeContext.putImageData(qrCodeImageData, 0, 0);
+            */
 
             const logo = new Image();//裏の文字と重なって見ずらいので廃止
             logo.src = 'images/tachikousai.png'; // QRコードの下に表示する画像
@@ -120,6 +123,8 @@ $('#make').on('click', function () { //makeボタンが押された場合の処�
                 const logoContext = logoCanvas.getContext('2d');
                 logoContext.drawImage(logo, 0, 0, logoWidth, logoHeight);
 
+                // 白背景を透過する処理（背景に画像を設定する場合はコメントアウト解除）
+                /*
                 const logoImageData = logoContext.getImageData(0, 0, logoCanvas.width, logoCanvas.height);
                 const logoData = logoImageData.data;
 
@@ -129,6 +134,7 @@ $('#make').on('click', function () { //makeボタンが押された場合の処�
                     }
                 }
                 logoContext.putImageData(logoImageData, 0, 0);
+                */
 
                 // QRの下に画像を描画
                 combinedContext.drawImage(logoCanvas, (combinedCanvas.width - logoWidth) / 2, qrCodeCanvas.height + padding * 2, logoWidth, logoHeight);
