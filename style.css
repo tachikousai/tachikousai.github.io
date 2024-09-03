@@ -1422,9 +1422,12 @@ footer {
     outline: none;
 }
 
-.tab-button.active {
+/* 重複記述のコメントアウト */
+/*
+.tab-button:active {
     background-color: #ddd;
 }
+*/
 
 /* スケジュールのデフォルト表示 */
 .schedule {
@@ -1437,7 +1440,7 @@ footer {
 }
 
 /* アクティブなタブ */
-.tab-button.active {
+.tab-button:active {
     background-color: #ddd;
 }
 /* テーブル全体のスタイル */
@@ -1465,4 +1468,44 @@ thead th {
 table {
     border: 2px solid #000; /* テーブルの外枠 */
     border-radius: 5px; /* 角を丸める */
+}
+
+/* テーブル全体のスタイル */
+table {
+    width: 90svw;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    margin: 0 auto 20px auto;
+}
+
+/* テーブルの各セルに枠線を追加 */
+th, td {
+    border: 1px solid #000; /* 黒い枠線 */
+    padding: 8px;
+    text-align: center;
+}
+
+/* ヘッダー部分のスタイル */
+thead th {
+    background-color: #f2f2f2;
+    border: 1px solid #000; /* ヘッダーの枠線 */
+}
+
+/* テーブルの枠線 */
+table {
+    border: 2px solid #000; /* テーブルの外枠 */
+    border-radius: 5px; /* 角を丸める */
+    font-size: 3.75svw;
+}
+
+.group-name {
+    width: 55svw;
+}
+
+.start-time {
+    width: 17.5svw;
+}
+
+.end-time {
+    width: 17.5svw;
 }
