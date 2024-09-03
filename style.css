@@ -1002,26 +1002,70 @@ footer {
 
 }
 
-.header-box4 {
+.header-box-detail-left {
     position: fixed;
     text-align: center;
-    width: 100svw;
-    height: 22.5svw;
+    width: 30svw;
+    height: 5svw;
     top: 17svw;
-    background-color: #5b6060;
-    align-items: center;
+    background-color: #f6f1b8;
+    align-items: left;
     z-index: 10;
-
 }
-#header-text4 {
+
+.header-box-detail-right {
+    position: fixed;
+    text-align: center;
+    margin: 0;
+    width: 66.5svw;
+    height: 5svw;
+    top: 17svw;
+    right: 0; 
+    background-color: #4de657;
+    z-index: 10;
+}
+
+
+#header-box-detail {
+    font-size: 3.9svw;
     font-family: serif;
     font-weight: bolder;
     position: relative;
-    font-size: 3.5svw;
-    margin-left: 2svw;
     margin-top: auto;
     margin-bottom: auto;
-    color: hsl(227, 94%, 75%);
+
+}
+
+.header-box-detail-under-kurahatu {
+    position: fixed;
+    text-align: center;
+    margin: 0;
+    width: 10svw;
+    height: 10svw;
+    top: 22svw;
+    background-color: hsl(227, 97%, 88%);
+    z-index: 10;
+    line-height: 10svw;
+    font-size: 3.9svw;
+    font-family: serif;
+    border: 1px solid hsl(0, 0%, 100%); /* 枠線を追加 */
+    border-radius: 0px; /* 角を丸くしたい場合はこのプロパティを使用 */
+}
+
+.header-box-detail-under-dantai {
+    position: fixed;
+    text-align: center;
+    margin: 0;
+    width: 13.3svw;
+    height: 10svw;
+    top: 22svw;
+    background-color: hsl(227, 97%, 88%);
+    z-index: 10;
+    line-height: 10svw;
+    font-size: 3.9svw;
+    font-family: serif;
+    border: 1px solid hsl(0, 0%, 100%); /* 枠線を追加 */
+    border-radius: 0px; /* 角を丸くしたい場合はこのプロパティを使用 */
 }
 
 #detail-text{
@@ -1038,6 +1082,8 @@ footer {
     margin-bottom: auto;
     color: #ffffff;
 }
+
+
 @media only screen and (min-width: 999px) {
 
     /* パソコン用のCSS */
