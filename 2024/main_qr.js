@@ -109,8 +109,14 @@ $('#make').on('click', function () { //makeボタンが押された場合の処�
                 combinedCanvas.height = qrCodeCanvas.height + logoHeight + padding * 3;
 
                 // 背景画像を描画
+                /*
                 combinedContext.globalAlpha = 0; // 透過度を設定
                 combinedContext.drawImage(backgroundImage, 0, 0, combinedCanvas.width, combinedCanvas.height);
+                */
+
+                // 背景を白に設定
+                combinedContext.fillStyle = "#ffffff";
+                combinedContext.fillRect(0, 0, combinedCanvas.width, combinedCanvas.height);
 
                 // QRコードを描画
                 combinedContext.globalAlpha = 1.0; // 透過度を元に戻す
