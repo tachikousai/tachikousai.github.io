@@ -1423,6 +1423,46 @@ footer {
         width: 60svw;
         height: auto;
     }
+
+    .danpatu {
+        margin-top: 20svw;
+        font-size: 2svw;
+        width: 68svw;
+    }
+
+    table {
+        width: 70svw;
+        font-size: 2svw;
+    }
+    
+    #qr_edit p {
+        font-size: 2svw;
+    }
+
+    .formText {
+        font-size: 2svw;
+    }
+
+    #qr_edit label {
+        font-size: 2svw;
+        margin-bottom: 1svw;
+    }
+
+    #qr_edit span {
+        font-size: 2svw;
+    }
+
+    .button {
+        margin: 1svw;
+        width: 25svw;
+        height: auto;
+        font-size: 2svw;
+        padding: 2svw;
+    }
+
+    #qrcode_credit {
+        font-size: 2svw;
+    }
 }
 /* タブのスタイル */
 .tabs {
