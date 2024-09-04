@@ -1409,6 +1409,20 @@ footer {
         padding: auto 0;
         line-height: 4svw;
     }
+
+    .title_text {
+        margin-left: 2svw;
+        font-size: 3svw;
+    }
+
+    .container1 {
+        font-size: 2svw;
+    }
+
+    #poster_image {
+        width: 60svw;
+        height: auto;
+    }
 }
 /* タブのスタイル */
 .tabs {
