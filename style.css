@@ -1422,6 +1422,9 @@ footer {
     #poster_image {
         width: 60svw;
         height: auto;
+        width: 90%;
+        border: solid #000000 1px; 
+        margin-top: 3svw;
     }
 
     .danpatu {
