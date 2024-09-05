@@ -890,7 +890,7 @@ footer {
     left: 0;
     bottom: 0;
     width: 94svw;
-    background: rgba(142, 241, 127, 0.5);
+    background: rgba(143, 143, 143, 0.5);
     z-index: 150;
     height: 12.5svw;
     /*border: solid rgba(0, 0, 0, 0.75) 0svw;*/
@@ -1422,6 +1422,9 @@ footer {
     #poster_image {
         width: 60svw;
         height: auto;
+        width: 90%;
+        border: solid #000000 1px; 
+        margin-top: 3svw;
     }
 
     .danpatu {
