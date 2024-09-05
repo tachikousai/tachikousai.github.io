@@ -87,8 +87,8 @@
 
 <!-- タブナビゲーション -->
 <div class="tabs">
-    <button class="tab-button" onclick="showSchedule('day1')">9/7(Day 1)</button>
-    <button class="tab-button" onclick="showSchedule('day2')">9/8(Day 2)</button>
+    <button class="tab-button" id="buttonOfday1" onclick="showSchedule('day1')">9/7(Day 1)</button>
+    <button class="tab-button" id="buttonOfday2" onclick="showSchedule('day2')">9/8(Day 2)</button>
 </div>
 <div class="schedule day1">
     <h2>9/7(Day 1)</h2>   
@@ -500,7 +500,8 @@
         document.querySelectorAll('.tab-button').forEach(function(button) {
             button.classList.remove('active');
         });
-        document.querySelector('.tab-button', day).classList.add('active');
+        document.querySelector('#buttonOf' + day).classList.add('active');
+        //document.querySelector('.tab-button', day).classList.add('active');
     }
     
     // デフォルトでDay 1を表示
