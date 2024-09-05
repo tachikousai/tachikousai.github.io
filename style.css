@@ -960,10 +960,11 @@ footer {
     text-align: left;
     width: 100svw;
     height: 13svw;
-    background-color: hsl(130, 50%, 55%);
+    background-color: hsl(289.68deg 39.01% 53.45%);
     align-items: center;
     z-index: 10;
     padding-left: 2svw;
+    border-bottom: hsl(309.23deg 39.57% 52.7%);
 }
 
 .header-box2 p {
@@ -981,10 +982,11 @@ footer {
     text-align: left;
     width: 100svw;
     height: 13svw;
-    background-color: hsl(227, 94%, 75%);
+    background-color: hsl(309.23deg 39.57% 52.7%);
     align-items: center;
     z-index: 10;
     padding-left: 2svw;
+    border-bottom: hsl(309.23deg 39.57% 52.7%);
 }
 
 .header-box3 p {
