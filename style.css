@@ -907,7 +907,7 @@ footer {
     width: 25svw;
     font-size: 4.5svw;
     font-weight: bold;
-    background-color: rgba(174, 116, 195, 0.75);
+    background-color: rgba(174, 116, 195, 0.85);
     border: #000000;
     border-style: inherit;
     border-radius: 2svw;
@@ -926,7 +926,7 @@ footer {
     font-size: 4.5svw;
     font-weight: bold;
 
-    background-color: rgba(174, 116, 195, 0.75);
+    background-color: rgba(174, 116, 195, 0.85);
     border: #000000;
     border-style: inherit;
     border-radius: 2svw;
@@ -945,7 +945,7 @@ footer {
     font-size: 4.5svw;
     font-weight: bold;
 
-    background-color: rgba(174, 116, 195, 0.75);
+    background-color: rgba(174, 116, 195, 0.85);
     border: #000000;
     border-style: inherit;
     border-radius: 2svw;
@@ -960,10 +960,11 @@ footer {
     text-align: left;
     width: 100svw;
     height: 13svw;
-    background-color: hsl(130, 50%, 55%);
+    background-color: hsl(289.68deg 39.01% 53.45%);
     align-items: center;
     z-index: 10;
     padding-left: 2svw;
+    border-bottom: hsl(309.23deg 39.57% 52.7%);
 }
 
 .header-box2 p {
@@ -981,10 +982,11 @@ footer {
     text-align: left;
     width: 100svw;
     height: 13svw;
-    background-color: hsl(227, 94%, 75%);
+    background-color: hsl(309.23deg 39.57% 52.7%);
     align-items: center;
     z-index: 10;
     padding-left: 2svw;
+    border-bottom: hsl(309.23deg 39.57% 52.7%);
 }
 
 .header-box3 p {
@@ -1006,7 +1008,7 @@ footer {
     margin-right: auto;
 }
 
-.header-box-detail {
+.header-box-detail-group {
     position: fixed;
     text-align: center;
     width: 100svw;
@@ -1015,27 +1017,26 @@ footer {
     background-color: hsl(0, 0%, 100%);
     align-items: left;
     z-index: 9;
+    display: flex;
 }
 
 .header-box-detail-left {
-    position: fixed;
+    position: relative;
     text-align: center;
     width: 30svw;
     height: 5svw;
-    top: 17svw;
     background-color: #f6f1b8;
     align-items: left;
     z-index: 10;
 }
 
 .header-box-detail-right {
-    position: fixed;
+    position: relative;
     text-align: center;
     margin: 0;
     width: 70svw;
     height: 5svw;
-    top: 17svw;
-    right: 0; 
+    right: 0svw; 
     background-color: #4de657;
     z-index: 10;
 }
@@ -1050,29 +1051,36 @@ footer {
     margin-bottom: auto;
 }
 
-.header-box-detail-under-kurahatu {
+.header-box-detail-under-box {
+    display: flex;
     position: fixed;
+    top: 22svw;
+}
+
+.header-box-detail-under-kurahatu {
+    position: relative;
     text-align: center;
     margin: 0;
-    width: 10svw;
+    padding: 0;
+    width: 9.9svw;
     height: 10svw;
-    top: 22svw;
+    top: 0svw;
     background-color: hsl(227, 97%, 88%);
     z-index: 10;
     line-height: 10svw;
     font-size: 3.9svw;
     font-family: serif;
-    border: 1px solid hsl(0, 0%, 100%); /* 枠線を追加 */
+    border: 0.1svw solid hsl(0, 0%, 100%); /* 枠線を追加 */
     border-radius: 0px; /* 角を丸くしたい場合はこのプロパティを使用 */
 }
 
 .header-box-detail-under-dantai {
-    position: fixed;
+    position: relative;
     text-align: center;
     margin: 0;
     width: 14svw;
     height: 10svw;
-    top: 22svw;
+    top: 0svw;
     background-color: hsl(227, 97%, 88%);
     z-index: 10;
     line-height: 10svw;
@@ -1286,7 +1294,7 @@ footer {
     .nav_list {
         margin-top: 3svw;
         margin-left: 0svw;
-        font-size: 3svw;
+        font-size: 2svw;
     }
 
     /* アイコンがクリックされたらメニューを表示 */
@@ -1354,6 +1362,14 @@ footer {
 
     .top_Media_Link a {
         margin-left: 6svw;
+    }
+
+    .header-box-detail-group {
+        top: 5svw;
+    }
+
+    .header-box-detail-under-box {
+        top: 10svw;
     }
 
     footer {
