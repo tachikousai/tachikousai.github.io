@@ -1564,3 +1564,17 @@ thead th {
     border-radius: 2svw;
     margin: 7.5svw 2svw 2svw 2svw;
 }
+
+/* mapのlink写真*/
+a[href^="detail.html#"]:after {
+    content: '';
+    display: inline-block;
+    background-image: url('images/link.png'); /* アイコン画像のパスを指定 */
+    width: 16px; /* 画像の幅 */
+    height: 16px; /* 画像の高さ */
+    margin-left: 5px;
+    background-size: contain; /* 画像をボックス内に収める */
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+
