@@ -21,6 +21,8 @@
             const data = await response.json();
             document.getElementById('sheetDataB3').innerText = data.valueB3;
             document.getElementById('sheetDataB18').innerText = data.valueB18;
+            document.getElementById('sheetDataI3').innerText = data.valueI3;
+            document.getElementById('sheetDataI4').innerText = data.valueI4;
 
             // sheetDataB4,19の加工
             let sheetDataB4 = data.valueB4;
@@ -91,12 +93,12 @@
     <div class="top_Infobar" style="display: block;">
       <div class="top_Infobar_Status" id="top_Infobar_Status">体育館</div>
       <div class="top_Infobar_Title" id="top_Infobar_Title"><span id="sheetDataB3">Loading...</span></div>
-      <div class="top_Infobar_Delay" id="top_Infobar_Delay">遅れ<span id="sheetDataB4"></span>分</div>
+      <div class="top_Infobar_Delay" id="top_Infobar_Delay"><span id="sheetDataI3"></span><span id="sheetDataB4"></span>分</div>
     </div>
     <div class="top_Infobar" style="display: none;">
       <div class="top_Infobar_Status" id="top_Infobar_Status">トレル</div>
       <div class="top_Infobar_Title" id="top_Infobar_Title"><span id="sheetDataB18">Loading...</span></div>
-      <div class="top_Infobar_Delay" id="top_Infobar_Delay">遅れ<span id="sheetDataB19"></span>分</div>
+      <div class="top_Infobar_Delay" id="top_Infobar_Delay"><span id="sheetDataI4"></span><span id="sheetDataB19"></span>分</div>
     </div>
     </a>
     

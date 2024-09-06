@@ -21,6 +21,8 @@
                 const data = await response.json();
                 document.getElementById('sheetDataB3').innerText = data.valueB3;
                 document.getElementById('sheetDataB18').innerText = data.valueB18;
+                document.getElementById('sheetDataI3').innerText = data.valueI3;
+                document.getElementById('sheetDataI4').innerText = data.valueI4;
 
                 // sheetDataB4,19の加工
                 let sheetDataB4 = data.valueB4;
@@ -72,11 +74,11 @@
 
         <div class="header-box2">
             <p>体育館 発表団体：<span id="sheetDataB3">Loading...</span><br>
-            約<span id="sheetDataB4">Loading...</span>分遅れ</p>
+            <span id="sheetDataI3">Loading...</span>約<span id="sheetDataB4">Loading...</span>分</p>
         </div>
         <div class="header-box3">
             <p>トレル 発表団体：<span id="sheetDataB18">Loading...</span><br>
-            約<span id="sheetDataB19">Loading...</span>分遅れ</p>
+            <span id="sheetDataI4">Loading...</span>約<span id="sheetDataB19">Loading...</span>分</p>
         </div>
     </header>
 <div class="danpatu">
