@@ -1578,3 +1578,14 @@ a[href^="detail.html#"]:after {
     vertical-align: middle;
 }
 
+.detail_pictures {
+    width: 50%;
+    height: 50%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #000000;
+    margin: auto;
+    display: block;
+}
+
+
