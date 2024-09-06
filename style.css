@@ -135,7 +135,9 @@ a {
 
 .img-01,
 .img-02,
-.img-03 {
+.img-03,
+.img-04,
+.img-05 {
     position: absolute;
     top: 0;
     left: 0;
@@ -158,6 +160,16 @@ a {
 .img-03 {
     background-image: url('images/top03.jpg');
     animation: slide-animation-03 24s infinite;
+}
+
+.img-04 {
+    background-image: url('images/top04.jpg');
+    animation: slide-animation-04 24s infinite;
+}
+
+.img-05 {
+    background-image: url('images/top05.jpg');
+    animation: slide-animation-05 24s infinite;
 }
 
 @keyframes slide-animation-01 {
