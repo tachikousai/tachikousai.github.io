@@ -164,12 +164,12 @@ a {
 
 .img-04 {
     background-image: url('images/top04.jpg');
-    animation: slide-animation-04 24s infinite;
+    animation: slide-animation-03 24s infinite;
 }
 
 .img-05 {
     background-image: url('images/top05.jpg');
-    animation: slide-animation-05 24s infinite;
+    animation: slide-animation-03 24s infinite;
 }
 
 @keyframes slide-animation-01 {
