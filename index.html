@@ -10,14 +10,14 @@
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <script src="./main.js"></script>
-  <meta name="description" content="都立立川高校文化祭 立高祭の公式Webサイトです。第76回を2024年9月7日から9月8日に開催します！">
+  <meta name="description" content="都立立川高校文化祭 立高祭の公式Webサイトです。">
   <script>
     async function fetchData() {
         try {
             //一日目
-            //const response = await fetch('https://script.google.com/macros/s/AKfycbyNGede96Uukxdo_7NM-sHhEf00UdoFHzzhyV0JNQXC7tpN6VXpd8fQb6NWcO9FGaq4/exec');
+            const response = await fetch('https://script.google.com/macros/s/AKfycbyNGede96Uukxdo_7NM-sHhEf00UdoFHzzhyV0JNQXC7tpN6VXpd8fQb6NWcO9FGaq4/exec');
             //二日目
-            const response = await fetch('https://script.google.com/macros/s/AKfycbxSicNljygW3ePIoAvghE2_bJGsejOLeabJ4khVd1d2wqY2hez_jR9Xv57nvCW8c-5Erw/exec');
+            //const response = await fetch('https://script.google.com/macros/s/AKfycbxSicNljygW3ePIoAvghE2_bJGsejOLeabJ4khVd1d2wqY2hez_jR9Xv57nvCW8c-5Erw/exec');
             const data = await response.json();
             document.getElementById('sheetDataB3').innerText = data.valueB3;
             document.getElementById('sheetDataB18').innerText = data.valueB18;
