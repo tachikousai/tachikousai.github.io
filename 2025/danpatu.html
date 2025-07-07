@@ -1,0 +1,532 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <title>タイムテーブル-立高祭</title>
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+    <script>
+        async function fetchData() {
+            try {
+                //一日目
+                //const response = await fetch('https://script.google.com/macros/s/AKfycbyNGede96Uukxdo_7NM-sHhEf00UdoFHzzhyV0JNQXC7tpN6VXpd8fQb6NWcO9FGaq4/exec');
+                //二日目
+                const response = await fetch('https://script.google.com/macros/s/AKfycbxSicNljygW3ePIoAvghE2_bJGsejOLeabJ4khVd1d2wqY2hez_jR9Xv57nvCW8c-5Erw/exec');
+                const data = await response.json();
+                document.getElementById('sheetDataB3').innerText = data.valueB3;
+                document.getElementById('sheetDataB18').innerText = data.valueB18;
+                document.getElementById('sheetDataI3').innerText = data.valueI3;
+                document.getElementById('sheetDataI4').innerText = data.valueI4;
+
+                // sheetDataB4,19の加工
+                let sheetDataB4 = data.valueB4;
+                sheetDataB4 = sheetDataB4.replace("1899-12-29T15:", "").replace(":00.000Z", "").replace("00:", "").replace(":00", "").replace("00","0").replace("05","5");
+                document.getElementById('sheetDataB4').innerText = sheetDataB4;
+                let sheetDataB19 = data.valueB19;
+                sheetDataB19 = sheetDataB19.replace("1899-12-29T15:", "").replace(":00.000Z", "").replace("00:", "").replace(":00", "").replace("00","0").replace("05","5");
+                document.getElementById('sheetDataB19').innerText = sheetDataB19;
+
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        }
+
+        window.onload = fetchData;
+    </script>
+</head>
+
+<body style="text-align:center;">
+    <header class="header-box">
+        <a href="index.html">
+            <h1 id="header-kai">第77回<span id="header-text">立高祭</span></h1>
+        </a>
+        
+        <span class="menu_text">Menu</span>
+        <!-- ハンバーガーメニュー部分 -->
+        <div class="nav">
+            <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+            <input id="drawer_input" class="drawer_hidden" type="checkbox">
+            <!-- ハンバーガーアイコン -->
+            <label for="drawer_input" class="drawer_open"><span></span></label>
+
+            <!-- メニュー -->
+            <nav class="nav_content">
+                <ul class="nav_list">
+                    <li class="nav_item"><a href="whatis.html">立高祭とは？</a></li>
+                    <li class="nav_item"><a href="about.html">今年の立高祭</a></li>
+                    <li class="nav_item"><a href="map.html">校内マップ</a></li>
+                    <li class="nav_item"><a href="detail.html">出展一覧</a></li>
+                    <li class="nav_item"><a href="kuchikomi.html">口コミ</a></li>
+                    <li class="nav_item"><a href="QR_system/createQR.html">受付QRコード作成</a></li>
+                    <li class="nav_item"><a href="danpatu.html">団発タイムテーブル</a></li>
+                    <li class="nav_item"><a href="access.html">アクセス</a></li>
+                    <li class="nav_item"><a href="site.html">このサイトについて</a></li>
+                    <li class="nav_item"><a href="license.html">利用規約</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="header-box2">
+            <p>体育館 発表団体：<span id="sheetDataB3">Loading...</span><br>
+            <span id="sheetDataI3">Loading...</span>約<span id="sheetDataB4">Loading...</span>分</p>
+        </div>
+        <div class="header-box3">
+            <p>トレル 発表団体：<span id="sheetDataB18">Loading...</span><br>
+            <span id="sheetDataI4">Loading...</span>約<span id="sheetDataB19">Loading...</span>分</p>
+        </div>
+    </header>
+    <div class="danpatu">
+        <!--<p>調整やメンテナンス等で、団体発表が実施中と表示されることがあります。ご迷惑をおかけします。また、--><p>掲載中の予定は変更になる場合があります。</p>
+        <p>「トレル」は1階・トレーニングルームの略称です。</p>
+        <h1>団体発表 タイムテーブル</h1>
+    </div>
+
+    <!-- <p id="detail-text">ボタンを押すとスクロールできます！</p> -->
+
+    <!-- 工事中の時は以下のコメント外す -->
+    <p id="detail-text">>現在工事中です。随時追加していきます。また、表示されているものは変更になる可能性があります。</p>
+    <img src="images/工事中.png"
+        style="width:50%; border-width: 1px; border-style: solid; border-color: #000000;"></img>
+    <!-- ここまで工事中 -->
+    
+    <!-- 工事が終わったら下のstyleと/styleにコメントをつける -->
+    <style>/*
+
+    <!-- タブナビゲーション -->
+    <div class="tabs">
+        <button class="tab-button" id="buttonOfday1" onclick="showSchedule('day1')">9/7(Day 1)</button>
+        <button class="tab-button" id="buttonOfday2" onclick="showSchedule('day2')">9/8(Day 2)</button>
+    </div>
+    <div class="schedule day1">
+        <h2>9/7(Day 1)</h2>   
+        <h2>体育館</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th class="group-name">団体名</th>
+                    <th class="start-time">開始予定</th>
+                    <th class="end-time">終了予定</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="group1">
+                    <td class="group-name">センチメンタルジプシーズ</td>
+                    <td class="start-time">9:30</td>
+                    <td class="end-time">9:40</td>
+                </tr>
+                <tr id="group2">
+                    <td class="group-name">軽音楽部</td>
+                    <td class="start-time">9:40</td>
+                    <td class="end-time">10:30</td>
+                </tr>
+                <tr id="group3">
+                    <td class="group-name">ダンス部</td>
+                    <td class="start-time">11:15</td>
+                    <td class="end-time">12:05</td>
+                </tr>
+                <tr id="group4">
+                    <td class="group-name">K-myth</td>
+                    <td class="start-time">12:10</td>
+                    <td class="end-time">12:20</td>
+                </tr>
+                <tr id="group5">
+                    <td class="group-name">poppin girl</td>
+                    <td class="start-time">12:25</td>
+                    <td class="end-time">12:35</td>
+                </tr>
+                <tr id="group6">
+                    <td class="group-name">吹奏楽部</td>
+                    <td class="start-time">13:10</td>
+                    <td class="end-time">13:45</td>
+                </tr>
+                <tr id="group7">
+                    <td class="group-name">室内楽部</td>
+                    <td class="start-time">14:05</td>
+                    <td class="end-time">14:50</td>
+                </tr>
+                <tr id="group8">
+                    <td class="group-name">合唱部</td>
+                    <td class="start-time">15:10</td>
+                    <td class="end-time">15:40</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="schedule day1">
+        <h2>トレル</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th class="group-name">団体名</th>
+                    <th class="start-time">開始予定</th>
+                    <th class="end-time">終了予定</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="group9">
+                    <td class="group-name">BBB</td>
+                    <td class="start-time">10:30</td>
+                    <td class="end-time">11:00</td>
+                </tr>
+                <tr id="group10">
+                    <td class="group-name">軽音楽部</td>
+                    <td class="start-time">13:00</td>
+                    <td class="end-time">15:40</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="schedule day2">
+        <h2>9/8(Day 2)</h2>
+        <h2>体育館</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th class="group-name">団体名</th>
+                    <th class="start-time">開始予定</th>
+                    <th class="end-time">終了予定</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="group1">
+                    <td class="group-name">ダンス部</td>
+                    <td class="start-time">9:10</td>
+                    <td class="end-time">9:55</td>
+                </tr>
+                <tr id="group2">
+                    <td class="group-name">じょばいろクローバーZ</td>
+                    <td class="start-time">10:00</td>
+                    <td class="end-time">10:10</td>
+                </tr>
+                <tr id="group3">
+                    <td class="group-name">おれんじぷりん</td>
+                    <td class="start-time">10:15</td>
+                    <td class="end-time">10:25</td>
+                </tr>
+                <tr id="group4">
+                    <td class="group-name">吹奏楽部</td>
+                    <td class="start-time">11:20</td>
+                    <td class="end-time">11:55</td>
+                </tr>
+                <tr id="group5">
+                    <td class="group-name">ゲンシタイキ</td>
+                    <td class="start-time">13:10</td>
+                    <td class="end-time">13:20</td>
+                </tr>
+                <tr id="group6">
+                    <td class="group-name">ザ・バント</td>
+                    <td class="start-time">13:25</td>
+                    <td class="end-time">13:35</td>
+                </tr>
+                <tr id="group7">
+                    <td class="group-name">Roüge.</td>
+                    <td class="start-time">13:40</td>
+                    <td class="end-time">13:50</td>
+                </tr>
+                <tr id="group8">
+                    <td class="group-name">軽音楽部</td>
+                    <td class="start-time">14:00</td>
+                    <td class="end-time">15:15</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="schedule day2">
+        <h2>トレル</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th class="group-name">団体名</th>
+                    <th class="start-time">開始予定</th>
+                    <th class="end-time">終了予定</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="group9">
+                    <td class="group-name">軽音楽部</td>
+                    <td class="start-time">10:50</td>
+                    <td class="end-time">12:15</td>
+                </tr>
+                <tr id="group10">
+                    <td class="group-name">室内楽部</td>
+                    <td class="start-time">13:10</td>
+                    <td class="end-time">13:40</td>
+                </tr>
+                <tr id="group11">
+                    <td class="group-name">BBB</td>
+                    <td class="start-time">14:20</td>
+                    <td class="end-time">14:50</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!--軽音楽部-->
+    <div class="schedule day1">
+        <div class="keion_box">
+
+        <h2>軽音楽部</h2>
+        <h2>体育館</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th class="group-name">団体名</th>
+                    <th class="start-time">開始予定</th>
+                    <th class="end-time">終了予定</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="group1">
+                    <td class="group-name">FERRET</td>
+                    <td class="start-time">9:40</td>
+                    <td class="end-time">9:50</td>
+                </tr>
+                <tr id="group2">
+                    <td class="group-name">ガンギマリいわしパフェ</td>
+                    <td class="start-time">9:52</td>
+                    <td class="end-time">10:02</td>
+                </tr>
+                <tr id="group3">
+                    <td class="group-name">On Sky</td>
+                    <td class="start-time">10:04</td>
+                    <td class="end-time">10:14</td>
+                </tr>
+                <tr id="group4">
+                    <td class="group-name">Növ藍</td>
+                    <td class="start-time">10:17</td>
+                    <td class="end-time">10:27</td>
+                </tr>
+            </tbody>
+        </table>
+    <!--</div>
+
+    <div class="schedule day1"> -->
+        <h2>トレル</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th class="group-name">団体名</th>
+                    <th class="start-time">開始予定</th>
+                    <th class="end-time">終了予定</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="group1">
+                    <td class="group-name">ノスタルジア</td>
+                    <td class="start-time">13:00</td>
+                    <td class="end-time">13:10</td>
+                </tr>
+                <tr id="group2">
+                    <td class="group-name">ハニィトラップ</td>
+                    <td class="start-time">13:12</td>
+                    <td class="end-time">13:22</td>
+                </tr>
+                <tr id="group3">
+                    <td class="group-name">ホボソロ</td>
+                    <td class="start-time">13:22</td>
+                    <td class="end-time">13:32</td>
+                </tr>
+                <tr id="group4">
+                    <td class="group-name">ゆっけりうむ！</td>
+                    <td class="start-time">13:32</td>
+                    <td class="end-time">13:42</td>
+                </tr>
+                <tr id="group5">
+                    <td class="group-name">Last1.</td>
+                    <td class="start-time">13:42</td>
+                    <td class="end-time">13:52</td>
+                </tr>
+                <tr id="group6">
+                    <td class="group-name">NEOTENY</td>
+                    <td class="start-time">13:54</td>
+                    <td class="end-time">14:04</td>
+                </tr>
+                <tr id="group7">
+                    <td class="group-name">あるまじろ</td>
+                    <td class="start-time">14:04</td>
+                    <td class="end-time">14:14</td>
+                </tr>
+                <tr id="group8">
+                    <td class="group-name">V1nclum</td>
+                    <td class="start-time">14:14</td>
+                    <td class="end-time">14:24</td>
+                </tr>
+                <tr id="group9">
+                    <td class="group-name">RASY FYTH</td>
+                    <td class="start-time">14:24</td>
+                    <td class="end-time">14:34</td>
+                </tr>
+                <tr id="group10">
+                    <td class="group-name">saVaya！</td>
+                    <td class="start-time">14:34</td>
+                    <td class="end-time">14:44</td>
+                </tr>
+                <tr id="group11">
+                    <td class="group-name">Night The unLimited</td>
+                    <td class="start-time">14:48</td>
+                    <td class="end-time">14:58</td>
+                </tr>
+                <tr id="group12">
+                    <td class="group-name">猫も食べるタルトタタン</td>
+                    <td class="start-time">15:00</td>
+                    <td class="end-time">15:10</td>
+                </tr>
+                <tr id="group13">
+                    <td class="group-name">おやつ</td>
+                    <td class="start-time">15:14</td>
+                    <td class="end-time">15:24</td>
+                </tr>
+                <tr id="group14">
+                    <td class="group-name">しっこうばんど</td>
+                    <td class="start-time">15:26</td>
+                    <td class="end-time">15:36</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </div>
+
+    <div class="schedule day2">
+        <div class="keion_box">
+
+        <h2>軽音楽部</h2>
+        <h2>体育館</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th class="group-name">団体名</th>
+                    <th class="start-time">開始予定</th>
+                    <th class="end-time">終了予定</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="group1">
+                    <td class="group-name">BlauΔйemoS</td>
+                    <td class="start-time">14:00</td>
+                    <td class="end-time">14:10</td>
+                </tr>
+                <tr id="group2">
+                    <td class="group-name">酢イカ</td>
+                    <td class="start-time">14:13</td>
+                    <td class="end-time">14:23</td>
+                </tr>
+                <tr id="group3">
+                    <td class="group-name">RTA</td>
+                    <td class="start-time">14:25</td>
+                    <td class="end-time">14:35</td>
+                </tr>
+                <tr id="group4">
+                    <td class="group-name">ΦTauri-</td>
+                    <td class="start-time">14:38</td>
+                    <td class="end-time">14:48</td>
+                </tr>
+                <tr id="group5">
+                    <td class="group-name">Minerva</td>
+                    <td class="start-time">14:50</td>
+                    <td class="end-time">15:00</td>
+                </tr>
+                <tr id="group6">
+                    <td class="group-name">うさぎさん連盟</td>
+                    <td class="start-time">15:03</td>
+                    <td class="end-time">15:13</td>
+                </tr>
+            </tbody>
+        </table>
+    <!--</div>
+
+    <div class="schedule day2">-->
+        <h2>トレル</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th class="group-name">団体名</th>
+                    <th class="start-time">開始予定</th>
+                    <th class="end-time">終了予定</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="group1">
+                    <td class="group-name">あおりいか</td>
+                    <td class="start-time">10:50</td>
+                    <td class="end-time">11:00</td>
+                </tr>
+                <tr id="group2">
+                    <td class="group-name">and more…</td>
+                    <td class="start-time">11:05</td>
+                    <td class="end-time">11:15</td>
+                </tr>
+                <tr id="group3">
+                    <td class="group-name">さつまいもタイム</td>
+                    <td class="start-time">11:20</td>
+                    <td class="end-time">11:30</td>
+                </tr>
+                <tr id="group4">
+                    <td class="group-name">blue means</td>
+                    <td class="start-time">11:35</td>
+                    <td class="end-time">11:45</td>
+                </tr>
+                <tr id="group5">
+                    <td class="group-name">こげこげおもち</td>
+                    <td class="start-time">11:50</td>
+                    <td class="end-time">12:00</td>
+                </tr>
+                <tr id="group6">
+                    <td class="group-name">おばんど</td>
+                    <td class="start-time">12:05</td>
+                    <td class="end-time">12:15</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </div>
+
+    <h2>その他の団体のタイムテーブルは<br>こちらから！</h2>
+    <h5>タップにより別ウィンドウで見ることが可能です</h5>
+    <a href="images/1_time.jpg" target="_blank"  class="schedule day1">>
+        <img src="images/1_time.jpg" id="poster_image" style="width:90%; border-width: 1px; border-style: solid; border-color: #000000;" alt="あいうえお"></img>
+    </a>
+    <a href="images/2_time.jpg" target="_blank"  class="schedule day2">
+        <img src="images/2_time.jpg" id="poster_image" style="width:90%; border-width: 1px; border-style: solid; border-color: #000000;" alt="あいうえお"></img>
+    </a>
+
+    */</style>
+    <!-- styleの閉じタグ -->
+
+    <script>
+        function showSchedule(day) {
+            // すべてのスケジュールを非表示
+            document.querySelectorAll('.schedule').forEach(function(schedule) {
+                schedule.style.display = 'none';
+            });
+            // 選択された日付のスケジュールを表示
+            document.querySelectorAll('.' + day).forEach(function(schedule) {
+                schedule.style.display = 'block';
+            });
+            // タブの状態を更新
+            document.querySelectorAll('.tab-button').forEach(function(button) {
+                button.classList.remove('active');
+            });
+            document.querySelector('#buttonOf' + day).classList.add('active');
+            //document.querySelector('.tab-button', day).classList.add('active');
+        }
+        
+        // デフォルトでDay 1を表示
+        document.addEventListener('DOMContentLoaded', function() {
+            showSchedule('day2');
+        });
+    </script>
+    
+
+
+</body>
+
+</html>

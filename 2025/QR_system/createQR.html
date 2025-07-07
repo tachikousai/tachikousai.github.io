@@ -1,0 +1,271 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>受付QRコード作成-立高祭</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" href="favicon.ico">
+</head>
+
+<body>
+  <header class="header-box">
+    <a href="/index.html">
+      <h1 id="header-kai">第77回<span id="header-text">立高祭</span></h1>
+    </a>
+    <span class="menu_text">Menu</span>
+    <!-- ハンバーガーメニュー部分 -->
+    <div class="nav">
+      <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+      <input id="drawer_input" class="drawer_hidden" type="checkbox">
+      <!-- ハンバーガーアイコン -->
+      <label for="drawer_input" class="drawer_open"><span></span></label>
+
+      <!-- メニュー -->
+      <nav class="nav_content">
+        <ul class="nav_list">
+          <li class="nav_item"><a href="/whatis.html">立高祭とは？</a></li>
+          <li class="nav_item"><a href="/about.html">今年の立高祭</a></li>
+          <li class="nav_item"><a href="/map.html">校内マップ</a></li>
+          <li class="nav_item"><a href="/detail.html">出展一覧</a></li>
+          <li class="nav_item"><a href="/kuchikomi.html">口コミ</a></li>
+          <li class="nav_item"><a href="/QR_system/createQR.html">受付QRコード作成</a></li>
+          <li class="nav_item"><a href="/danpatu.html">団発タイムテーブル</a></li>
+          <li class="nav_item"><a href="/access.html">アクセス</a></li>
+          <li class="nav_item"><a href="/site.html">このサイトについて</a></li>
+          <li class="nav_item"><a href="/license.html">利用規約</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="main">
+    <h1 class="title_text" style="text-align:left;">入場用QRコード作成ページ</h1>
+
+    <div class="container1">
+      <div id="introTextBefore">
+        <p>東京都立立川高等学校<wbr>文化祭へようこそ！</p>
+        <p>ご入場されるにあたり<wbr>アンケートをお願いしています。</p>
+        <p>お手数ですが<wbr>下記アンケートに<wbr>ご回答をお願いいたします。</p>
+        <p>アンケート結果は<wbr>今後の文化祭運営に<wbr>利用させていただきます。</p>
+        <p>（このアンケートでは個人情報を収集いたしません）</p>
+      </div>
+
+      <div id="introTextAfter">
+        <p>アンケートへのご回答<wbr>ありがとうございました。</p>
+        <p>受付でこの画面を<wbr>読み取り機にかざしてください。</p>
+      </div>
+
+
+      <form id="qr_edit">
+        <div>
+          <p>1.お住まいの<wbr>市区町村を選択 (必須)</p>
+          <select name="liveArea" id="liveArea" class="formText liveArea" required>
+            <option value="000000">選択してください</option>
+            <option value="132284">あ：あきる野市</option>
+            <option value="132071">　　昭島市</option>
+            <option value="132250">い：稲城市</option>
+            <option value="131199">　　板橋区</option>
+            <option value="133086">お：奥多摩町</option>
+            <option value="132055">　　青梅市</option>
+            <option value="131113">　　大田区</option>
+            <option value="132217">き：清瀬市</option>
+            <option value="132152">く：国立市</option>
+            <option value="131083">こ：江東区</option>
+            <option value="132144">　　国分寺市</option>
+            <option value="132195">　　狛江市</option>
+            <option value="132101">　　小金井市</option>
+            <option value="132110">　　小平市</option>
+            <option value="131041">し：新宿区</option>
+            <option value="131091">　　品川区</option>
+            <option value="131156">す：杉並区</option>
+            <option value="131121">せ：世田谷区</option>
+            <option value="132241">た：多摩市</option>
+            <option value="132021">　　立川市</option>
+            <option value="132080">ち：調布市</option>
+            <option value="131148">な：中野区</option>
+            <option value="132292">に：西東京市</option>
+            <option value="131202">ね：練馬区</option>
+            <option value="132276">は：羽村市</option>
+            <option value="132012">　　八王子市</option>
+            <option value="132225">ひ：東久留米市</option>
+            <option value="132136">　　東村山市</option>
+            <option value="132209">　　東大和市</option>
+            <option value="133051">　　日の出町</option>
+            <option value="132128">　　日野市</option>
+            <option value="133078">　　檜原村</option>
+            <option value="132063">ふ：府中市</option>
+            <option value="132187">　　福生市</option>
+            <option value="131059">　　文京区</option>
+            <option value="132098">ま：町田市</option>
+            <option value="132047">み：三鷹市</option>
+            <option value="133035">　　瑞穂町</option>
+            <option value="132233">む：武蔵村山市</option>
+            <option value="132039">　　武蔵野市</option>
+            <option value="480001">他：東京都23区</option>
+            <option value="480004">　　東京都島しょ部</option>
+            <option value="480005">　　道府県</option>
+          </select>
+        </div>
+
+        <div>
+          <p>2.入場される方の人数を入力 (必須)</p>
+          <label>本校の保護者</label>
+          <select name="numPeopleObOgParents" id="numPeopleObOgParents" class="formText numPeopleObOgParents">
+            <option>0</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+          </select>
+          <span>人</span>
+
+          <label>本校の卒業生</label>
+          <select name="numPeopleObOg" id="numPeopleObOg" class="formText numPeopleObOg">
+            <option>0</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+          </select>
+          <span>人</span>
+
+          <label>小学生以下</label>
+          <select name="numPeopleElementary" id="numPeopleElementary" class="formText numPeopleElementary">
+            <option>0</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+          </select>
+          <span>人</span>
+
+          <label>中学生・その保護者</label>
+          <select name="numPeopleJhs" id="numPeopleJhs" class="formText numPeopleJhs">
+            <option>0</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+          </select>
+          <span>人</span>
+
+          <label>ご近隣にお住まい</label>
+          <select name="numPeopleNear" id="numPeopleNear" class="formText numPeopleNear">
+            <option>0</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+          </select>
+          <span>人</span>
+
+          <label>本校関係者(紫芳会・定時制)</label>
+          <select name="numPeopleInvolved" id="numPeopleInvolved" class="formText numPeopleInvolved">
+            <option>0</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+          </select>
+          <span>人</span>
+
+          <label>その他</label>
+          <select name="numPeopleOther" id="numPeopleOther" class="formText numPeopleOther">
+            <option>0</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+          </select>
+          <span>人</span>
+        </div>
+
+        <div>
+          <p>3.お越しになった理由を選択 (複数可)</p>
+          <label class="formText reason_label">
+            <input type="checkbox" name="reason" class="formText reason_checkbox" id="reason1">お子様の状況を<wbr>見たいから
+          </label>
+
+          <label class="formText reason_label">
+            <input type="checkbox" name="reason" class="formText reason_checkbox" id="reason2">本校の卒業生だから
+          </label>
+
+          <label class="formText reason_label">
+            <input type="checkbox" name="reason" class="formText reason_checkbox" id="reason3">立川高校に興味があったから
+          </label>
+
+          <label class="formText reason_label">
+            <input type="checkbox" name="reason" class="formText reason_checkbox" id="reason4">立川高校への受験を<br>　考えているから
+          </label>
+
+          <label class="formText reason_label">
+            <input type="checkbox" name="reason" class="formText reason_checkbox" id="reason5">クラ発・団発に<br>　興味があったから
+          </label>
+
+          <label class="formText reason_label">
+            <input type="checkbox" name="reason" class="formText reason_checkbox" id="reason6">立高グッズが欲しかったから
+          </label>
+
+          <label class="formText reason_label">
+            <input type="checkbox" name="reason" class="formText reason_checkbox" id="reason7">その他
+          </label>
+        </div>
+      </form>
+
+
+    </div>
+
+
+    <button type="button" id="make" class="button submit">QRコード生成</button>
+
+    <div class="canvas" id="qrcode"></div>
+    <div id="qrContainer"><img id="newImg">
+      <a id="dlImg" class="button">ダウンロード</a>
+    </div>
+    <a class="hidden" id="link"></a>
+
+    <p id="qrcode_credit">QRコードは株式会社デンソーウェーブの登録商標です。</p>
+  </div>
+  <script src="jquery.min.js"></script>
+  <script src="jquery.qrcode.min.js" charset="utf-8"></script>
+  <script src="main_qr.js" charset="utf-8"></script>
+</body>
+
+</html>
