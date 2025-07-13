@@ -14,15 +14,19 @@
     <script>
         async function fetchData() {
             try {
+                // gasでデプロイしたURLをここに張り付ける
                 //一日目
-                //const response = await fetch('https://script.google.com/macros/s/AKfycbyNGede96Uukxdo_7NM-sHhEf00UdoFHzzhyV0JNQXC7tpN6VXpd8fQb6NWcO9FGaq4/exec');
+                //const response = await fetch('https://script.google.com/macros/s/AKfycbwqdrL1AIj6gDgtVb-Bvhbw_eg8tSIRfoSVYeKeg7tEHpsBNoI4eaXCEm7hobaXSh7odQ/exec');
                 //二日目
-                const response = await fetch('https://script.google.com/macros/s/AKfycbxSicNljygW3ePIoAvghE2_bJGsejOLeabJ4khVd1d2wqY2hez_jR9Xv57nvCW8c-5Erw/exec');
+                const response = await fetch('https://script.google.com/macros/s/AKfycbzMT7oAta7S9gUJCWbt68iwYdILhTjqxKCJqJ6b_uJtAVUl03OdLKqzVslnUwhE3bZw/exec');
                 const data = await response.json();
                 document.getElementById('sheetDataB3').innerText = data.valueB3;
                 document.getElementById('sheetDataB18').innerText = data.valueB18;
                 document.getElementById('sheetDataI3').innerText = data.valueI3;
                 document.getElementById('sheetDataI4').innerText = data.valueI4;
+
+                document.getElementById('sheetDataB3').innerText = "準備中";
+                document.getElementById('sheetDataB18').innerText = "準備中";
 
                 // sheetDataB4,19の加工
                 let sheetDataB4 = data.valueB4;
@@ -90,7 +94,7 @@
     <!-- <p id="detail-text">ボタンを押すとスクロールできます！</p> -->
 
     <!-- 工事中の時は以下のコメント外す -->
-    <p id="detail-text">>現在工事中です。随時追加していきます。また、表示されているものは変更になる可能性があります。</p>
+    <p id="detail-text" style="margin-top: 50px;">>現在工事中です。随時追加していきます。また、表示されているものは変更になる可能性があります。</p>
     <img src="images/工事中.png"
         style="width:50%; border-width: 1px; border-style: solid; border-color: #000000;"></img>
     <!-- ここまで工事中 -->
