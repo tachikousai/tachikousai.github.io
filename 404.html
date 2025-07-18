@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>立高祭公式ホームページ</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="canonical" href="https://tachikousai.github.io/index.html">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <script src="./main.js"></script>
+  <meta name="description" content="都立立川高校文化祭 立高祭の公式Webサイトです。">
+  <script>
+    async function fetchData() {
+        try {
+            //一日目
+            const response = await fetch('https://script.google.com/macros/s/AKfycbw9Tu39j5TfJCQGg1Kp95HAsfQWSqG2q3PEAd8rLC5WnH-xfjktwgblIvKH2MHxNU7ZhA/exec');
+            //二日目
+            //const response = await fetch('https://script.google.com/macros/s/AKfycbzMT7oAta7S9gUJCWbt68iwYdILhTjqxKCJqJ6b_uJtAVUl03OdLKqzVslnUwhE3bZw/exec');
+            const data = await response.json();
+            document.getElementById('sheetDataB3').innerText = data.valueB3;
+            document.getElementById('sheetDataB18').innerText = data.valueB18;
+            document.getElementById('sheetDataI3').innerText = data.valueI3;
+            document.getElementById('sheetDataI4').innerText = data.valueI4;
+
+            // TODO:準備中ここかえる
+            document.getElementById('sheetDataB3').innerText = "準備中";
+            document.getElementById('sheetDataB18').innerText = "準備中";
+
+            // sheetDataB4,19の加工
+            let sheetDataB4 = data.valueB4;
+            sheetDataB4 = sheetDataB4.replace("1899-12-29T15:", "").replace(":00.000Z", "").replace("00:", "").replace(":00", "").replace("00","0").replace("05","5");
+            document.getElementById('sheetDataB4').innerText = sheetDataB4;
+            let sheetDataB19 = data.valueB19;
+            sheetDataB19 = sheetDataB19.replace("1899-12-29T15:", "").replace(":00.000Z", "").replace("00:", "").replace(":00", "").replace("00","0").replace("05","5");
+            document.getElementById('sheetDataB19').innerText = sheetDataB19;
+
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    }
+
+    window.onload = fetchData;
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      let infobars = document.querySelectorAll('.top_Infobar');
+      let currentIndex = 0;
+  
+      setInterval(() => {
+        // 全てのInfobarを非表示にする
+        infobars.forEach(infobar => infobar.style.display = 'none');
+        
+        // 現在のインデックスのInfobarを表示する
+        infobars[currentIndex].style.display = 'block';
+  
+        // インデックスを切り替える
+        currentIndex = (currentIndex + 1) % infobars.length;
+      }, 4000); // 4秒ごとに切り替え
+    });
+  </script>
+</head>
+
+<body style="height: 70vh;">
+    <header class="header-box">
+        <a href="index.html"><h1 id="header-kai">第77回<span id="header-text">立高祭</span></h1></a>
+        <span class="menu_text">Menu</span>
+        <!-- ハンバーガーメニュー部分 -->
+        <div class="nav">
+            <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+            <input id="drawer_input" class="drawer_hidden" type="checkbox">
+            <!-- ハンバーガーアイコン -->
+            <label for="drawer_input" class="drawer_open"><span></span></label>
+
+            <!-- メニュー -->
+            <nav class="nav_content">
+                <ul class="nav_list">
+                    <li class="nav_item"><a href="2025/whatis.html">立高祭とは？</a></li>
+                    <li class="nav_item"><a href="2025/about.html">今年の立高祭</a></li>
+                    <li class="nav_item"><a href="2025/map.html">校内マップ</a></li>
+                    <li class="nav_item"><a href="2025/detail.html">出展一覧</a></li>
+                    <li class="nav_item"><a href="2025/kuchikomi.html">口コミ</a></li>
+                    <li class="nav_item"><a href="2025/QR_system/createQR.html">受付QRコード作成</a></li>
+                    <li class="nav_item"><a href="2025/danpatu.html">団発タイムテーブル</a></li>
+                    <li class="nav_item"><a href="2025/access.html">アクセス</a></li>
+                    <li class="nav_item"><a href="2025/site.html">このサイトについて</a></li>
+                    <li class="nav_item"><a href="2025/license.html">利用規約</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; height: 100%;">
+        <p style="font-size: 2em;">
+            このページは移動または削除しました。<br>
+            <a href="/index.html" class="link_color">トップページへ移動する</a>
+        </p>
+        <img src="images/工事中.png" width="100px">
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--<script src="jquery.qrcode.min.js" charset="utf-8"></script>-->
+    <script src="main.js" charset="utf-8"></script>
+</body>
+
+</html>
+
+</html>
