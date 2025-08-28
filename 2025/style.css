@@ -1591,8 +1591,7 @@ a[href^="detail.html#"]:after {
 }
 
 .detail_pictures {
-    width: 50%;
-    height: 50%;
+    width: 80%;
     border-width: 1px;
     border-style: solid;
     border-color: #000000;
