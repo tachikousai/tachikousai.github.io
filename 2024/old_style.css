@@ -72,7 +72,6 @@ a {
     background-color: #edd3e3;
     display: flex;
     position: relative;
-    color: #000000;
 }
 
 .top_Infobar_Status {
@@ -99,7 +98,7 @@ a {
     top: 1svw;
     left: 20.25svw;
     width: 60svw;
-    font-size: 5svw;
+    font-size: 6svw;
     padding: 0svw;
     line-height: 9svw;
 }
@@ -135,9 +134,7 @@ a {
 
 .img-01,
 .img-02,
-.img-03,
-.img-04,
-.img-05 {
+.img-03 {
     position: absolute;
     top: 0;
     left: 0;
@@ -159,16 +156,6 @@ a {
 
 .img-03 {
     background-image: url('images/top03.jpg');
-    animation: slide-animation-03 24s infinite;
-}
-
-.img-04 {
-    background-image: url('images/top04.jpg');
-    animation: slide-animation-03 24s infinite;
-}
-
-.img-05 {
-    background-image: url('images/top05.jpg');
     animation: slide-animation-03 24s infinite;
 }
 
@@ -370,11 +357,6 @@ a {
     margin-left: 0svw;
     list-style: none;
     font-size: 7svw;
-    color: #000000;
-}
-
-.nav_item a {
-    color: black;
 }
 
 /* アイコンがクリックされたらメニューを表示 */
@@ -386,7 +368,6 @@ a {
 .nav {
     /*margin-left: 85svw;*/
     z-index: 101;
-    color: #000000;
 }
 
 .floorchange {
@@ -474,23 +455,23 @@ a {
 
 .dantai_name {
     text-align: right;
-    margin-bottom: -0.5svw;
+    margin-bottom: -0.75svh;
     margin-top: 0svh;
-    font-size: 3.5svw;
+    font-size: 3svw;
 }
 
 .url {
     text-align: right;
-    margin-bottom: -0.5svw;
+    margin-bottom: -0.75svh;
     margin-top: 0svh;
-    font-size: 3.5svw;
+    font-size: 3svw;
 }
 
 .time {
     font-weight: bold;
     font-size: 4.5svw;
     margin-left: 3svw;
-    margin-top: 0.5svw;
+    margin-top: 0.5svh;
     margin-bottom: 0svw;
     text-align: right;
 }
@@ -607,12 +588,8 @@ a {
     font-size: 4.5svw;
 }
 
-.top_Media_Link {
-    background-color: #3A3C3C;
-    font-size: 3svw;
-    color: #ffffff;
-    padding-bottom: 15svw;
-}
+
+
 
 .sp_top_img {
     width: 100svw;
@@ -745,7 +722,6 @@ span {
 .link_more {
     margin-left: 40svw;
     font-size: 4svw;
-    color: #000000;
 }
 
 
@@ -902,7 +878,7 @@ footer {
     left: 0;
     bottom: 0;
     width: 94svw;
-    background: rgba(143, 143, 143, 0.5);
+    background: rgba(142, 241, 127, 0.5);
     z-index: 150;
     height: 12.5svw;
     /*border: solid rgba(0, 0, 0, 0.75) 0svw;*/
@@ -919,13 +895,12 @@ footer {
     width: 25svw;
     font-size: 4.5svw;
     font-weight: bold;
-    background-color: rgba(174, 116, 195, 0.85);
+    background-color: rgba(174, 116, 195, 0.75);
     border: #000000;
     border-style: inherit;
     border-radius: 2svw;
     padding: auto 0;
     line-height: 10svw;
-    color: #000000;
 }
 
 .top_Footer_Timetable {
@@ -938,13 +913,12 @@ footer {
     font-size: 4.5svw;
     font-weight: bold;
 
-    background-color: rgba(174, 116, 195, 0.85);
+    background-color: rgba(174, 116, 195, 0.75);
     border: #000000;
     border-style: inherit;
     border-radius: 2svw;
     padding: auto 0;
     line-height: 10svw;
-    color: #000000;
 }
 
 .top_Footer_Access {
@@ -957,26 +931,22 @@ footer {
     font-size: 4.5svw;
     font-weight: bold;
 
-    background-color: rgba(174, 116, 195, 0.85);
+    background-color: rgba(174, 116, 195, 0.75);
     border: #000000;
     border-style: inherit;
     border-radius: 2svw;
     padding: auto 0;
     line-height: 10svw;
-    color: #000000;
 }
-
 .header-box2 {
     position: fixed;
     top: 17svw;
     text-align: left;
     width: 100svw;
     height: 13svw;
-    background-color: hsl(289.68deg 39.01% 53.45%);
+    background-color: hsl(130, 50%, 55%);
     align-items: center;
     z-index: 10;
-    padding-left: 2svw;
-    border-bottom: hsl(309.23deg 39.57% 52.7%);
 }
 
 .header-box2 p {
@@ -985,7 +955,7 @@ footer {
     margin: 0;
     line-height: 1;
     padding-top: 1.5svh;
-    font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+    font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
 }
 
 .header-box3 {
@@ -994,11 +964,9 @@ footer {
     text-align: left;
     width: 100svw;
     height: 13svw;
-    background-color: hsl(309.23deg 39.57% 52.7%);
+    background-color: hsl(227, 94%, 75%);
     align-items: center;
     z-index: 10;
-    padding-left: 2svw;
-    border-bottom: hsl(309.23deg 39.57% 52.7%);
 }
 
 .header-box3 p {
@@ -1007,598 +975,13 @@ footer {
     margin: 0;
     line-height: 1;
     padding-top: 1.5svh;
-    font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+    font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
 }
 
-.danpatu {
+.dannpatu{
     font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
     position: relative;
     margin-top: 43svw;
     font-size: 4svw;
-    width: 95svw;
-    margin-left: auto;
-    margin-right: auto;
+
 }
-
-.header-box-detail-group {
-    position: fixed;
-    text-align: center;
-    width: 100svw;
-    height: 15.2svw;
-    top: 17svw;
-    background-color: hsl(0, 0%, 100%);
-    align-items: left;
-    z-index: 9;
-    display: flex;
-}
-
-.header-box-detail-left {
-    position: relative;
-    text-align: center;
-    width: 30svw;
-    height: 5svw;
-    background-color: #f6f1b8;
-    align-items: left;
-    z-index: 10;
-}
-
-.header-box-detail-right {
-    position: relative;
-    text-align: center;
-    margin: 0;
-    width: 70svw;
-    height: 5svw;
-    right: 0svw; 
-    background-color: #4de657;
-    z-index: 10;
-}
-
-
-#header-box-detail {
-    font-size: 3.9svw;
-    font-family: serif;
-    font-weight: bolder;
-    position: relative;
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-.header-box-detail-under-box {
-    display: flex;
-    position: fixed;
-    top: 22svw;
-}
-
-.header-box-detail-under-kurahatu {
-    position: relative;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    width: 9.9svw;
-    height: 10svw;
-    top: 0svw;
-    background-color: hsl(227, 97%, 88%);
-    z-index: 10;
-    line-height: 10svw;
-    font-size: 3.9svw;
-    font-family: serif;
-    border: 0.1svw solid hsl(0, 0%, 100%); /* 枠線を追加 */
-    border-radius: 0px; /* 角を丸くしたい場合はこのプロパティを使用 */
-}
-
-.header-box-detail-under-dantai {
-    position: relative;
-    text-align: center;
-    margin: 0;
-    width: 14svw;
-    height: 10svw;
-    top: 0svw;
-    background-color: hsl(227, 97%, 88%);
-    z-index: 10;
-    line-height: 10svw;
-    font-size: 3.9svw;
-    font-family: serif;
-    border: 0.5px solid hsl(0, 0%, 100%); /* 枠線を追加 */
-    border-radius: 0px; /* 角を丸くしたい場合はこのプロパティを使用 */
-}
-
-#detail-text{
-    margin-top: 39.5svw;
-}
-
-.detaillimk{
-    font-size: 5svw;
-}
-
-#white{
-    font-family: serif;
-    font-weight: bolder;
-    position: relative;
-    font-size: 3.5svw;
-    margin-left: 2svw;
-    margin-top: auto;
-    margin-bottom: auto;
-    color: #ffffff;
-}
-
-
-@media only screen and (min-width: 999px) {
-
-    /* パソコン用のCSS */
-    /* height 17svw to 5svw */
-    body {
-        overflow-x: hidden;
-    }
-
-    .header-box {
-        width: 100svw;
-        height: 5svw;
-    }
-
-    .header-box2 {
-        width: 100svw;
-        height: 5svw;
-        top: 5svw;
-    }
-
-    .header-box2 p {
-        font-size: 2svw;
-    }
-
-    .header-box3 {
-        width: 100svw;
-        height: 5svw;
-        top: 10svw;
-    }
-
-    .header-box3 p {
-        font-size: 2svw;
-    }
-    .header-box4 {
-        width: 100svw;
-        height: 5svw;
-        top: 5svw;
-    }
-    #header-text4 {
-        font-size: 1svw;
-        margin-left: 1svw;
-    }
-
-    #header-kai {
-        font-size: 2svw;
-        margin-left: 5svw;
-    }
-
-    #header-text {
-        font-size: 3.5svw;
-        margin-left: 1svw;
-    }
-
-    .top_Infobar {
-        width: 50svw;
-        height: 5svw;
-        background-color: #edd3e3;
-        display: flex;
-        position: fixed;
-        bottom: 2.75svw;
-        left: 4svw;
-        color: #000000;
-        border: inherit;
-        border-radius: 1svw;
-
-    }
-
-    .top_Infobar_Status {
-        position: relative;
-
-        height: 4svw;
-        top: 0.25svw;
-        left: 0.25svw;
-        width: 10svw;
-        font-size: 2.5svw;
-
-        border-radius: 1svw;
-        padding: 0.25svw;
-        line-height: 4svw;
-    }
-
-
-    .top_Infobar_Title {
-        position: absolute;
-
-        height: 5svw;
-        top: 0.25svw;
-        left: 12.75svw;
-        width: 25svw;
-        font-size: 2svw;
-        padding: 0svw;
-        line-height: 5svw;
-    }
-
-
-    .top_Infobar_Delay {
-        position: absolute;
-
-        height: 4svw;
-        top: 0.25svw;
-        right: 0.25svw;
-        width: 10svw;
-        font-size: 2svw;
-        border-radius: 1svw;
-        padding: 0.25svw 0;
-        line-height: 4svw;
-    }
-
-    .top_Picture {
-        width: 49.5svw;
-        height: 33svw;
-        margin-left: 4svw;
-        border: solid rgba(87, 87, 87, 0.75) 0.25svw;
-        border-radius: 2svw;
-        position: fixed;
-    }
-
-    .main {
-        top: 5svw;
-    }
-
-    .top_Mini_Title {
-        position: absolute;
-        left: 56svw;
-        margin-right: 0;
-        top: 3svw;
-        width: 40svw;
-        margin-bottom: 10svw;
-    }
-
-    #top_Mini_Title_Count {
-        font-size: 3svw;
-    }
-    
-    #top_Mini_Title_Main {
-        font-size: 3.5svw;
-    }
-    
-    #top_Mini_Title_Subtitle {
-        font-size: 3.5svw;
-        font-family: serif;
-        font-weight: bold;
-        margin-left: 1svw;
-    }
-    
-    #top_Mini_Title_Date {
-        font-size: 2.5svw;
-    }
-
-    .drawer_open {
-        height: 5svw;
-        width: 3svw;
-        top: 2.25svw;
-        right: 3svw;
-    }
-
-    /* ハンバーガーメニューのアイコン */
-    .drawer_open span,
-    .drawer_open span:before,
-    .drawer_open span:after {
-        height: 0.5svw;
-        width: 4svw;
-        border-radius: 0.75svw;
-    }
-
-    /* 三本線の一番上の棒の位置調整 */
-    .drawer_open span:before {
-        bottom: 1.25svw;
-    }
-
-    /* 三本線の一番下の棒の位置調整 */
-    .drawer_open span:after {
-        top: 1.25svw;
-    }
-
-
-    /* メニューのデザイン*/
-    .nav_content {
-        top: 5svw;
-    }
-
-    /* メニュー黒ポチを消す */
-    .nav_list {
-        margin-top: 3svw;
-        margin-left: 0svw;
-        font-size: 2svw;
-    }
-
-    /* アイコンがクリックされたらメニューを表示 */
-    #drawer_input:checked~.nav_content {
-        left: 60svw;
-        /* メニューを画面に入れる */
-    }
-
-    .menu_text {
-        top: 1.5svw;
-        right: 7svw;
-        font-size: 2.5svw;
-    }
-
-    .top_textBox {
-        width: 32.5svw;
-        height: auto;
-        border: solid rgba(0, 0, 0, 0.75) 0.25svw;
-        border-radius: 3svw;
-        left: 56svw;
-        padding: 4svw;
-        position: relative;
-        top: 10svw;
-        margin-right: 0;
-    }
-    
-    .top_textBox_title {
-        position: absolute;
-        font-size: 3svw;
-        top: -5svw;
-        background-color: rgba(255, 255, 255, 1);
-        padding: 0 0.5svw;
-    }
-    
-    .top_textBox_main {
-        width: 32.5svw;
-        position: relative;
-        margin: 1svw auto 0 auto;
-        text-align: left;
-    }
-    
-    .top_textBox_main span {
-        font-size: 2svw;
-    }
-
-    .link_more {
-        margin-left: 15svw;
-        font-size: 2svw;
-    }
-
-    .top_Media_Link {
-        position: absolute;
-
-        font-size: 1svw;
-        padding: 0;
-        margin: 0;
-        width: 100svw;
-        bottom: -20svw;
-        text-align: left;
-    }
-
-    .top_Media_Link h2 {
-        margin-left: 5svw;
-    }
-
-    .top_Media_Link a {
-        margin-left: 6svw;
-    }
-
-    .header-box-detail-group {
-        top: 5svw;
-    }
-
-    .header-box-detail-under-box {
-        top: 10svw;
-    }
-
-    footer {
-        position: fixed;
-        left: 53.5svw;
-        bottom: -0.25svw;
-        width: 40svw;
-        height: 5svw;
-        border-radius: 1svw;
-        margin: 3svw;
-    }
-    
-    .top_Footer_Detail {
-        position: absolute;
-    
-        height: 4svw;
-        top: 0.5svw;
-        left: 0.5svw;
-        width: 11svw;
-        font-size: 1.75svw;
-        font-weight: bold;
-        border-radius: 1svw;
-        padding: auto 0;
-        line-height: 4svw;
-    }
-    
-    .top_Footer_Timetable {
-        position: absolute;
-    
-        height: 4svw;
-        top: 0.5svw;
-        left: 12.5svw;
-        width: 15svw;
-        font-size: 1.75svw;
-        font-weight: bold;
-    
-        border-radius: 1svw;
-        padding: auto 0;
-        line-height: 4svw;
-    }
-    
-    .top_Footer_Access {
-        position: absolute;
-    
-        height: 4svw;
-        top: 0.5svw;
-        left: 28.5svw;
-        width: 11svw;
-        font-size: 1.75svw;
-        font-weight: bold;
-    
-        border-radius: 1svw;
-        padding: auto 0;
-        line-height: 4svw;
-    }
-
-    .title_text {
-        margin-left: 2svw;
-        font-size: 3svw;
-    }
-
-    .container1 {
-        font-size: 2svw;
-    }
-
-    #poster_image {
-        width: 60svw;
-        height: auto;
-        width: 90%;
-        border: solid #000000 1px; 
-        margin-top: 3svw;
-    }
-
-    .danpatu {
-        margin-top: 20svw;
-        font-size: 2svw;
-        width: 68svw;
-    }
-
-    table {
-        width: 70svw;
-        font-size: 2svw;
-    }
-    
-    #qr_edit p {
-        font-size: 2svw;
-    }
-
-    .formText {
-        font-size: 2svw;
-    }
-
-    #qr_edit label {
-        font-size: 2svw;
-        margin-bottom: 1svw;
-    }
-
-    #qr_edit span {
-        font-size: 2svw;
-    }
-
-    .button {
-        margin: 1svw;
-        width: 25svw;
-        height: auto;
-        font-size: 2svw;
-        padding: 2svw;
-    }
-
-    #qrcode_credit {
-        font-size: 2svw;
-    }
-}
-
-/* タブのスタイル */
-.tabs {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.tab-button {
-    background-color: #f2f2f2;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 10px 20px;
-    margin: 0 5px;
-    cursor: pointer;
-    outline: none;
-}
-
-/* アクティブなタブのスタイル */
-.tab-button.active {
-    background-color: #ddd;
-    font-weight: bold;
-}
-
-/* スケジュールのデフォルト表示 */
-.schedule {
-    display: none;
-}
-
-/* Day 1とDay 2の表示 */
-.schedule.day1, .schedule.day2 {
-    display: none;
-}
-
-/* テーブル全体のスタイル */
-table {
-    width: 90svw;
-    border-collapse: collapse;
-    margin: 0 auto 20px auto;
-    border: 2px solid #000; /* テーブルの外枠 */
-    border-radius: 5px; /* 角を丸める */
-    font-size: 3.75svw;
-}
-
-/* テーブルの各セルに枠線を追加 */
-th, td {
-    border: 1px solid #000; /* 黒い枠線 */
-    padding: 8px;
-    text-align: center;
-}
-
-/* ヘッダー部分のスタイル */
-thead th {
-    background-color: #f2f2f2;
-    border: 1px solid #000; /* ヘッダーの枠線 */
-}
-
-/* 選択されたスケジュールの強調表示スタイル */
-.schedule.selected-day {
-    background-color: #cce7ff; /* 選択された日付の背景色 */
-    border: 2px solid #007bff; /* 強調表示のための枠線 */
-    padding: 10px;
-    border-radius: 5px; /* 角を丸める */
-}
-
-.group-name {
-    width: 55svw;
-}
-
-.start-time {
-    width: 17.5svw;
-}
-
-.end-time {
-    width: 17.5svw;
-}
-
-.keion_box {
-    border: solid rgba(0, 0, 0, 0.75) 0.5svw;
-    border-radius: 2svw;
-    margin: 7.5svw 2svw 2svw 2svw;
-}
-
-/* mapのlink写真*/
-a[href^="detail.html#"]:after {
-    content: '';
-    display: inline-block;
-    background-image: url('images/link.png'); /* アイコン画像のパスを指定 */
-    width: 16px; /* 画像の幅 */
-    height: 16px; /* 画像の高さ */
-    margin-left: 5px;
-    background-size: contain; /* 画像をボックス内に収める */
-    background-repeat: no-repeat;
-    vertical-align: middle;
-}
-
-.detail_pictures {
-    width: 50%;
-    height: 50%;
-    border-width: 1px;
-    border-style: solid;
-    border-color: #000000;
-    margin: auto;
-    display: block;
-    border-radius: 20px;
-}
-
-
