@@ -16,9 +16,9 @@
             try {
                 // gasでデプロイしたURLをここに張り付ける
                 //一日目
-                //const response = await fetch('https://script.google.com/macros/s/AKfycbwqdrL1AIj6gDgtVb-Bvhbw_eg8tSIRfoSVYeKeg7tEHpsBNoI4eaXCEm7hobaXSh7odQ/exec');
+                const response = await fetch('https://script.google.com/macros/s/AKfycbwqdrL1AIj6gDgtVb-Bvhbw_eg8tSIRfoSVYeKeg7tEHpsBNoI4eaXCEm7hobaXSh7odQ/exec');
                 //二日目
-                const response = await fetch('https://script.google.com/macros/s/AKfycbzMT7oAta7S9gUJCWbt68iwYdILhTjqxKCJqJ6b_uJtAVUl03OdLKqzVslnUwhE3bZw/exec');
+                // const response = await fetch('https://script.google.com/macros/s/AKfycbzMT7oAta7S9gUJCWbt68iwYdILhTjqxKCJqJ6b_uJtAVUl03OdLKqzVslnUwhE3bZw/exec');
                 const data = await response.json();
                 document.getElementById('sheetDataB3').innerText = data.valueB3;
                 document.getElementById('sheetDataB18').innerText = data.valueB18;
@@ -86,7 +86,7 @@
         </div>
     </header>
     <div class="danpatu">
-        <!--<p>調整やメンテナンス等で、団体発表が実施中と表示されることがあります。ご迷惑をおかけします。また、--><p>掲載中の予定は変更になる場合があります。</p>
+        <p>調整やメンテナンス等で、団体発表が実施中と表示されることがあります。ご迷惑をおかけします。また、掲載中の予定は変更になる場合があります。</p>
         <p>「トレル」は1階・トレーニングルームの略称です。</p>
         <h1>団体発表 タイムテーブル</h1>
     </div>
@@ -94,21 +94,21 @@
     <!-- <p id="detail-text">ボタンを押すとスクロールできます！</p> -->
 
     <!-- 工事中の時は以下のコメント外す -->
-    <p id="detail-text" style="margin-top: 50px;">>現在工事中です。随時追加していきます。また、表示されているものは変更になる可能性があります。</p>
+    <!-- <p id="detail-text" style="margin-top: 50px;">>現在工事中です。随時追加していきます。また、表示されているものは変更になる可能性があります。</p>
     <img src="images/工事中.png"
-        style="width:50%; border-width: 1px; border-style: solid; border-color: #000000;"></img>
+        style="width:50%; border-width: 1px; border-style: solid; border-color: #000000;"></img> -->
     <!-- ここまで工事中 -->
     
     <!-- 工事が終わったら下のstyleと/styleにコメントをつける -->
-    <style>/*
+    <!-- <style>/* -->
 
     <!-- タブナビゲーション -->
     <div class="tabs">
-        <button class="tab-button" id="buttonOfday1" onclick="showSchedule('day1')">9/7(Day 1)</button>
-        <button class="tab-button" id="buttonOfday2" onclick="showSchedule('day2')">9/8(Day 2)</button>
+        <button class="tab-button" id="buttonOfday1" onclick="showSchedule('day1')">9/6(Day 1)</button>
+        <button class="tab-button" id="buttonOfday2" onclick="showSchedule('day2')">9/7(Day 2)</button>
     </div>
     <div class="schedule day1">
-        <h2>9/7(Day 1)</h2>   
+        <h2>9/6(Day 1)</h2>   
         <h2>体育館</h2>
         <table>
             <thead>
@@ -120,44 +120,29 @@
             </thead>
             <tbody>
                 <tr id="group1">
-                    <td class="group-name">センチメンタルジプシーズ</td>
-                    <td class="start-time">9:30</td>
-                    <td class="end-time">9:40</td>
+                    <td class="group-name">軽音楽部</td>
+                    <td class="start-time">9:20</td>
+                    <td class="end-time">10:10</td>
                 </tr>
                 <tr id="group2">
-                    <td class="group-name">軽音楽部</td>
-                    <td class="start-time">9:40</td>
-                    <td class="end-time">10:30</td>
+                    <td class="group-name">ゲンシタイキ</td>
+                    <td class="start-time">10:15</td>
+                    <td class="end-time">10:25</td>
                 </tr>
                 <tr id="group3">
-                    <td class="group-name">ダンス部</td>
-                    <td class="start-time">11:15</td>
-                    <td class="end-time">12:05</td>
+                    <td class="group-name">ますらを</td>
+                    <td class="start-time">10:30</td>
+                    <td class="end-time">11:10</td>
                 </tr>
                 <tr id="group4">
-                    <td class="group-name">K-myth</td>
-                    <td class="start-time">12:10</td>
-                    <td class="end-time">12:20</td>
-                </tr>
-                <tr id="group5">
-                    <td class="group-name">poppin girl</td>
-                    <td class="start-time">12:25</td>
+                    <td class="group-name">ダンス部</td>
+                    <td class="start-time">11:50</td>
                     <td class="end-time">12:35</td>
                 </tr>
-                <tr id="group6">
+                <tr id="group5">
                     <td class="group-name">吹奏楽部</td>
-                    <td class="start-time">13:10</td>
-                    <td class="end-time">13:45</td>
-                </tr>
-                <tr id="group7">
-                    <td class="group-name">室内楽部</td>
-                    <td class="start-time">14:05</td>
-                    <td class="end-time">14:50</td>
-                </tr>
-                <tr id="group8">
-                    <td class="group-name">合唱部</td>
-                    <td class="start-time">15:10</td>
-                    <td class="end-time">15:40</td>
+                    <td class="start-time">13:25</td>
+                    <td class="end-time">14:05</td>
                 </tr>
             </tbody>
         </table>
@@ -174,12 +159,17 @@
                 </tr>
             </thead>
             <tbody>
-                <tr id="group9">
+                <tr id="group6">
                     <td class="group-name">BBB</td>
-                    <td class="start-time">10:30</td>
-                    <td class="end-time">11:00</td>
+                    <td class="start-time">9:40</td>
+                    <td class="end-time">10:10</td>
                 </tr>
-                <tr id="group10">
+                <tr id="group7">
+                    <td class="group-name">合唱部</td>
+                    <td class="start-time">11:30</td>
+                    <td class="end-time">12:15</td>
+                </tr>
+                <tr id="group8">
                     <td class="group-name">軽音楽部</td>
                     <td class="start-time">13:00</td>
                     <td class="end-time">15:40</td>
@@ -189,7 +179,7 @@
     </div>
 
     <div class="schedule day2">
-        <h2>9/8(Day 2)</h2>
+        <h2>9/7(Day 2)</h2>
         <h2>体育館</h2>
         <table>
             <thead>
@@ -201,44 +191,34 @@
             </thead>
             <tbody>
                 <tr id="group1">
-                    <td class="group-name">ダンス部</td>
-                    <td class="start-time">9:10</td>
-                    <td class="end-time">9:55</td>
+                    <td class="group-name">合唱部</td>
+                    <td class="start-time">9:20</td>
+                    <td class="end-time">10:00</td>
                 </tr>
                 <tr id="group2">
-                    <td class="group-name">じょばいろクローバーZ</td>
-                    <td class="start-time">10:00</td>
-                    <td class="end-time">10:10</td>
+                    <td class="group-name">吹奏楽部</td>
+                    <td class="start-time">10:30</td>
+                    <td class="end-time">11:10</td>
                 </tr>
                 <tr id="group3">
-                    <td class="group-name">おれんじぷりん</td>
-                    <td class="start-time">10:15</td>
-                    <td class="end-time">10:25</td>
+                    <td class="group-name">TDC文化祭公演</td>
+                    <td class="start-time">11:50</td>
+                    <td class="end-time">12:35</td>
                 </tr>
                 <tr id="group4">
-                    <td class="group-name">吹奏楽部</td>
-                    <td class="start-time">11:20</td>
-                    <td class="end-time">11:55</td>
+                    <td class="group-name">Rubi rose</td>
+                    <td class="start-time">12:40</td>
+                    <td class="end-time">12:50</td>
                 </tr>
                 <tr id="group5">
-                    <td class="group-name">ゲンシタイキ</td>
-                    <td class="start-time">13:10</td>
-                    <td class="end-time">13:20</td>
+                    <td class="group-name">軽音楽部</td>
+                    <td class="start-time">13:40</td>
+                    <td class="end-time">14:50</td>
                 </tr>
                 <tr id="group6">
-                    <td class="group-name">ザ・バント</td>
-                    <td class="start-time">13:25</td>
-                    <td class="end-time">13:35</td>
-                </tr>
-                <tr id="group7">
-                    <td class="group-name">Roüge.</td>
-                    <td class="start-time">13:40</td>
-                    <td class="end-time">13:50</td>
-                </tr>
-                <tr id="group8">
-                    <td class="group-name">軽音楽部</td>
-                    <td class="start-time">14:00</td>
-                    <td class="end-time">15:15</td>
+                    <td class="group-name">Steles</td>
+                    <td class="start-time">15:00</td>
+                    <td class="end-time">15:10</td>
                 </tr>
             </tbody>
         </table>
@@ -255,26 +235,27 @@
                 </tr>
             </thead>
             <tbody>
-                <tr id="group9">
+                <tr id="group7">
                     <td class="group-name">軽音楽部</td>
-                    <td class="start-time">10:50</td>
-                    <td class="end-time">12:15</td>
+                    <td class="start-time">9:55</td>
+                    <td class="end-time">11:25</td>
                 </tr>
-                <tr id="group10">
+                <tr id="group8">
                     <td class="group-name">室内楽部</td>
                     <td class="start-time">13:10</td>
                     <td class="end-time">13:40</td>
                 </tr>
-                <tr id="group11">
+                <tr id="group9">
                     <td class="group-name">BBB</td>
-                    <td class="start-time">14:20</td>
-                    <td class="end-time">14:50</td>
+                    <td class="start-time">14:30</td>
+                    <td class="end-time">15:00</td>
                 </tr>
             </tbody>
         </table>
     </div>
 
     <!--軽音楽部-->
+    <style> /*
     <div class="schedule day1">
         <div class="keion_box">
 
@@ -501,8 +482,11 @@
     <a href="images/2_time.jpg" target="_blank"  class="schedule day2">
         <img src="images/2_time.jpg" id="poster_image" style="width:90%; border-width: 1px; border-style: solid; border-color: #000000;" alt="あいうえお"></img>
     </a>
+    
+    TODO:ここ消す
+    */ </style>
 
-    */</style>
+    <!-- */</style> -->
     <!-- styleの閉じタグ -->
 
     <script>
@@ -524,8 +508,9 @@
         }
         
         // デフォルトでDay 1を表示
+        // TODO:2日目になったらここを変える
         document.addEventListener('DOMContentLoaded', function() {
-            showSchedule('day2');
+            showSchedule('day1');
         });
     </script>
     
