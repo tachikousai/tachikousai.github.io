@@ -1058,9 +1058,12 @@
     <script>
         // webページを開いたときに最初に表示される日付
         const nowDay = 'day1';
+        let showingDay = nowDay;
 
 
         function showSchedule(day) {
+            showingDay = day;
+
             // すべてのスケジュールを非表示
             document.querySelectorAll('.schedule').forEach(function(schedule) {
                 schedule.style.display = 'none';
@@ -1088,7 +1091,7 @@
         $locateBtns.forEach($locateBtn => {
             $locateBtn.addEventListener("click", e => {
                 const link = $locateBtn.dataset.link;
-                location.href = `./danpatu.html#${link}_${(nowDay == 'day1' ? "first" : "second")}`;
+                location.href = `./danpatu.html#${link}_${(showingDay == 'day1' ? "first" : "second")}`;
             });
         });
     </script>
