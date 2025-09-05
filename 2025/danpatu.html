@@ -15,14 +15,28 @@
         .locate_btn {
             margin: 0;
             border-radius: 0;
+            flex: 0 0 calc(50% - 5px); /* 1行に2つ並べる */
+            padding-inline: clamp(0px, 1vw, 10px);
+            white-space: nowrap;
+            font-size: clamp(0.8rem, 2vw, 1rem); /* 最小0.6rem、最大1rem、幅に応じて変化 */
+            overflow: hidden;
         }
         
         #locate_list {
             display: flex;
-            flex-direction: row;
-            justify-content: center; /* 中央揃え */
+            flex-direction: column; /* 各行を縦に並べる */
+            align-items: center;    /* 各行を中央揃え */
             gap: 0;
             margin-inline: 10px;
+            font-size: clamp(0.6rem, 2vw, 1rem);
+            flex-wrap: wrap;
+        }
+        #locate_list > div {
+            display: flex;
+            flex-direction: row;
+            justify-content: center; /* 各行のボタンを中央揃え */
+            gap: 0; /* ボタン間の隙間を消す */
+            margin: 0; /* divの余白を消す */
         }
     </style>
 
@@ -127,13 +141,17 @@
     <div class="schedule day1">
         <h2>9/6(Day 1)</h2>   
         <div class="tabs" id="locate_list">
-            <button class="tab-button locate_btn" data-link="gym">体育館</button>
-            <button class="tab-button locate_btn" data-link="toreru">トレル</button>
-            <button class="tab-button locate_btn" data-link="music">音楽室</button>
-            <button class="tab-button locate_btn" data-link="drama">劇</button>
-            <button class="tab-button locate_btn" data-link="quiz">社会科室</button>
-            <button class="tab-button locate_btn" data-link="hall">玄関ホール</button>
-            <button class="tab-button locate_btn" data-link="tenki">天文気象部</button>
+            <div>
+                <button class="tab-button locate_btn" data-link="gym">体育館</button>
+                <button class="tab-button locate_btn" data-link="toreru">トレル</button>
+                <button class="tab-button locate_btn" data-link="music">音楽室</button>
+                <button class="tab-button locate_btn" data-link="drama">劇</button>
+            </div>
+            <div>
+                <button class="tab-button locate_btn" data-link="quiz">社会科室</button>
+                <button class="tab-button locate_btn" data-link="hall">玄関ホール</button>
+                <button class="tab-button locate_btn" data-link="tenki">天文気象部</button>
+            </div>
         </div>
     </div>
     <div class="schedule day1">
@@ -478,13 +496,17 @@
     <div class="schedule day2">
         <h2>9/7(Day 2)</h2>
         <div class="tabs" id="locate_list">
-            <button class="tab-button locate_btn" data-link="gym">体育館</button>
-            <button class="tab-button locate_btn" data-link="toreru">トレル</button>
-            <button class="tab-button locate_btn" data-link="music">音楽室</button>
-            <button class="tab-button locate_btn" data-link="drama">劇</button>
-            <button class="tab-button locate_btn" data-link="quiz">社会科室</button>
-            <button class="tab-button locate_btn" data-link="hall">玄関ホール</button>
-            <button class="tab-button locate_btn" data-link="tenki">天文気象部</button>
+            <div>
+                <button class="tab-button locate_btn" data-link="gym">体育館</button>
+                <button class="tab-button locate_btn" data-link="toreru">トレル</button>
+                <button class="tab-button locate_btn" data-link="music">音楽室</button>
+                <button class="tab-button locate_btn" data-link="drama">劇</button>
+            </div>
+            <div>
+                <button class="tab-button locate_btn" data-link="quiz">社会科室</button>
+                <button class="tab-button locate_btn" data-link="hall">玄関ホール</button>
+                <button class="tab-button locate_btn" data-link="tenki">天文気象部</button>
+            </div>
         </div>
     </div>
 
@@ -1094,6 +1116,13 @@
                 location.href = `./danpatu.html#${link}_${(showingDay == 'day1' ? "first" : "second")}`;
             });
         });
+
+        // URLから day= の値を取得
+        const params = new URLSearchParams(window.location.search);
+        const locate = params.get("locate");
+        if (locate) {
+            location.href = `./danpatu.html#${locate}_${(showingDay == 'day1' ? "first" : "second")}`;
+        }
     </script>
     
 
