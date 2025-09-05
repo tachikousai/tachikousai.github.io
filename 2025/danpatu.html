@@ -11,6 +11,21 @@
     <meta name="viewport"
         content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 
+    <style>
+        .locate_btn {
+            margin: 0;
+            border-radius: 0;
+        }
+        
+        #locate_list {
+            display: flex;
+            flex-direction: row;
+            justify-content: center; /* 中央揃え */
+            gap: 0;
+            margin-inline: 10px;
+        }
+    </style>
+
     <script>
         async function fetchData() {
             try {
@@ -92,7 +107,7 @@
         <h1>団体発表 タイムテーブル</h1>
     </div>
 
-    <!-- <p id="detail-text">ボタンを押すとスクロールできます！</p> -->
+
 
     <!-- 工事中の時は以下のコメント外す -->
     <!-- <p id="detail-text" style="margin-top: 50px;">>現在工事中です。随時追加していきます。また、表示されているものは変更になる可能性があります。</p>
@@ -108,9 +123,21 @@
         <button class="tab-button" id="buttonOfday1" onclick="showSchedule('day1')">9/6(Day 1)</button>
         <button class="tab-button" id="buttonOfday2" onclick="showSchedule('day2')">9/7(Day 2)</button>
     </div>
+
     <div class="schedule day1">
         <h2>9/6(Day 1)</h2>   
-        <h2>体育館</h2>
+        <div class="tabs" id="locate_list">
+            <button class="tab-button locate_btn" data-link="gym">体育館</button>
+            <button class="tab-button locate_btn" data-link="toreru">トレル</button>
+            <button class="tab-button locate_btn" data-link="music">音楽室</button>
+            <button class="tab-button locate_btn" data-link="drama">劇</button>
+            <button class="tab-button locate_btn" data-link="quiz">社会科室</button>
+            <button class="tab-button locate_btn" data-link="hall">玄関ホール</button>
+            <button class="tab-button locate_btn" data-link="tenki">天文気象部</button>
+        </div>
+    </div>
+    <div class="schedule day1">
+        <h2 id="gym_first">体育館</h2>
         <table>
             <thead>
                 <tr>
@@ -155,7 +182,7 @@
     </div>
 
     <div class="schedule day1">
-        <h2>トレル</h2>
+        <h2 id="toreru_first">トレル</h2>
         <table>
             <thead>
                 <tr>
@@ -180,7 +207,7 @@
     </div>
 
     <div class="schedule day1">
-        <h2>音楽室</h2>
+        <h2 id="music_first">音楽室</h2>
         <table>
             <thead>
                 <tr>
@@ -206,7 +233,7 @@
 
 
     <div class="schedule day1">
-        <h2>劇</h2>
+        <h2 id="drama_first">劇</h2>
         <table>
             <thead>
                 <tr>
@@ -307,7 +334,7 @@
 
 
     <div class="schedule day1">
-        <h2>社会科室（クイズ研究部）</h2>
+        <h2 id="quiz_first">社会科室（クイズ研究部）</h2>
         <table>
             <thead>
                 <tr>
@@ -339,7 +366,7 @@
 
 
     <div class="schedule day1">
-        <h2>玄関ホール（執行委員会）</h2>
+        <h2 id="hall_first">玄関ホール（執行委員会）</h2>
         <table>
             <thead>
                 <tr>
@@ -362,7 +389,7 @@
 
 
     <div class="schedule day1">
-        <h2 style="margin-bottom: 0;">天文気象部</h2>
+        <h2 id="tenki_first" style="margin-bottom: 0;">天文気象部</h2>
         <p style="margin-top: 0;">4階視聴覚室前で配布されている整理券がないと入ることはできません。<br>整理券は開始予定時刻の1時間前から配布されます。</p>
         <table>
             <thead>
@@ -450,7 +477,19 @@
 
     <div class="schedule day2">
         <h2>9/7(Day 2)</h2>
-        <h2>体育館</h2>
+        <div class="tabs" id="locate_list">
+            <button class="tab-button locate_btn" data-link="gym">体育館</button>
+            <button class="tab-button locate_btn" data-link="toreru">トレル</button>
+            <button class="tab-button locate_btn" data-link="music">音楽室</button>
+            <button class="tab-button locate_btn" data-link="drama">劇</button>
+            <button class="tab-button locate_btn" data-link="quiz">社会科室</button>
+            <button class="tab-button locate_btn" data-link="hall">玄関ホール</button>
+            <button class="tab-button locate_btn" data-link="tenki">天文気象部</button>
+        </div>
+    </div>
+
+    <div class="schedule day2">
+        <h2 id="gym_second">体育館</h2>
         <table>
             <thead>
                 <tr>
@@ -497,7 +536,7 @@
     
 
     <div class="schedule day2">
-        <h2>トレル</h2>
+        <h2 id="toreru_second">トレル</h2>
         <table>
             <thead>
                 <tr>
@@ -529,7 +568,7 @@
 
 
     <div class="schedule day2">
-        <h2>音楽室</h2>
+        <h2 id="music_second">音楽室</h2>
         <table>
             <thead>
                 <tr>
@@ -554,7 +593,7 @@
     </div>
 
     <div class="schedule day2">
-        <h2>劇</h2>
+        <h2 id="drama_second">劇</h2>
         <table>
             <thead>
                 <tr>
@@ -644,7 +683,7 @@
     </div>
 
     <div class="schedule day2">
-        <h2>社会科室（クイズ研究部）</h2>
+        <h2 id="quiz_second">社会科室（クイズ研究部）</h2>
         <table>
             <thead>
                 <tr>
@@ -674,7 +713,7 @@
     </div>
 
     <div class="schedule day2">
-        <h2>玄関ホール（執行委員会）</h2>
+        <h2 id="hall_second">玄関ホール（執行委員会）</h2>
         <table>
             <thead>
                 <tr>
@@ -696,7 +735,7 @@
     </div>
 
     <div class="schedule day2">
-        <h2 style="margin-bottom: 0;">天文気象部</h2>
+        <h2 id="tenki_second" style="margin-bottom: 0;">天文気象部</h2>
         <p style="margin-top: 0;">4階視聴覚室前で配布されている整理券がないと入ることはできません。<br>整理券は開始予定時刻の1時間前から配布されます。</p>
         <table>
             <thead>
@@ -1017,6 +1056,10 @@
     <!-- styleの閉じタグ -->
 
     <script>
+        // webページを開いたときに最初に表示される日付
+        const nowDay = 'day1';
+
+
         function showSchedule(day) {
             // すべてのスケジュールを非表示
             document.querySelectorAll('.schedule').forEach(function(schedule) {
@@ -1037,7 +1080,16 @@
         // デフォルトでDay 1を表示
         // TODO:2日目になったらここを変える
         document.addEventListener('DOMContentLoaded', function() {
-            showSchedule('day1');
+            showSchedule(nowDay);
+        });
+
+
+        const $locateBtns = document.querySelectorAll(".locate_btn");
+        $locateBtns.forEach($locateBtn => {
+            $locateBtn.addEventListener("click", e => {
+                const link = $locateBtn.dataset.link;
+                location.href = `./danpatu.html#${link}_${(nowDay == 'day1' ? "first" : "second")}`;
+            });
         });
     </script>
     
