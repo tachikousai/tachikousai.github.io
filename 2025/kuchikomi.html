@@ -17,17 +17,17 @@
     const apiUrl = 'https://script.google.com/macros/s/AKfycbyeoq-Q5lGKQfy6FBKpbNv8TqeqJwIYDIUyGuwOT0fyv9ch3vmXyvRlj6vdqX02nKMD/exec';
 
     // データを取得して表示
-    // fetch(apiUrl)
-    //     .then(response => response.json())
-    //     .then(data => {
-    //         const reviewsList = document.getElementById('reviews-list');
-    //         data.forEach(review => {
-    //             const listItem = document.createElement('li');
-    //             listItem.textContent = review;
-    //             reviewsList.appendChild(listItem);
-    //         });
-    //     })
-    //     .catch(error => console.error('Error:', error));
+    fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+            const reviewsList = document.getElementById('reviews-list');
+            data.forEach(review => {
+                const listItem = document.createElement('li');
+                listItem.textContent = review;
+                reviewsList.appendChild(listItem);
+            });
+        })
+        .catch(error => console.error('Error:', error));
   </script>
 
   <header class="header-box">
@@ -62,8 +62,8 @@
 
   <div class="main">
     <h1 class="title_text" style="text-align:left;">投稿された口コミ一覧</h1>
-    <!-- <p style="text-align:left;">　読み込みに多少時間がかかります。<br><span>　感想は<a href="https://docs.google.com/forms/d/e/1FAIpQLScjoGDZe1vdl6BIOB-boVwyDz_YBGHOHLLe3-gmwEguE1mvRw/viewform" style="font-weight: bold; text-decoration: blueviolet;">こちら</a>から！</span></p> -->
-    <p style="text-align:left;">　準備中です。<br><span>　感想は<a href="https://docs.google.com/forms/d/e/1FAIpQLScjoGDZe1vdl6BIOB-boVwyDz_YBGHOHLLe3-gmwEguE1mvRw/viewform" style="font-weight: bold; text-decoration: blueviolet;">こちら</a>から！</span></p>
+    <p style="text-align:left;">　読み込みに多少時間がかかります。<br><span>　感想は<a href="https://docs.google.com/forms/d/e/1FAIpQLScjoGDZe1vdl6BIOB-boVwyDz_YBGHOHLLe3-gmwEguE1mvRw/viewform" style="font-weight: bold; text-decoration: blueviolet;">こちら</a>から！</span></p>
+    <!-- <p style="text-align:left;">　準備中です。<br><span>　感想は<a href="https://docs.google.com/forms/d/e/1FAIpQLScjoGDZe1vdl6BIOB-boVwyDz_YBGHOHLLe3-gmwEguE1mvRw/viewform" style="font-weight: bold; text-decoration: blueviolet;">こちら</a>から！</span></p> -->
     <div class="container1">
       <ul id="reviews-list"></ul>
     </div>
