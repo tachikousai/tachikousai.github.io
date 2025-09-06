@@ -158,12 +158,12 @@ a {
 }
 
 .img-03 {
-    background-image: url('images/top03.jpg');
+    /* background-image: url('images/top03.jpg'); */
     animation: slide-animation-03 24s infinite;
 }
 
 .img-04 {
-    background-image: url('images/top04.jpg');
+    /* background-image: url('images/top04.jpg'); */
     animation: slide-animation-03 24s infinite;
 }
 
