@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>立高祭公式ホームページ</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="canonical" href="https://tachikousai.github.io/index.html">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <script src="./main.js"></script>
+  <meta name="description" content="都立立川高校文化祭 立高祭の公式Webサイトです。">
+  <script>
+    async function fetchData() {
+        try {
+            //一日目
+            const response = await fetch('https://script.google.com/macros/s/AKfycbw9Tu39j5TfJCQGg1Kp95HAsfQWSqG2q3PEAd8rLC5WnH-xfjktwgblIvKH2MHxNU7ZhA/exec');
+            //二日目
+            //const response = await fetch('https://script.google.com/macros/s/AKfycbzMT7oAta7S9gUJCWbt68iwYdILhTjqxKCJqJ6b_uJtAVUl03OdLKqzVslnUwhE3bZw/exec');
+            const data = await response.json();
+            document.getElementById('sheetDataB3').innerText = data.valueB3;
+            document.getElementById('sheetDataB18').innerText = data.valueB18;
+            document.getElementById('sheetDataI3').innerText = data.valueI3;
+            document.getElementById('sheetDataI4').innerText = data.valueI4;
+
+            // TODO:準備中ここかえる
+            document.getElementById('sheetDataB3').innerText = "準備中";
+            document.getElementById('sheetDataB18').innerText = "準備中";
+
+            // sheetDataB4,19の加工
+            let sheetDataB4 = data.valueB4;
+            sheetDataB4 = sheetDataB4.replace("1899-12-29T15:", "").replace(":00.000Z", "").replace("00:", "").replace(":00", "").replace("00","0").replace("05","5");
+            document.getElementById('sheetDataB4').innerText = sheetDataB4;
+            let sheetDataB19 = data.valueB19;
+            sheetDataB19 = sheetDataB19.replace("1899-12-29T15:", "").replace(":00.000Z", "").replace("00:", "").replace(":00", "").replace("00","0").replace("05","5");
+            document.getElementById('sheetDataB19').innerText = sheetDataB19;
+
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    }
+
+    window.onload = fetchData;
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      let infobars = document.querySelectorAll('.top_Infobar');
+      let currentIndex = 0;
+  
+      setInterval(() => {
+        // 全てのInfobarを非表示にする
+        infobars.forEach(infobar => infobar.style.display = 'none');
+        
+        // 現在のインデックスのInfobarを表示する
+        infobars[currentIndex].style.display = 'block';
+  
+        // インデックスを切り替える
+        currentIndex = (currentIndex + 1) % infobars.length;
+      }, 4000); // 4秒ごとに切り替え
+    });
+  </script>
+</head>
+
+<body>
+  <header class="header-box">
+    <a href="index.html"><h1 id="header-kai">第78回<span id="header-text">立高祭</span></h1></a>
+    <span class="menu_text">Menu</span>
+    <!-- ハンバーガーメニュー部分 -->
+    <div class="nav">
+        <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+        <input id="drawer_input" class="drawer_hidden" type="checkbox">
+        <!-- ハンバーガーアイコン -->
+        <label for="drawer_input" class="drawer_open"><span></span></label>
+
+        <!-- メニュー -->
+        <nav class="nav_content">
+            <ul class="nav_list">
+                <li class="nav_item"><a href="whatis.html">立高祭とは？</a></li>
+                <li class="nav_item"><a href="about.html">今年の立高祭</a></li>
+                <li class="nav_item"><a href="map.html">校内マップ</a></li>
+                <li class="nav_item"><a href="detail.html">出展一覧</a></li>
+                <li class="nav_item"><a href="kuchikomi.html">口コミ</a></li>
+                <li class="nav_item"><a href="QR_system/createQR.html">受付QRコード作成</a></li>
+                <li class="nav_item"><a href="danpatu.html">団発タイムテーブル</a></li>
+                <li class="nav_item"><a href="access.html">アクセス</a></li>
+                <li class="nav_item"><a href="site.html">このサイトについて</a></li>
+                <li class="nav_item"><a href="license.html">利用規約</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+  <div class="main">
+    <!--開演中情報・最新情報等の掲示-->
+    <a href="danpatu.html">
+    <div class="top_Infobar" style="display: block;">
+      <div class="top_Infobar_Status" id="top_Infobar_Status">体育館</div>
+      <div class="top_Infobar_Title" id="top_Infobar_Title"><span id="sheetDataB3">Loading...</span></div>
+      <div class="top_Infobar_Delay" id="top_Infobar_Delay"><span id="sheetDataI3"></span><span id="sheetDataB4"></span>分</div>
+    </div>
+    <div class="top_Infobar" style="display: none;">
+      <div class="top_Infobar_Status" id="top_Infobar_Status">トレル</div>
+      <div class="top_Infobar_Title" id="top_Infobar_Title"><span id="sheetDataB18">Loading...</span></div>
+      <div class="top_Infobar_Delay" id="top_Infobar_Delay"><span id="sheetDataI4"></span><span id="sheetDataB19"></span>分</div>
+    </div>
+    </a>
+    
+
+
+    <!--トップページ画像-->
+    <div class="top_Picture">
+      <div class="img-01"></div>
+      <div class="img-02"></div>
+      <div class="img-03"></div>
+      <div class="img-04"></div>
+      <div class="img-05"></div>
+    </div>
+
+    <div class="top_Mini_Title">
+      <div>
+        <span id="top_Mini_Title_Count">第78回</span>
+        <span id="top_Mini_Title_Main">立高祭</span>
+        <span id="top_Mini_Title_Subtitle">-綺羅新風-</span>
+      </div>
+      <div>
+        <span id="top_Mini_Title_Date">2025/9/6 ～ 9/7</span>
+      </div>
+    </div>
+
+    <div class="top_textBox">
+      <p class="top_textBox_title" id="top_textBox_news">NEWS</p>
+      <div class="top_textBox_main">
+        <span>受付ではQRコードを使用します。<a href="QR_system/createQR.html"
+            class="link_color">QRコード生成ページ</a>から、事前に生成していただけるとスムーズに入場できます。</span><br><br>
+      </div>
+    </div>
+
+    <!--<div class="top_textBox">
+      <p class="top_textBox_title" id="top_textBox_news">クラ発、団体臨時情報</p>
+      <div class="top_textBox_main">
+        <span>・</span>
+      </div>
+    </div>-->
+
+    <div class="top_textBox">
+      <p class="top_textBox_title" id="top_textBox_news">立高祭とは？</p>
+      <div class="top_textBox_main">
+        <span>今年度で78回を迎える、都立立川高校の伝統ある文化祭です。立高生が全力を挙げて作り上げています。</span>
+      </div>
+      <div class="linkBox">
+        <a class="link_more" href="whatis.html">詳しくはこちら ＞</a>
+      </div>
+    </div>
+
+    <div class="top_textBox">
+      <p class="top_textBox_title" id="top_textBox_news">開催日程</p>
+      <div class="top_textBox_main">
+        <span>2026年9月5日から6日まで、東京都立立川高等学校で行われます。事前予約は不要です。</span>
+      </div>
+      <div class="linkBox">
+        <a class="link_more" href="about.html">詳しくはこちら ＞</a>
+      </div>
+    </div>
+
+    <div class="top_textBox">
+      <p class="top_textBox_title" id="top_textBox_news">アクセス</p>
+      <div class="top_textBox_main">
+        <span>JR立川駅から　　　徒歩10分<br>柴崎体育館駅から　徒歩7分<br>立川南駅から　　　徒歩7分</span>
+      </div>
+      <div class="linkBox">
+        <a class="link_more" href="access.html">詳しくはこちら ＞</a>
+      </div>
+    </div>
+
+    <div class="top_textBox">
+      <p class="top_textBox_title" id="top_textBox_news">お願い</p>
+      <div class="top_textBox_main">
+        <span>校内では実行委員・教員の指示に従ってください。</span>
+      </div>
+    </div>
+
+    <div class="top_textBox">
+      <p class="top_textBox_title" id="top_textBox_news">このサイトについて</p>
+      <div class="top_textBox_main">
+        <span>このサイトは立高祭実行委員会が運営しています。ページや機能はほぼすべてオリジナルです。</span>
+      </div>
+      <div class="linkBox">
+        <a class="link_more" href="site.html">詳しくはこちら ＞</a>
+      </div>
+    </div>
+
+    <div class="top_Media_Link">
+      <h2>公式リンク</h2>
+      <h3>
+      <a href="https://www.metro.ed.jp/tachikawa-h/" style="color :#ffffff">都立立川高校ホームページ</a><br><br>
+      <a href="https://www.instagram.com/tckw_tachijitsu/" style="color :#ffffff">Instagram</a><br><br>
+      <a href="https://x.com/tckw_tachijitsu" style="color :#ffffff">X (Twitter)</a>   
+
+      </h3>  
+    </div>
+
+    <!--<div id="top_footer_adjuster"></div>
+    <div class="container1"></div>-->
+
+
+  </div>
+  <footer>
+    <div>
+      <a href="detail.html">
+        <div class="top_Footer_Detail" id="top_Footer_Detail">出展一覧</div>
+      </a>
+      <a href="danpatu.html">
+        <div class="top_Footer_Timetable" id="top_Footer_Timetable">タイムテーブル</div>
+      </a>
+      <a href="access.html">
+        <div class="top_Footer_Access" id="top_Footer_Access">アクセス</div>
+      </a>
+    </div>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!--<script src="jquery.qrcode.min.js" charset="utf-8"></script>-->
+  <script src="main.js" charset="utf-8"></script>
+</body>
+
+</html>
+
+</html>
