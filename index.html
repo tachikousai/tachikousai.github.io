@@ -15,9 +15,9 @@
     async function fetchData() {
         try {
             //一日目
-            const response = await fetch('https://script.google.com/macros/s/AKfycbw9Tu39j5TfJCQGg1Kp95HAsfQWSqG2q3PEAd8rLC5WnH-xfjktwgblIvKH2MHxNU7ZhA/exec');
+            // const response = await fetch('https://script.google.com/macros/s/AKfycbw9Tu39j5TfJCQGg1Kp95HAsfQWSqG2q3PEAd8rLC5WnH-xfjktwgblIvKH2MHxNU7ZhA/exec');
             //二日目
-            // const response = await fetch('https://script.google.com/macros/s/AKfycbzMT7oAta7S9gUJCWbt68iwYdILhTjqxKCJqJ6b_uJtAVUl03OdLKqzVslnUwhE3bZw/exec');
+            const response = await fetch('https://script.google.com/macros/s/AKfycbzMT7oAta7S9gUJCWbt68iwYdILhTjqxKCJqJ6b_uJtAVUl03OdLKqzVslnUwhE3bZw/exec');
             const data = await response.json();
             document.getElementById('sheetDataB3').innerText = data.valueB3;
             document.getElementById('sheetDataB18').innerText = data.valueB18;
